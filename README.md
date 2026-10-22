@@ -6,7 +6,7 @@
 
 Built for the **#1MillionDevs AZ-900 Vibe Coding Hackathon**, challenge: **🤖 AI Study Buddy**.
 
-**Live demo:** _link added after deploy_ · **Demo video:** _link_ · **Pitch deck:** _link_
+**Live demo:** https://wingu-buddy.vercel.app · **Demo video:** _link_ · **Pitch deck:** _link_
 
 ---
 
