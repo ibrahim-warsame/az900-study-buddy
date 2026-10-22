@@ -1,0 +1,165 @@
+[
+ {
+  "id": "p1m1",
+  "path": 1,
+  "n": 1,
+  "title": "Describe cloud computing",
+  "url": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/",
+  "units": [
+   "What is cloud computing",
+   "Shared responsibility model",
+   "Cloud models",
+   "Consumption-based model"
+  ]
+ },
+ {
+  "id": "p1m2",
+  "path": 1,
+  "n": 2,
+  "title": "Describe the benefits of using cloud services",
+  "url": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/",
+  "units": [
+   "High availability and scalability",
+   "Reliability and predictability",
+   "Security and governance",
+   "Manageability",
+   "Sustainability"
+  ]
+ },
+ {
+  "id": "p1m3",
+  "path": 1,
+  "n": 3,
+  "title": "Describe cloud service types",
+  "url": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/",
+  "units": [
+   "Infrastructure as a Service",
+   "Platform as a Service",
+   "Software as a Service"
+  ]
+ },
+ {
+  "id": "p2m1",
+  "path": 2,
+  "n": 1,
+  "title": "Describe the core architectural components of Azure",
+  "url": "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/",
+  "units": [
+   "What is Microsoft Azure",
+   "Azure accounts",
+   "Physical infrastructure (regions, zones, pairs)",
+   "Management infrastructure (resource groups, subscriptions, management groups)"
+  ]
+ },
+ {
+  "id": "p2m2",
+  "path": 2,
+  "n": 2,
+  "title": "Describe Azure compute services",
+  "url": "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/",
+  "units": [
+   "Virtual machines",
+   "Azure Virtual Desktop",
+   "Containers",
+   "Azure Functions",
+   "AI, machine learning and IoT/Edge services",
+   "Application hosting options"
+  ]
+ },
+ {
+  "id": "p2m3",
+  "path": 2,
+  "n": 3,
+  "title": "Describe Azure networking services",
+  "url": "https://learn.microsoft.com/en-us/training/modules/describe-azure-networking-services/",
+  "units": [
+   "Virtual networking",
+   "VPN Gateway",
+   "ExpressRoute",
+   "Azure DNS"
+  ]
+ },
+ {
+  "id": "p2m4",
+  "path": 2,
+  "n": 4,
+  "title": "Describe Azure storage services",
+  "url": "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/",
+  "units": [
+   "Storage accounts",
+   "Storage redundancy",
+   "Storage services",
+   "Data migration options",
+   "File movement options"
+  ]
+ },
+ {
+  "id": "p2m5",
+  "path": 2,
+  "n": 5,
+  "title": "Describe Azure identity, access, and security",
+  "url": "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/",
+  "units": [
+   "Directory services",
+   "Authentication methods",
+   "External identities",
+   "Conditional Access",
+   "Role-based access control",
+   "Zero Trust",
+   "Defense in depth",
+   "Encryption and key management",
+   "Defender for Cloud"
+  ]
+ },
+ {
+  "id": "p3m1",
+  "path": 3,
+  "n": 1,
+  "title": "Describe cost management in Azure",
+  "url": "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/",
+  "units": [
+   "Factors that affect cost",
+   "Pricing calculator",
+   "Cost Management",
+   "Tags",
+   "Cost optimization options"
+  ]
+ },
+ {
+  "id": "p3m2",
+  "path": 3,
+  "n": 2,
+  "title": "Describe features and tools in Azure for governance and compliance",
+  "url": "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/",
+  "units": [
+   "Microsoft Purview",
+   "Azure Policy",
+   "Resource locks",
+   "Service Trust Portal"
+  ]
+ },
+ {
+  "id": "p3m3",
+  "path": 3,
+  "n": 3,
+  "title": "Describe features and tools for managing and deploying Azure resources",
+  "url": "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/",
+  "units": [
+   "Tools for interacting with Azure (portal, Cloud Shell, CLI, PowerShell, Copilot)",
+   "Azure Arc",
+   "Azure Resource Manager and ARM templates"
+  ]
+ },
+ {
+  "id": "p3m4",
+  "path": 3,
+  "n": 4,
+  "title": "Describe monitoring tools in Azure",
+  "url": "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/",
+  "units": [
+   "Azure Advisor",
+   "Azure Service Health",
+   "Azure Monitor"
+  ]
+ }
+]

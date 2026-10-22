@@ -1,0 +1,19 @@
+{
+  "name": "az900-study-buddy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wingu Buddy: an unofficial AZ-900 AI study buddy with African examples, in English and Kiswahili.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/",
+    "eval": "node evals/run.mjs",
+    "check-content": "node scripts/check-content.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.1.0"
+  }
+}

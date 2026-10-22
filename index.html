@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wingu Buddy · Unofficial AZ-900 study buddy</title>
+  <meta name="description" content="Unofficial AZ-900 study buddy. Azure explained in plain words with African examples, in English and Kiswahili. Works offline with verified cards.">
+  <meta name="theme-color" content="#0f4c4a">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 36h21a9 9 0 0 0 1.6-17.85A12 12 0 0 0 13.4 21 7.5 7.5 0 0 0 14 36Z" fill="currentColor"/><circle cx="19" cy="27" r="2.2" fill="var(--bg)"/><circle cx="29" cy="27" r="2.2" fill="var(--bg)"/><path d="M20 31.5c2.4 2 5.6 2 8 0" stroke="var(--bg)" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <div>
+        <h1>Wingu Buddy</h1>
+        <p class="tag" data-i18n="tagline">Unofficial AZ-900 study buddy</p>
+      </div>
+    </div>
+    <div class="controls">
+      <label class="sr" for="lang">Language</label>
+      <select id="lang" aria-label="Language">
+        <option value="en">English</option>
+        <option value="sw">Kiswahili</option>
+        <option value="fr">Français (beta)</option>
+        <option value="so">Soomaali (beta)</option>
+      </select>
+      <span id="status" class="status" role="status">…</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="view-ask" class="view" aria-labelledby="tab-ask">
+      <div id="thread" class="thread" aria-live="polite"></div>
+      <div id="starters" class="starters"></div>
+      <form id="ask" class="ask" autocomplete="off">
+        <label class="sr" for="q" data-i18n="askLabel">Ask about any AZ-900 topic</label>
+        <textarea id="q" rows="1" maxlength="1500" data-i18n-ph="askPh" placeholder="Ask about any AZ-900 topic…"></textarea>
+        <button type="submit" class="send" aria-label="Send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 16-2.5-6.5L4 12z" fill="currentColor"/></svg></button>
+      </form>
+    </section>
+
+    <section id="view-topics" class="view" hidden aria-labelledby="tab-topics"></section>
+    <section id="view-practice" class="view" hidden aria-labelledby="tab-practice"></section>
+    <section id="view-progress" class="view" hidden aria-labelledby="tab-progress"></section>
+  </main>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button role="tab" id="tab-ask" data-view="ask" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v10H9l-5 4V5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span data-i18n="tabAsk">Ask</span></button>
+    <button role="tab" id="tab-topics" data-view="topics" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h10l4 4v12H5z M9 10h6 M9 14h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span data-i18n="tabTopics">Topics</span></button>
+    <button role="tab" id="tab-practice" data-view="practice" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="tabPractice">Practice</span></button>
+    <button role="tab" id="tab-progress" data-view="progress" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V11 M12 19V5 M19 19v-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span data-i18n="tabProgress">Progress</span></button>
+  </nav>
+
+  <footer class="foot"><span data-i18n="footer">Unofficial. Not affiliated with or endorsed by Microsoft. Our own questions and notes, written from the public AZ-900 skills outline. No real exam questions.</span></footer>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>

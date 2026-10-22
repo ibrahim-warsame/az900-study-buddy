@@ -1,0 +1,2769 @@
+[
+ {
+  "id": "q1",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "Which cloud model needs no up-front capital expenditure and is owned and run by a provider for many customers?",
+  "options": [
+   "Private cloud",
+   "Public cloud",
+   "Hybrid cloud",
+   "On-premises"
+  ],
+  "answer": 1,
+  "explanation": "A public cloud is owned by the provider (Azure), and you pay as you go with no CapEx."
+ },
+ {
+  "id": "q2",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "A company must keep customer records in its own datacenter by law, but wants to use Azure for its website. Which model fits?",
+  "options": [
+   "Public cloud",
+   "Private cloud",
+   "Hybrid cloud",
+   "SaaS"
+  ],
+  "answer": 2,
+  "explanation": "Some workloads stay on-premises and some run in Azure, so this is hybrid."
+ },
+ {
+  "id": "q3",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "Buying ten new servers for your office is an example of…",
+  "options": [
+   "OpEx",
+   "CapEx",
+   "Consumption-based pricing",
+   "Serverless"
+  ],
+  "answer": 1,
+  "explanation": "Up-front spending on physical equipment is capital expenditure (CapEx)."
+ },
+ {
+  "id": "q4",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "What does the consumption-based model mean?",
+  "options": [
+   "You pay a fixed yearly fee",
+   "You pay only for the resources you use, with no up-front cost",
+   "You buy hardware and rent it to Microsoft",
+   "You pay per user per month regardless of use"
+  ],
+  "answer": 1,
+  "explanation": "You pay for what you use, and the cost is OpEx."
+ },
+ {
+  "id": "q5",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "You run a Windows Server VM in Azure. Who installs the operating system updates?",
+  "options": [
+   "Microsoft",
+   "You",
+   "The connectivity provider",
+   "Nobody, VMs update themselves"
+  ],
+  "answer": 1,
+  "explanation": "A VM is IaaS, so the guest OS is your responsibility."
+ },
+ {
+  "id": "q6",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "Which responsibility is ALWAYS the customer's, whatever the service type?",
+  "options": [
+   "Physical hosts",
+   "Operating system",
+   "Information and data",
+   "Physical network"
+  ],
+  "answer": 2,
+  "explanation": "Data, devices, and accounts and identities are always yours, even with SaaS."
+ },
+ {
+  "id": "q7",
+  "domain": 1,
+  "module": "p1m3",
+  "q": "Your developers want to deploy a web app without managing servers or the OS. Which service type?",
+  "options": [
+   "IaaS",
+   "PaaS",
+   "On-premises",
+   "Private cloud"
+  ],
+  "answer": 1,
+  "explanation": "With PaaS (for example App Service), Microsoft runs the OS and you bring your code."
+ },
+ {
+  "id": "q8",
+  "domain": 1,
+  "module": "p1m3",
+  "q": "Microsoft 365 (Outlook, Word online) is an example of…",
+  "options": [
+   "IaaS",
+   "PaaS",
+   "SaaS",
+   "Serverless compute"
+  ],
+  "answer": 2,
+  "explanation": "It is finished software that you just use, so it is SaaS."
+ },
+ {
+  "id": "q9",
+  "domain": 1,
+  "module": "p1m3",
+  "q": "You need to move existing on-premises servers to Azure as they are, without changing them. Which service type?",
+  "options": [
+   "SaaS",
+   "PaaS",
+   "IaaS",
+   "Serverless"
+  ],
+  "answer": 2,
+  "explanation": "Lift-and-shift onto VMs is IaaS."
+ },
+ {
+  "id": "q10",
+  "domain": 1,
+  "module": "p1m2",
+  "q": "Adding more VM instances behind a load balancer when traffic rises is called…",
+  "options": [
+   "Scaling up",
+   "Scaling out",
+   "Vertical scaling",
+   "Rehydration"
+  ],
+  "answer": 1,
+  "explanation": "Adding more machines is horizontal scaling, or scaling out."
+ },
+ {
+  "id": "q11",
+  "domain": 1,
+  "module": "p1m2",
+  "q": "Changing a VM from 2 CPUs to 8 CPUs is…",
+  "options": [
+   "Scaling out",
+   "Scaling up",
+   "Elasticity",
+   "High availability"
+  ],
+  "answer": 1,
+  "explanation": "Making one machine bigger is vertical scaling, or scaling up."
+ },
+ {
+  "id": "q12",
+  "domain": 1,
+  "module": "p1m2",
+  "q": "A service that keeps running with minimal downtime, promised as 99.99% uptime, shows which benefit?",
+  "options": [
+   "Predictability",
+   "High availability",
+   "Governance",
+   "Manageability"
+  ],
+  "answer": 1,
+  "explanation": "Uptime promised in an SLA is high availability."
+ },
+ {
+  "id": "q13",
+  "domain": 1,
+  "module": "p1m2",
+  "q": "Your app keeps working after a datacenter fails because it runs in another region. Which benefit?",
+  "options": [
+   "Reliability",
+   "Elasticity",
+   "Cost predictability",
+   "Governance"
+  ],
+  "answer": 0,
+  "explanation": "Recovering from failures and continuing to work is reliability."
+ },
+ {
+  "id": "q14",
+  "domain": 1,
+  "module": "p1m2",
+  "q": "Using the pricing calculator to forecast next year's Azure bill supports which benefit?",
+  "options": [
+   "Security",
+   "Predictability",
+   "High availability",
+   "Scalability"
+  ],
+  "answer": 1,
+  "explanation": "Forecasting cost is cost predictability."
+ },
+ {
+  "id": "q15",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "Which statement about serverless computing is TRUE?",
+  "options": [
+   "You choose the VM size",
+   "You are billed only while your code runs",
+   "You must patch the OS",
+   "It always runs on dedicated hardware"
+  ],
+  "answer": 1,
+  "explanation": "With serverless, the provider manages the servers and you pay per execution."
+ },
+ {
+  "id": "q16",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "You commit to a VM for 3 years in exchange for a large discount. This is a…",
+  "options": [
+   "Spot VM",
+   "Reservation",
+   "Pay-as-you-go plan",
+   "Free account"
+  ],
+  "answer": 1,
+  "explanation": "Reservations (reserved instances) are 1- or 3-year commitments."
+ },
+ {
+  "id": "q17",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "Which option is cheapest but can be stopped by Azure at any time?",
+  "options": [
+   "Reserved instance",
+   "Spot VM",
+   "Dedicated host",
+   "Availability set"
+  ],
+  "answer": 1,
+  "explanation": "Spot VMs use spare capacity and can be evicted."
+ },
+ {
+  "id": "q18",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "You already own Windows Server licences. What lets you use them in Azure to pay less?",
+  "options": [
+   "Azure Hybrid Benefit",
+   "Azure Arc",
+   "Azure Advisor",
+   "Spot pricing"
+  ],
+  "answer": 0,
+  "explanation": "Azure Hybrid Benefit lets you reuse existing Windows Server and SQL Server licences."
+ },
+ {
+  "id": "q19",
+  "domain": 1,
+  "module": "p1m2",
+  "q": "Which is an example of manageability OF the cloud (rather than IN the cloud)?",
+  "options": [
+   "Using the Azure CLI",
+   "Automatically scaling resources with demand",
+   "Using the Azure portal",
+   "Calling the REST API"
+  ],
+  "answer": 1,
+  "explanation": "Management of the cloud means what happens to your resources: autoscaling, monitoring, templates. The portal, CLI and APIs are how you manage, so they are management in the cloud."
+ },
+ {
+  "id": "q20",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "Which TWO are true of a private cloud? (Choose two)",
+  "options": [
+   "The organisation has complete control of resources",
+   "No up-front costs",
+   "The organisation buys and maintains the hardware",
+   "Anyone can buy services from it"
+  ],
+  "answer": [
+   0,
+   2
+  ],
+  "explanation": "A private cloud gives full control, but you buy and run the hardware (CapEx)."
+ },
+ {
+  "id": "q21",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "Using both Azure and AWS for different workloads is…",
+  "options": [
+   "Hybrid cloud",
+   "Private cloud",
+   "Multi-cloud",
+   "Sovereign cloud"
+  ],
+  "answer": 2,
+  "explanation": "More than one public provider means multi-cloud."
+ },
+ {
+  "id": "q22",
+  "domain": 1,
+  "module": "p1m3",
+  "q": "With PaaS, who applies the operating system patches?",
+  "options": [
+   "The customer",
+   "Microsoft",
+   "The app's users",
+   "Nobody"
+  ],
+  "answer": 1,
+  "explanation": "In PaaS, Microsoft manages the OS, which is a security and governance benefit."
+ },
+ {
+  "id": "q23",
+  "domain": 1,
+  "module": "p1m3",
+  "q": "Which scenario best fits SaaS?",
+  "options": [
+   "Running custom software that needs a specific OS version",
+   "Providing company-wide email with no infrastructure to manage",
+   "Hosting your own .NET web app",
+   "Moving a database server unchanged"
+  ],
+  "answer": 1,
+  "explanation": "Finished software such as email, used as-is, is SaaS."
+ },
+ {
+  "id": "q24",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "Physically separate locations within one Azure region, each with independent power, cooling and networking, are…",
+  "options": [
+   "Region pairs",
+   "Availability zones",
+   "Availability sets",
+   "Resource groups"
+  ],
+  "answer": 1,
+  "explanation": "Availability zones are separate datacenters within one region."
+ },
+ {
+  "id": "q25",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "A region that supports availability zones has at least how many zones?",
+  "options": [
+   "2",
+   "3",
+   "5",
+   "10"
+  ],
+  "answer": 1,
+  "explanation": "There are at least three zones in an enabled region."
+ },
+ {
+  "id": "q26",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "What is a benefit of region pairs?",
+  "options": [
+   "Free outbound data",
+   "Planned updates are rolled out to one region of the pair at a time",
+   "Unlimited storage",
+   "VMs never reboot"
+  ],
+  "answer": 1,
+  "explanation": "Pairs reduce risk: updates go one region at a time, and one region of each pair is recovered first in a large outage."
+ },
+ {
+  "id": "q27",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "Which is a sovereign region?",
+  "options": [
+   "West Europe",
+   "Azure Government (US)",
+   "East US 2",
+   "UK South"
+  ],
+  "answer": 1,
+  "explanation": "Azure Government and Azure China (run by 21Vianet) are sovereign regions."
+ },
+ {
+  "id": "q28",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "What is the correct hierarchy from top to bottom?",
+  "options": [
+   "Subscription → Management group → Resource group → Resource",
+   "Management group → Subscription → Resource group → Resource",
+   "Resource group → Subscription → Management group → Resource",
+   "Management group → Resource group → Subscription → Resource"
+  ],
+  "answer": 1,
+  "explanation": "Management groups contain subscriptions, which contain resource groups, which contain resources."
+ },
+ {
+  "id": "q29",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "Can a resource group contain another resource group?",
+  "options": [
+   "Yes, up to 6 levels",
+   "Yes, unlimited",
+   "No",
+   "Only in the same region"
+  ],
+  "answer": 2,
+  "explanation": "Resource groups cannot be nested. Management groups can (up to 6 levels)."
+ },
+ {
+  "id": "q30",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "A VM can belong to how many resource groups at the same time?",
+  "options": [
+   "One",
+   "Two",
+   "Up to 10",
+   "Unlimited"
+  ],
+  "answer": 0,
+  "explanation": "Each resource is in exactly one resource group, though it can be moved to another."
+ },
+ {
+  "id": "q31",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "What happens when you delete a resource group?",
+  "options": [
+   "Only the empty group is deleted",
+   "All resources inside it are deleted too",
+   "Resources move to the default group",
+   "It is impossible while it has resources"
+  ],
+  "answer": 1,
+  "explanation": "Deleting a resource group deletes everything in it. This is why delete locks are useful."
+ },
+ {
+  "id": "q32",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "Two departments need separate Azure bills. What should you create?",
+  "options": [
+   "Two resource groups",
+   "Two subscriptions",
+   "Two regions",
+   "Two VNets"
+  ],
+  "answer": 1,
+  "explanation": "A subscription is a billing boundary. (Tags can also split costs, but separate invoices come from subscriptions.)"
+ },
+ {
+  "id": "q33",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "You must apply the same policy to 12 subscriptions with the least effort. Where do you assign it?",
+  "options": [
+   "On each resource group",
+   "On a management group containing the subscriptions",
+   "On each resource",
+   "In Azure Advisor"
+  ],
+  "answer": 1,
+  "explanation": "Settings on a management group are inherited by every subscription below it."
+ },
+ {
+  "id": "q34",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Which service gives a group of identical, load-balanced VMs that scale automatically?",
+  "options": [
+   "Availability set",
+   "VM Scale Sets",
+   "Azure Virtual Desktop",
+   "Container Instances"
+  ],
+  "answer": 1,
+  "explanation": "VM Scale Sets are for identical VMs with autoscaling."
+ },
+ {
+  "id": "q35",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Availability sets protect VMs from…",
+  "options": [
+   "A full region outage",
+   "Rack (hardware) failures and planned maintenance reboots",
+   "Data deletion",
+   "DDoS attacks"
+  ],
+  "answer": 1,
+  "explanation": "Fault domains cover hardware racks and update domains cover maintenance reboots."
+ },
+ {
+  "id": "q36",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "In an availability set, what is an update domain?",
+  "options": [
+   "A rack with shared power",
+   "A group of VMs rebooted together during maintenance",
+   "A copy of data in another region",
+   "A DNS zone"
+  ],
+  "answer": 1,
+  "explanation": "Update domains are rebooted one at a time. Fault domains are about shared power and network."
+ },
+ {
+  "id": "q37",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "You need to run one container quickly without managing VMs or an orchestrator. Which service?",
+  "options": [
+   "AKS",
+   "Azure Container Instances",
+   "VM Scale Sets",
+   "Azure Virtual Desktop"
+  ],
+  "answer": 1,
+  "explanation": "ACI is the fastest and simplest way to run a container."
+ },
+ {
+  "id": "q38",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Which service orchestrates and manages many containers at scale?",
+  "options": [
+   "Azure Kubernetes Service",
+   "Azure Functions",
+   "Azure Files",
+   "Container Instances"
+  ],
+  "answer": 0,
+  "explanation": "AKS is Azure's managed Kubernetes service for orchestration."
+ },
+ {
+  "id": "q39",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Code must run each time a file is uploaded, and you want to pay only when it runs. Which service?",
+  "options": [
+   "Virtual Machine",
+   "App Service plan",
+   "Azure Functions",
+   "AKS"
+  ],
+  "answer": 2,
+  "explanation": "Event-driven code billed per execution is Azure Functions."
+ },
+ {
+  "id": "q40",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Which service hosts web apps and APIs as PaaS, with autoscale and deployment slots?",
+  "options": [
+   "Azure App Service",
+   "Azure VMs",
+   "Azure Data Box",
+   "Azure Arc"
+  ],
+  "answer": 0,
+  "explanation": "App Service is PaaS web hosting."
+ },
+ {
+  "id": "q41",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Remote staff need secure Windows desktops hosted in Azure that they can use from any device. Which service?",
+  "options": [
+   "Azure Virtual Desktop",
+   "Azure Bastion",
+   "App Service",
+   "VPN Gateway"
+  ],
+  "answer": 0,
+  "explanation": "Azure Virtual Desktop delivers hosted Windows desktops and apps."
+ },
+ {
+  "id": "q42",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Which is NOT a resource a VM needs?",
+  "options": [
+   "Network interface",
+   "Managed disk",
+   "Virtual network",
+   "Queue storage"
+  ],
+  "answer": 3,
+  "explanation": "A VM needs a size, disks, a network interface, a VNet and an image. Queue storage is for app messages."
+ },
+ {
+  "id": "q43",
+  "domain": 2,
+  "module": "p2m3",
+  "q": "Two VNets in different regions must communicate privately over Microsoft's network. What do you use?",
+  "options": [
+   "ExpressRoute",
+   "VNet peering",
+   "Azure DNS",
+   "Public endpoints"
+  ],
+  "answer": 1,
+  "explanation": "VNet peering (global peering across regions) uses Microsoft's backbone."
+ },
+ {
+  "id": "q44",
+  "domain": 2,
+  "module": "p2m3",
+  "q": "You need a private connection from your office to Azure that does NOT travel over the public internet. Which service?",
+  "options": [
+   "VPN Gateway site-to-site",
+   "ExpressRoute",
+   "Point-to-site VPN",
+   "Azure DNS"
+  ],
+  "answer": 1,
+  "explanation": "ExpressRoute is private through a provider. A VPN is encrypted, but it goes over the internet."
+ },
+ {
+  "id": "q45",
+  "domain": 2,
+  "module": "p2m3",
+  "q": "One developer's laptop needs an encrypted connection to an Azure VNet. Which option?",
+  "options": [
+   "Site-to-site VPN",
+   "Point-to-site VPN",
+   "ExpressRoute",
+   "VNet peering"
+  ],
+  "answer": 1,
+  "explanation": "Point-to-site connects a single device."
+ },
+ {
+  "id": "q46",
+  "domain": 2,
+  "module": "p2m3",
+  "q": "Can you purchase a new domain name directly through Azure DNS?",
+  "options": [
+   "Yes",
+   "No"
+  ],
+  "answer": 1,
+  "explanation": "No. Azure DNS hosts domains; you buy the name from a registrar (or App Service domains)."
+ },
+ {
+  "id": "q47",
+  "domain": 2,
+  "module": "p2m3",
+  "q": "What does a private endpoint do?",
+  "options": [
+   "Gives a service a public IP",
+   "Gives a service a private IP from your VNet so it can be reached without the internet",
+   "Encrypts the disks",
+   "Blocks all traffic"
+  ],
+  "answer": 1,
+  "explanation": "A private endpoint is a NIC with a private IP linked to a service through Private Link."
+ },
+ {
+  "id": "q48",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Which storage service suits images and videos served by a website?",
+  "options": [
+   "Queue",
+   "Table",
+   "Blob",
+   "Disk"
+  ],
+  "answer": 2,
+  "explanation": "Blob storage holds unstructured objects accessed over HTTP."
+ },
+ {
+  "id": "q49",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Users need a shared folder they can map as a network drive using SMB. Which service?",
+  "options": [
+   "Azure Files",
+   "Blob storage",
+   "Queue storage",
+   "Table storage"
+  ],
+  "answer": 0,
+  "explanation": "Azure Files provides SMB/NFS file shares."
+ },
+ {
+  "id": "q50",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Two parts of an app should exchange messages asynchronously. Which storage service?",
+  "options": [
+   "Queue storage",
+   "Azure Files",
+   "Disk storage",
+   "Archive tier"
+  ],
+  "answer": 0,
+  "explanation": "Queue storage holds messages of up to 64 KB."
+ },
+ {
+  "id": "q51",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Backups must be kept for 7 years and are almost never read. Waiting hours to retrieve them is acceptable. Cheapest tier?",
+  "options": [
+   "Hot",
+   "Cool",
+   "Cold",
+   "Archive"
+  ],
+  "answer": 3,
+  "explanation": "Archive is cheapest to store but offline. Reading means rehydrating, which takes hours."
+ },
+ {
+  "id": "q52",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "At what level can the Archive tier be set?",
+  "options": [
+   "Storage account default",
+   "Individual blob only",
+   "Subscription",
+   "Resource group"
+  ],
+  "answer": 1,
+  "explanation": "Archive is set per blob, never as the account default."
+ },
+ {
+  "id": "q53",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Which redundancy keeps 3 copies in a single datacenter?",
+  "options": [
+   "LRS",
+   "ZRS",
+   "GRS",
+   "GZRS"
+  ],
+  "answer": 0,
+  "explanation": "LRS is locally redundant: 3 copies in one datacenter, the cheapest option."
+ },
+ {
+  "id": "q54",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Data must survive the loss of one datacenter but stay within one region. Which redundancy?",
+  "options": [
+   "LRS",
+   "ZRS",
+   "GRS",
+   "RA-GRS"
+  ],
+  "answer": 1,
+  "explanation": "ZRS copies data across 3 availability zones in the same region."
+ },
+ {
+  "id": "q55",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "You need to READ data from the secondary region at any time, without a failover. Which option?",
+  "options": [
+   "GRS",
+   "GZRS",
+   "RA-GRS",
+   "ZRS"
+  ],
+  "answer": 2,
+  "explanation": "Only the RA- options (RA-GRS, RA-GZRS) let you read the secondary at any time."
+ },
+ {
+  "id": "q56",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Which TWO tools copy files to Azure Storage? (Choose two)",
+  "options": [
+   "AzCopy",
+   "Azure Storage Explorer",
+   "Azure Advisor",
+   "Azure Policy"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "AzCopy (command line) and Storage Explorer (GUI) both move data."
+ },
+ {
+  "id": "q57",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "You want to keep your on-premises Windows file server but sync it with Azure Files and cache hot files locally. Which tool?",
+  "options": [
+   "Azure File Sync",
+   "AzCopy",
+   "Azure Migrate",
+   "Data Box"
+  ],
+  "answer": 0,
+  "explanation": "Azure File Sync syncs both ways and uses cloud tiering."
+ },
+ {
+  "id": "q58",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "You must move 60 TB to Azure and your internet connection is slow. Which option?",
+  "options": [
+   "AzCopy",
+   "Azure Data Box",
+   "VPN Gateway",
+   "Azure File Sync"
+  ],
+  "answer": 1,
+  "explanation": "Data Box is a physical device you ship."
+ },
+ {
+  "id": "q59",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Which service discovers and assesses on-premises servers before moving them to Azure?",
+  "options": [
+   "Azure Migrate",
+   "Azure Arc",
+   "Azure Advisor",
+   "Purview"
+  ],
+  "answer": 0,
+  "explanation": "Azure Migrate is the hub to discover, assess and migrate."
+ },
+ {
+  "id": "q60",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "What is the cloud identity service that used to be called Azure Active Directory?",
+  "options": [
+   "Microsoft Entra ID",
+   "Microsoft Purview",
+   "Defender for Cloud",
+   "Azure Arc"
+  ],
+  "answer": 0,
+  "explanation": "Azure AD was renamed Microsoft Entra ID."
+ },
+ {
+  "id": "q61",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "An old app needs LDAP, Kerberos and domain join, but you don't want to run domain controllers. Which service?",
+  "options": [
+   "Microsoft Entra ID",
+   "Microsoft Entra Domain Services",
+   "Conditional Access",
+   "Azure RBAC"
+  ],
+  "answer": 1,
+  "explanation": "Entra Domain Services provides managed domain features."
+ },
+ {
+  "id": "q62",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Users sign in once and can open many apps without signing in again. This is…",
+  "options": [
+   "MFA",
+   "SSO",
+   "RBAC",
+   "Zero Trust"
+  ],
+  "answer": 1,
+  "explanation": "Single sign-on."
+ },
+ {
+  "id": "q63",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Which is a passwordless sign-in method?",
+  "options": [
+   "Password plus SMS code",
+   "FIDO2 security key",
+   "Security questions",
+   "Password with 20 characters"
+  ],
+  "answer": 1,
+  "explanation": "FIDO2 keys, Windows Hello for Business and the Authenticator app are passwordless."
+ },
+ {
+  "id": "q64",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "MFA combines factors from which categories?",
+  "options": [
+   "Something you know, have, are",
+   "Username, password, email",
+   "Location, device, time",
+   "Owner, Contributor, Reader"
+  ],
+  "answer": 0,
+  "explanation": "Know (password), have (phone), are (biometric)."
+ },
+ {
+  "id": "q65",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Partner company staff should access your app using their own work accounts. Which feature?",
+  "options": [
+   "External identities (B2B collaboration)",
+   "Resource locks",
+   "Azure Policy",
+   "Entra Domain Services"
+  ],
+  "answer": 0,
+  "explanation": "External identities let outside users sign in with their own identity."
+ },
+ {
+  "id": "q66",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Require MFA only when users sign in from outside the company's country. Which feature?",
+  "options": [
+   "Azure RBAC",
+   "Conditional Access",
+   "Azure Policy",
+   "Resource locks"
+  ],
+  "answer": 1,
+  "explanation": "Conditional Access acts on signals (location, device, risk) to allow, require MFA or block."
+ },
+ {
+  "id": "q67",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Let a user manage VMs in ONE resource group only. What do you use?",
+  "options": [
+   "Azure Policy",
+   "Azure RBAC role assigned at that resource group",
+   "A resource lock",
+   "Tags"
+  ],
+  "answer": 1,
+  "explanation": "RBAC assigns a role at a scope, here the resource group."
+ },
+ {
+  "id": "q68",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Which is NOT a Zero Trust principle?",
+  "options": [
+   "Verify explicitly",
+   "Use least privilege access",
+   "Assume breach",
+   "Trust everything inside the corporate network"
+  ],
+  "answer": 3,
+  "explanation": "Zero Trust never trusts by network location."
+ },
+ {
+  "id": "q69",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "In defense in depth, network security groups (NSGs) belong to which layer?",
+  "options": [
+   "Physical",
+   "Perimeter",
+   "Network",
+   "Data"
+  ],
+  "answer": 2,
+  "explanation": "The network layer limits traffic between resources. DDoS protection is the perimeter layer."
+ },
+ {
+  "id": "q70",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Which tool gives a secure score and security recommendations across Azure, on-premises and other clouds?",
+  "options": [
+   "Azure Advisor",
+   "Microsoft Defender for Cloud",
+   "Service Health",
+   "Purview"
+  ],
+  "answer": 1,
+  "explanation": "Defender for Cloud handles security posture and threat protection. (Advisor has a security category too, but \"secure score\" points to Defender.)"
+ },
+ {
+  "id": "q71",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "Which TWO services are global, so you don't choose a region for them? (Choose two)",
+  "options": [
+   "Microsoft Entra ID",
+   "Azure DNS",
+   "Virtual machines",
+   "Storage accounts"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "Entra ID and Azure DNS are global. VMs and storage accounts are regional."
+ },
+ {
+  "id": "q72",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Which of these does NOT increase your Azure bill?",
+  "options": [
+   "Outbound data transfer",
+   "Choosing a more expensive region",
+   "Creating more resource groups",
+   "Larger VM sizes"
+  ],
+  "answer": 2,
+  "explanation": "Resource groups are free. Egress, region and size all affect cost."
+ },
+ {
+  "id": "q73",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "In general, data transferred INTO Azure datacenters is…",
+  "options": [
+   "Free",
+   "Charged per GB",
+   "Charged only across regions",
+   "Charged only for storage"
+  ],
+  "answer": 0,
+  "explanation": "Ingress is generally free; egress is charged."
+ },
+ {
+  "id": "q74",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Which tool estimates the monthly cost of resources BEFORE you deploy them?",
+  "options": [
+   "Pricing calculator",
+   "Cost Management",
+   "Azure Advisor",
+   "Azure Monitor"
+  ],
+  "answer": 0,
+  "explanation": "The pricing calculator is for planning and creates nothing."
+ },
+ {
+  "id": "q75",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Which Azure cost tool has Microsoft retired?",
+  "options": [
+   "TCO calculator",
+   "Pricing calculator",
+   "Microsoft Cost Management",
+   "Azure Advisor"
+  ],
+  "answer": 0,
+  "explanation": "The Total Cost of Ownership (TCO) calculator has been retired. Use the pricing calculator to estimate costs."
+ },
+ {
+  "id": "q76",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Send an email when spending reaches 80% of a monthly budget. Which tool?",
+  "options": [
+   "Microsoft Cost Management",
+   "Pricing calculator",
+   "Azure Policy",
+   "Resource locks"
+  ],
+  "answer": 0,
+  "explanation": "Cost Management has budgets and alerts on actual spend."
+ },
+ {
+  "id": "q77",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "You want to report costs by department across many resource groups. What do you add to resources?",
+  "options": [
+   "Tags",
+   "Locks",
+   "Policies",
+   "Endpoints"
+  ],
+  "answer": 0,
+  "explanation": "Tags (for example dept=finance) let you group costs."
+ },
+ {
+  "id": "q78",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Are tags on a resource group automatically inherited by its resources?",
+  "options": [
+   "Yes, always",
+   "No, not by default"
+  ],
+  "answer": 1,
+  "explanation": "Not by default. Azure Policy can enforce or inherit them."
+ },
+ {
+  "id": "q79",
+  "domain": 3,
+  "module": "p3m2",
+  "q": "Ensure resources can only be created in West Europe. What do you use?",
+  "options": [
+   "Azure RBAC",
+   "Azure Policy",
+   "Resource lock",
+   "Tags"
+  ],
+  "answer": 1,
+  "explanation": "Policy enforces rules on resource properties, such as allowed locations."
+ },
+ {
+  "id": "q80",
+  "domain": 3,
+  "module": "p3m2",
+  "q": "Stop anyone from accidentally deleting a production database, while still allowing configuration changes. What do you use?",
+  "options": [
+   "ReadOnly lock",
+   "Delete (CanNotDelete) lock",
+   "Reader role",
+   "Azure Policy"
+  ],
+  "answer": 1,
+  "explanation": "A Delete lock allows read and modify, but not delete."
+ },
+ {
+  "id": "q81",
+  "domain": 3,
+  "module": "p3m2",
+  "q": "A user with the Owner role tries to delete a resource that has a Delete lock. What happens?",
+  "options": [
+   "It is deleted because Owners bypass locks",
+   "It fails until the lock is removed",
+   "It moves to the recycle bin",
+   "Azure asks Microsoft for approval"
+  ],
+  "answer": 1,
+  "explanation": "Locks apply to everyone. The lock must be removed first."
+ },
+ {
+  "id": "q82",
+  "domain": 3,
+  "module": "p3m2",
+  "q": "A ReadOnly lock allows authorised users to…",
+  "options": [
+   "Read, but not modify or delete",
+   "Modify, but not delete",
+   "Delete, but not modify",
+   "Do anything"
+  ],
+  "answer": 0,
+  "explanation": "ReadOnly means read only."
+ },
+ {
+  "id": "q83",
+  "domain": 3,
+  "module": "p3m2",
+  "q": "Which service discovers and classifies sensitive data across on-premises, multi-cloud and SaaS?",
+  "options": [
+   "Microsoft Purview",
+   "Azure Policy",
+   "Azure Monitor",
+   "Defender for Cloud"
+  ],
+  "answer": 0,
+  "explanation": "Purview handles data governance, risk and compliance."
+ },
+ {
+  "id": "q84",
+  "domain": 3,
+  "module": "p3m2",
+  "q": "A group of Azure Policy definitions assigned together is called…",
+  "options": [
+   "A blueprint",
+   "An initiative",
+   "A management group",
+   "A tag set"
+  ],
+  "answer": 1,
+  "explanation": "A policy initiative is a group of policies."
+ },
+ {
+  "id": "q85",
+  "domain": 3,
+  "module": "p3m3",
+  "q": "Which tool gives a browser-based, already signed-in shell with Bash or PowerShell?",
+  "options": [
+   "Azure Cloud Shell",
+   "Azure Arc",
+   "Storage Explorer",
+   "Azure Advisor"
+  ],
+  "answer": 0,
+  "explanation": "Cloud Shell runs in the browser with nothing to install."
+ },
+ {
+  "id": "q86",
+  "domain": 3,
+  "module": "p3m3",
+  "q": "Manage on-premises servers and Kubernetes clusters in another cloud with Azure Policy and RBAC. Which service?",
+  "options": [
+   "Azure Arc",
+   "Azure Migrate",
+   "ExpressRoute",
+   "Azure Virtual Desktop"
+  ],
+  "answer": 0,
+  "explanation": "Azure Arc extends Azure management beyond Azure."
+ },
+ {
+  "id": "q87",
+  "domain": 3,
+  "module": "p3m3",
+  "q": "Requests from the portal, Azure CLI and PowerShell are all processed by…",
+  "options": [
+   "Azure Resource Manager",
+   "Azure Monitor",
+   "Microsoft Entra ID",
+   "Azure DNS"
+  ],
+  "answer": 0,
+  "explanation": "Every management request goes through ARM."
+ },
+ {
+  "id": "q88",
+  "domain": 3,
+  "module": "p3m3",
+  "q": "ARM templates are…",
+  "options": [
+   "Imperative PowerShell scripts",
+   "Declarative JSON files",
+   "Python programs",
+   "Excel sheets"
+  ],
+  "answer": 1,
+  "explanation": "ARM templates are declarative JSON. Bicep is a simpler language that compiles to it."
+ },
+ {
+  "id": "q89",
+  "domain": 3,
+  "module": "p3m3",
+  "q": "Main benefit of infrastructure as code?",
+  "options": [
+   "Repeatable, consistent deployments",
+   "Free resources",
+   "No need for subscriptions",
+   "Faster internet"
+  ],
+  "answer": 0,
+  "explanation": "Code produces the same environment every time and can be version-controlled."
+ },
+ {
+  "id": "q90",
+  "domain": 3,
+  "module": "p3m4",
+  "q": "Which service gives personalised recommendations to cut cost and improve reliability, security and performance?",
+  "options": [
+   "Azure Advisor",
+   "Service Health",
+   "Log Analytics",
+   "Pricing calculator"
+  ],
+  "answer": 0,
+  "explanation": "Advisor covers 5 categories: reliability, security, performance, operational excellence, cost."
+ },
+ {
+  "id": "q91",
+  "domain": 3,
+  "module": "p3m4",
+  "q": "You want to be told when an Azure outage affects the services and regions you use. Which service?",
+  "options": [
+   "Azure Service Health",
+   "Azure Advisor",
+   "Azure Policy",
+   "Application Insights"
+  ],
+  "answer": 0,
+  "explanation": "Service Health gives a personalised view of Azure incidents and maintenance."
+ },
+ {
+  "id": "q92",
+  "domain": 3,
+  "module": "p3m4",
+  "q": "You want to check whether one of your VMs is currently available. Which feature?",
+  "options": [
+   "Resource Health",
+   "Azure status page",
+   "Pricing calculator",
+   "Purview"
+  ],
+  "answer": 0,
+  "explanation": "Resource Health shows the health of individual resources."
+ },
+ {
+  "id": "q93",
+  "domain": 3,
+  "module": "p3m4",
+  "q": "Write queries over collected log data. Which tool?",
+  "options": [
+   "Log Analytics",
+   "Azure Advisor",
+   "Cost Management",
+   "Azure Arc"
+  ],
+  "answer": 0,
+  "explanation": "Log Analytics is part of Azure Monitor and uses KQL queries."
+ },
+ {
+  "id": "q94",
+  "domain": 3,
+  "module": "p3m4",
+  "q": "Monitor a web app's response times, failure rates and dependencies. Which tool?",
+  "options": [
+   "Application Insights",
+   "Service Health",
+   "Azure Policy",
+   "Defender for Cloud"
+  ],
+  "answer": 0,
+  "explanation": "Application Insights is application performance monitoring, part of Azure Monitor."
+ },
+ {
+  "id": "q95",
+  "domain": 3,
+  "module": "p3m4",
+  "q": "Send an SMS when a VM's CPU stays above 90%. Which feature?",
+  "options": [
+   "Azure Monitor alert with an action group",
+   "Resource lock",
+   "Azure Advisor",
+   "Pricing calculator"
+  ],
+  "answer": 0,
+  "explanation": "Monitor alerts fire on conditions, and action groups send the SMS or email."
+ },
+ {
+  "id": "q96",
+  "domain": 3,
+  "module": "p3m2",
+  "q": "Azure Policy vs Azure RBAC: which statement is correct?",
+  "options": [
+   "Policy controls who can act; RBAC controls resource properties",
+   "RBAC controls what users can do; Policy controls what resources may look like",
+   "They are the same",
+   "Both only control cost"
+  ],
+  "answer": 1,
+  "explanation": "RBAC is about people's actions. Policy is about resource rules."
+ },
+ {
+  "id": "q97",
+  "domain": 3,
+  "module": "p3m3",
+  "q": "Which TWO can you use from a script to create Azure resources? (Choose two)",
+  "options": [
+   "Azure CLI",
+   "Azure PowerShell",
+   "Azure Service Health",
+   "Pricing calculator"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "The CLI (az ...) and PowerShell (New-Az...) are both scriptable."
+ },
+ {
+  "id": "q98",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Which statement about Azure Cost Management is TRUE?",
+  "options": [
+   "It estimates costs before you deploy",
+   "It shows actual spending and can alert on budgets",
+   "It enforces allowed regions",
+   "It deletes unused resources automatically"
+  ],
+  "answer": 1,
+  "explanation": "Estimating before deployment is the pricing calculator. Cost Management is about actual spend."
+ },
+ {
+  "id": "q99",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Which factor can change the price of the same VM size?",
+  "options": [
+   "The region it runs in",
+   "The resource group name",
+   "The number of tags",
+   "The portal theme"
+  ],
+  "answer": 0,
+  "explanation": "Prices differ by geography (region)."
+ },
+ {
+  "id": "q100",
+  "domain": 1,
+  "module": "p1m2",
+  "q": "Which is a sustainability-aligned cloud practice?",
+  "options": [
+   "Leave development VMs running all night",
+   "Shut down or deallocate resources you are not using",
+   "Overprovision resources for peak load all year",
+   "Turn off monitoring"
+  ],
+  "answer": 1,
+  "explanation": "Turning off idle resources and right-sizing cut waste and cost. Scale down when demand drops."
+ },
+ {
+  "id": "q101",
+  "domain": 1,
+  "module": "p1m2",
+  "q": "A development environment is shut down automatically overnight and at weekends. Which benefit does this mainly support?",
+  "options": [
+   "Sustainability and cost efficiency",
+   "Data residency",
+   "Vertical scaling",
+   "Passwordless sign-in"
+  ],
+  "answer": 0,
+  "explanation": "Not running idle resources reduces waste and cost."
+ },
+ {
+  "id": "q102",
+  "domain": 1,
+  "module": "p1m2",
+  "q": "Reliability is one of the pillars of which Microsoft framework?",
+  "options": [
+   "Azure Well-Architected Framework",
+   "Azure Landing Zone",
+   "Zero Trust model",
+   "Shared responsibility model"
+  ],
+  "answer": 0,
+  "explanation": "The Azure Well-Architected Framework has reliability as a pillar and also shapes predictability."
+ },
+ {
+  "id": "q103",
+  "domain": 1,
+  "module": "p1m2",
+  "q": "Which is an example of management IN the cloud?",
+  "options": [
+   "Automatically scaling resources",
+   "Deploying from a template",
+   "Using the Azure CLI",
+   "Automatic alerts on metrics"
+  ],
+  "answer": 2,
+  "explanation": "The portal, CLI, APIs and PowerShell are how you manage. Autoscale, templates, health monitoring and alerts are management OF the cloud."
+ },
+ {
+  "id": "q104",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "You already run VMware workloads in a private cloud and want to run them in Azure. Which service helps?",
+  "options": [
+   "Azure VMware Solution",
+   "Azure Virtual Desktop",
+   "Azure Functions",
+   "Azure DNS"
+  ],
+  "answer": 0,
+  "explanation": "Azure VMware Solution runs VMware workloads in Azure."
+ },
+ {
+  "id": "q105",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "Which THREE are always the cloud provider's responsibility? (Choose three)",
+  "options": [
+   "The physical datacenter",
+   "The physical network",
+   "Your accounts and identities",
+   "The physical hosts"
+  ],
+  "answer": [
+   0,
+   1,
+   3
+  ],
+  "explanation": "Physical datacenter, network and hosts always belong to the provider. Accounts and identities are always yours."
+ },
+ {
+  "id": "q106",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "Which model lets a private cloud \"surge\" by temporarily using public cloud resources?",
+  "options": [
+   "Hybrid cloud",
+   "Public cloud",
+   "Multicloud",
+   "Sovereign cloud"
+  ],
+  "answer": 0,
+  "explanation": "Hybrid cloud connects private and public so you can burst into public resources."
+ },
+ {
+  "id": "q107",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "You commit to an hourly spend on compute for 1 or 3 years, with flexibility across compute services. What is this?",
+  "options": [
+   "Azure savings plan for compute",
+   "Reservation",
+   "Spot VM",
+   "Pay-as-you-go"
+  ],
+  "answer": 0,
+  "explanation": "A savings plan commits to an hourly spend. A reservation commits to specific resources."
+ },
+ {
+  "id": "q108",
+  "domain": 1,
+  "module": "p1m1",
+  "q": "A production database runs 24/7 and its needs are stable. Which pricing option fits best?",
+  "options": [
+   "Reservation",
+   "Spot VM",
+   "Pay-as-you-go only",
+   "Azure free account"
+  ],
+  "answer": 0,
+  "explanation": "Reservations suit stable, predictable, long-running workloads."
+ },
+ {
+  "id": "q110",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Which category gives you prebuilt AI features (language, speech, vision) through APIs?",
+  "options": [
+   "Azure AI services",
+   "Azure Machine Learning",
+   "Azure IoT Hub",
+   "Azure Functions"
+  ],
+  "answer": 0,
+  "explanation": "Azure AI services are prebuilt capabilities used through APIs."
+ },
+ {
+  "id": "q111",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Your team needs to build, train and manage a custom machine learning model. Which service?",
+  "options": [
+   "Azure Machine Learning",
+   "Azure AI services",
+   "Azure IoT Central",
+   "Azure Queue storage"
+  ],
+  "answer": 0,
+  "explanation": "Azure Machine Learning is for custom model development and lifecycle management."
+ },
+ {
+  "id": "q112",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Which service provides secure two-way communication between the cloud and IoT devices?",
+  "options": [
+   "Azure IoT Hub",
+   "Azure IoT Central",
+   "Azure DNS",
+   "Azure Files"
+  ],
+  "answer": 0,
+  "explanation": "IoT Hub handles secure bi-directional device communication."
+ },
+ {
+  "id": "q113",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "You want some workloads to run on devices close to where data is generated. Which service?",
+  "options": [
+   "Azure IoT Edge",
+   "Azure IoT Hub",
+   "Azure Monitor",
+   "Azure Policy"
+  ],
+  "answer": 0,
+  "explanation": "IoT Edge extends cloud capabilities to edge devices."
+ },
+ {
+  "id": "q114",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Which service is a simplified SaaS platform for building IoT solutions?",
+  "options": [
+   "Azure IoT Central",
+   "Azure IoT Edge",
+   "Azure Kubernetes Service",
+   "Azure App Service"
+  ],
+  "answer": 0,
+  "explanation": "IoT Central is the SaaS IoT platform."
+ },
+ {
+  "id": "q115",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Which service supports generative AI scenarios such as chat and content generation?",
+  "options": [
+   "Azure OpenAI Service",
+   "Azure Machine Learning",
+   "Azure DNS",
+   "Azure Data Box"
+  ],
+  "answer": 0,
+  "explanation": "Azure OpenAI Service provides generative AI with built-in security and governance controls."
+ },
+ {
+  "id": "q116",
+  "domain": 2,
+  "module": "p2m3",
+  "q": "Which feature holds inbound and outbound rules that allow or block traffic by source and destination IP address, port and protocol?",
+  "options": [
+   "Network security group",
+   "Azure Policy",
+   "Resource lock",
+   "Azure Advisor"
+  ],
+  "answer": 0,
+  "explanation": "A network security group (NSG) filters network traffic."
+ },
+ {
+  "id": "q117",
+  "domain": 2,
+  "module": "p2m3",
+  "q": "Which feature lets resources in a virtual network connect securely to Azure SQL databases and storage accounts with optimal routing?",
+  "options": [
+   "Service endpoints",
+   "ExpressRoute",
+   "Azure DNS",
+   "Point-to-site VPN"
+  ],
+  "answer": 0,
+  "explanation": "Service endpoints link a VNet to these Azure resource types."
+ },
+ {
+  "id": "q118",
+  "domain": 2,
+  "module": "p2m3",
+  "q": "Which feature lets you control how traffic is directed between subnets?",
+  "options": [
+   "Route tables and user-defined routes",
+   "Azure Advisor",
+   "Tags",
+   "Availability sets"
+  ],
+  "answer": 0,
+  "explanation": "Custom route tables and UDRs override the default routing."
+ },
+ {
+  "id": "q119",
+  "domain": 2,
+  "module": "p2m3",
+  "q": "How many VPN gateways can you deploy in each virtual network?",
+  "options": [
+   "One",
+   "Two",
+   "Five",
+   "Unlimited"
+  ],
+  "answer": 0,
+  "explanation": "Only one VPN gateway per virtual network, though it can connect to multiple locations."
+ },
+ {
+  "id": "q120",
+  "domain": 2,
+  "module": "p2m3",
+  "q": "Which VPN gateway type do you need for VNet-to-VNet and point-to-site connections?",
+  "options": [
+   "Route-based",
+   "Policy-based",
+   "Either one",
+   "Neither, use ExpressRoute"
+  ],
+  "answer": 0,
+  "explanation": "Route-based gateways are needed for VNet-to-VNet, point-to-site, multisite and ExpressRoute coexistence."
+ },
+ {
+  "id": "q121",
+  "domain": 2,
+  "module": "p2m3",
+  "q": "What is a benefit of an Azure DNS alias record set?",
+  "options": [
+   "It updates automatically if the target resource's IP address changes",
+   "It lets you buy a domain name",
+   "It encrypts all DNS traffic",
+   "It blocks DDoS attacks"
+  ],
+  "answer": 0,
+  "explanation": "Alias record sets follow the Azure resource they point to."
+ },
+ {
+  "id": "q122",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Which storage account type supports both SMB and NFS file shares?",
+  "options": [
+   "Premium file shares",
+   "Standard general-purpose v2",
+   "Premium block blobs",
+   "Premium page blobs"
+  ],
+  "answer": 0,
+  "explanation": "Premium file shares support both SMB and NFS."
+ },
+ {
+  "id": "q123",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Which is a valid storage account name?",
+  "options": [
+   "mystorage123",
+   "My_Storage",
+   "ab",
+   "MyStorageAccountWithAVeryLongNameThatIsTooLong"
+  ],
+  "answer": 0,
+  "explanation": "Names are 3 to 24 characters, lowercase letters and numbers only, and unique across Azure."
+ },
+ {
+  "id": "q124",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Which endpoint belongs to Azure Files?",
+  "options": [
+   "name.blob.core.windows.net",
+   "name.file.core.windows.net",
+   "name.queue.core.windows.net",
+   "name.table.core.windows.net"
+  ],
+  "answer": 1,
+  "explanation": ".file. is Azure Files. .blob. is Blob, .queue. is Queue, .table. is Table."
+ },
+ {
+  "id": "q125",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "How many copies of your data does Azure Storage always keep in the primary region?",
+  "options": [
+   "One",
+   "Two",
+   "Three",
+   "Six"
+  ],
+  "answer": 2,
+  "explanation": "Data is always replicated three times in the primary region."
+ },
+ {
+  "id": "q126",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "In geo-redundant storage (GRS), how is the data stored in the secondary region?",
+  "options": [
+   "LRS (three copies in one datacenter)",
+   "ZRS across three zones",
+   "A single copy",
+   "Not stored"
+  ],
+  "answer": 0,
+  "explanation": "GRS copies asynchronously to the secondary region, which uses LRS."
+ },
+ {
+  "id": "q127",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Which access tiers can be set as the default at the storage account level?",
+  "options": [
+   "Hot, Cool and Cold",
+   "Hot, Cool, Cold and Archive",
+   "Archive only",
+   "None of them"
+  ],
+  "answer": 0,
+  "explanation": "Archive isn't available at the account level. All four can be set per blob."
+ },
+ {
+  "id": "q128",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "What is the maximum usable capacity of an Azure Data Box device?",
+  "options": [
+   "8 TB",
+   "80 TB",
+   "800 TB",
+   "8 PB"
+  ],
+  "answer": 1,
+  "explanation": "A Data Box has up to 80 terabytes of usable storage."
+ },
+ {
+  "id": "q129",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "AzCopy synchronisation works in which direction?",
+  "options": [
+   "One direction only",
+   "Both directions",
+   "Neither",
+   "Only from Azure to on-premises"
+  ],
+  "answer": 0,
+  "explanation": "AzCopy sync is one-way. Azure File Sync is bi-directional."
+ },
+ {
+  "id": "q130",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Which THREE are passwordless options in Microsoft Entra ID? (Choose three)",
+  "options": [
+   "Windows Hello for Business",
+   "Microsoft Authenticator app",
+   "FIDO2 security key",
+   "Password plus SMS code"
+  ],
+  "answer": [
+   0,
+   1,
+   2
+  ],
+  "explanation": "Windows Hello for Business, the Authenticator app and FIDO2 keys are passwordless. A password plus SMS is MFA."
+ },
+ {
+  "id": "q131",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Which capability supports Teams shared channels and does NOT create guest users in your directory?",
+  "options": [
+   "B2B direct connect",
+   "B2B collaboration",
+   "Microsoft Entra Connect",
+   "Microsoft Entra Domain Services"
+  ],
+  "answer": 0,
+  "explanation": "B2B direct connect uses mutual trust between tenants. B2B collaboration creates guest users."
+ },
+ {
+  "id": "q132",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Microsoft Entra External ID for customers was formerly known as…",
+  "options": [
+   "Azure AD B2C",
+   "Azure Active Directory Domain Services",
+   "Azure AD Connect",
+   "Azure Policy"
+  ],
+  "answer": 0,
+  "explanation": "External ID for customers is the new name for Azure AD B2C."
+ },
+ {
+  "id": "q133",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "One role assignment gives a user read access and another gives write access to the same resource group. What can the user do?",
+  "options": [
+   "Read and write",
+   "Read only",
+   "Write only",
+   "Nothing"
+  ],
+  "answer": 0,
+  "explanation": "Azure RBAC uses an allow model, so permissions add up."
+ },
+ {
+  "id": "q134",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Azure RBAC enforces permissions at the application and data level inside your app.",
+  "options": [
+   "Yes",
+   "No"
+  ],
+  "answer": 1,
+  "explanation": "No. RBAC covers actions that go through Azure Resource Manager. Application security is up to your app."
+ },
+ {
+  "id": "q135",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Which service lets you run domain-joined, group policy and LDAP workloads without managing domain controllers?",
+  "options": [
+   "Microsoft Entra Domain Services",
+   "Microsoft Entra Connect",
+   "Conditional Access",
+   "Azure Key Vault"
+  ],
+  "answer": 0,
+  "explanation": "Entra Domain Services provides managed domain services. Microsoft runs the domain controllers."
+ },
+ {
+  "id": "q136",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "DDoS protection belongs to which defense-in-depth layer?",
+  "options": [
+   "Perimeter",
+   "Network",
+   "Compute",
+   "Data"
+  ],
+  "answer": 0,
+  "explanation": "DDoS protection and perimeter firewalls are the perimeter layer."
+ },
+ {
+  "id": "q137",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Which service stores passwords, connection strings, encryption keys and certificates securely?",
+  "options": [
+   "Azure Key Vault",
+   "Azure Policy",
+   "Microsoft Purview",
+   "Azure Monitor"
+  ],
+  "answer": 0,
+  "explanation": "Azure Key Vault is the main service for secrets, keys and certificates."
+ },
+ {
+  "id": "q138",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Data moving between a web app and a user's browser is protected by…",
+  "options": [
+   "Encryption in transit",
+   "Encryption at rest",
+   "Data lineage",
+   "Resource tags"
+  ],
+  "answer": 0,
+  "explanation": "In transit = moving data. At rest = stored data."
+ },
+ {
+  "id": "q139",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "How can Microsoft Defender for Cloud protect on-premises servers?",
+  "options": [
+   "By deploying Azure Arc",
+   "By using ExpressRoute only",
+   "By moving them to a new region",
+   "It can't"
+  ],
+  "answer": 0,
+  "explanation": "Azure Arc extends Defender for Cloud plans to non-Azure machines."
+ },
+ {
+  "id": "q140",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "What sits at the very top of an Entra tenant's management group hierarchy?",
+  "options": [
+   "Tenant Root Group",
+   "A resource group",
+   "A subscription",
+   "A region pair"
+  ],
+  "answer": 0,
+  "explanation": "Every Entra tenant has a single top-level Tenant Root Group."
+ },
+ {
+  "id": "q141",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "Can a resource group be renamed after it is created?",
+  "options": [
+   "Yes",
+   "No"
+  ],
+  "answer": 1,
+  "explanation": "No. Resource groups can't be renamed or nested."
+ },
+ {
+  "id": "q142",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "How many parents can a subscription have in the management group hierarchy?",
+  "options": [
+   "One",
+   "Two",
+   "As many as you like",
+   "None"
+  ],
+  "answer": 0,
+  "explanation": "Each management group and subscription has only one parent."
+ },
+ {
+  "id": "q143",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "All Azure services automatically fail over to the paired region.",
+  "options": [
+   "Yes",
+   "No"
+  ],
+  "answer": 1,
+  "explanation": "No. Not all services replicate or fall back automatically. Some need you to configure recovery."
+ },
+ {
+  "id": "q144",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "You choose which availability zone a VM runs in. What kind of service is that?",
+  "options": [
+   "Zonal",
+   "Zone-redundant",
+   "Non-regional",
+   "Sovereign"
+  ],
+  "answer": 0,
+  "explanation": "Zonal services (VMs, managed disks, IP addresses) are pinned to a zone."
+ },
+ {
+  "id": "q145",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Which VM family is GPU-enabled?",
+  "options": [
+   "B-series",
+   "D-series",
+   "E-series",
+   "N-series"
+  ],
+  "answer": 3,
+  "explanation": "N-series is GPU-enabled. D is general purpose, E is memory optimised, B is burstable."
+ },
+ {
+  "id": "q146",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Azure Functions are stateless by default. What are the stateful ones called?",
+  "options": [
+   "Durable Functions",
+   "Premium Functions",
+   "Logic Apps",
+   "Container Apps"
+  ],
+  "answer": 0,
+  "explanation": "Durable Functions keep state across executions."
+ },
+ {
+  "id": "q147",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Which App Service feature runs a program or script in the context of a web app, on a schedule or trigger?",
+  "options": [
+   "WebJobs",
+   "API apps",
+   "Mobile apps",
+   "Deployment slots"
+  ],
+  "answer": 0,
+  "explanation": "WebJobs run background tasks alongside your app."
+ },
+ {
+  "id": "q148",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Which container service is PaaS and has built-in load balancing and scaling?",
+  "options": [
+   "Azure Container Apps",
+   "Azure Container Instances",
+   "A VM running Docker",
+   "Azure Files"
+  ],
+  "answer": 0,
+  "explanation": "Container Apps add built-in load balancing and scaling. ACI is the simplest way to run one container."
+ },
+ {
+  "id": "q149",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "Which is true of the Azure free student account?",
+  "options": [
+   "It needs no credit card",
+   "It needs a credit card",
+   "It lasts forever",
+   "It excludes developer tools"
+  ],
+  "answer": 0,
+  "explanation": "The student account gives $100 credit and free developer tools without a credit card."
+ },
+ {
+  "id": "q150",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "What does the Azure free account include?",
+  "options": [
+   "Popular products free for 12 months, a credit for the first 30 days, and some always-free services",
+   "Unlimited free services forever",
+   "Only a 7-day trial",
+   "Only free support"
+  ],
+  "answer": 0,
+  "explanation": "12 months of popular products, a 30-day credit and some always-free services."
+ },
+ {
+  "id": "q151",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "You delete a VM. Which of these may still be billed if you forget about it?",
+  "options": [
+   "Its attached disks and network resources",
+   "The name of the resource group",
+   "The region it was in",
+   "Its tags"
+  ],
+  "answer": 0,
+  "explanation": "Deprovisioning a VM does not always remove the extra resources created with it. Check for leftovers to control cost (the maintenance factor)."
+ },
+ {
+  "id": "q152",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "What is a billing zone?",
+  "options": [
+   "A geographic grouping of regions used for data-transfer pricing",
+   "A separate datacenter in a region",
+   "A kind of subscription",
+   "A type of resource lock"
+  ],
+  "answer": 0,
+  "explanation": "Billing zones price outbound data transfer. They are not availability zones."
+ },
+ {
+  "id": "q153",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Which is NOT a type of cost alert in Cost Management?",
+  "options": [
+   "Budget alert",
+   "Credit alert",
+   "Department spending quota alert",
+   "Resource Health alert"
+  ],
+  "answer": 3,
+  "explanation": "The three cost alert types are budget, credit and department spending quota."
+ },
+ {
+  "id": "q154",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "You want to shut down non-production resources automatically when spending reaches a limit. Which feature can trigger that?",
+  "options": [
+   "A budget in Cost Management",
+   "The pricing calculator",
+   "Azure Advisor",
+   "A resource tag"
+  ],
+  "answer": 0,
+  "explanation": "Budgets can trigger automation when a threshold is reached."
+ },
+ {
+  "id": "q155",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Which is NOT a typical use of tags?",
+  "options": [
+   "Reporting costs by team",
+   "Identifying resources for compliance",
+   "Encrypting data",
+   "Targeting resources for automation"
+  ],
+  "answer": 2,
+  "explanation": "Tags are labels. They don't encrypt anything."
+ },
+ {
+  "id": "q156",
+  "domain": 3,
+  "module": "p3m2",
+  "q": "Microsoft Purview's two main solution areas are…",
+  "options": [
+   "Risk and compliance, and unified data governance",
+   "Networking and storage",
+   "Compute and containers",
+   "Identity and billing"
+  ],
+  "answer": 0,
+  "explanation": "Purview covers risk and compliance, and unified data governance."
+ },
+ {
+  "id": "q157",
+  "domain": 3,
+  "module": "p3m2",
+  "q": "Which tool can automatically add a required tag when it is missing from a new resource?",
+  "options": [
+   "Azure Policy",
+   "Azure Advisor",
+   "Service Health",
+   "ExpressRoute"
+  ],
+  "answer": 0,
+  "explanation": "Azure Policy can remediate non-compliant resources, for example by adding a tag."
+ },
+ {
+  "id": "q158",
+  "domain": 3,
+  "module": "p3m2",
+  "q": "Where can you find Microsoft's compliance documents and audit reports?",
+  "options": [
+   "Service Trust Portal",
+   "Azure Advisor",
+   "Cost Management",
+   "Resource Health"
+  ],
+  "answer": 0,
+  "explanation": "The Service Trust Portal holds security, privacy and compliance content."
+ },
+ {
+  "id": "q159",
+  "domain": 3,
+  "module": "p3m2",
+  "q": "What do you need to open some Service Trust Portal compliance materials?",
+  "options": [
+   "A Microsoft Entra work or school account and acceptance of the NDA",
+   "An ExpressRoute circuit",
+   "A reserved instance",
+   "An Owner role on a subscription"
+  ],
+  "answer": 0,
+  "explanation": "Some content requires signing in and accepting Microsoft's non-disclosure agreement."
+ },
+ {
+  "id": "q160",
+  "domain": 3,
+  "module": "p3m3",
+  "q": "Which tool is an AI assistant that helps with Azure operations tasks such as drafting commands?",
+  "options": [
+   "Copilot in Azure",
+   "Azure Arc",
+   "Azure Cloud Shell",
+   "Azure Migrate"
+  ],
+  "answer": 0,
+  "explanation": "Copilot in Azure is an AI assistant. Always validate its suggestions."
+ },
+ {
+  "id": "q161",
+  "domain": 3,
+  "module": "p3m3",
+  "q": "Which declarative language is simpler and more concise than JSON ARM templates?",
+  "options": [
+   "Bicep",
+   "Azure CLI",
+   "PowerShell",
+   "KQL"
+  ],
+  "answer": 0,
+  "explanation": "Bicep deploys through Azure Resource Manager with simpler syntax."
+ },
+ {
+  "id": "q162",
+  "domain": 3,
+  "module": "p3m3",
+  "q": "Which THREE can Azure Arc manage outside Azure? (Choose three)",
+  "options": [
+   "Servers",
+   "Kubernetes clusters",
+   "SQL Server",
+   "Azure Advisor recommendations"
+  ],
+  "answer": [
+   0,
+   1,
+   2
+  ],
+  "explanation": "Arc manages servers, Kubernetes clusters, Azure data services and SQL Server outside Azure."
+ },
+ {
+  "id": "q163",
+  "domain": 3,
+  "module": "p3m4",
+  "q": "Which view shows the global health of Azure across all services and regions?",
+  "options": [
+   "Azure status",
+   "Resource Health",
+   "Azure Advisor",
+   "Log Analytics"
+  ],
+  "answer": 0,
+  "explanation": "Azure status is global. Service Health is personalised. Resource Health is for one resource."
+ },
+ {
+  "id": "q164",
+  "domain": 3,
+  "module": "p3m4",
+  "q": "Which Application Insights feature sends synthetic requests to check that your app is responding?",
+  "options": [
+   "Availability tests",
+   "Action groups",
+   "Budgets",
+   "Tags"
+  ],
+  "answer": 0,
+  "explanation": "Availability tests probe your app even during low traffic."
+ },
+ {
+  "id": "q165",
+  "domain": 3,
+  "module": "p3m4",
+  "q": "Action groups can be reused by which services?",
+  "options": [
+   "Azure Monitor, Service Health and Azure Advisor",
+   "Only Azure Monitor",
+   "Only Cost Management",
+   "None"
+  ],
+  "answer": 0,
+  "explanation": "Action groups are reusable across Monitor, Service Health and Advisor."
+ },
+ {
+  "id": "q166",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Batch jobs that can restart if interrupted are best suited to which pricing option?",
+  "options": [
+   "Spot pricing",
+   "Reservation",
+   "Savings plan",
+   "Dedicated host"
+  ],
+  "answer": 0,
+  "explanation": "Spot uses spare capacity at a discount but can be evicted."
+ },
+ {
+  "id": "q167",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Adding resources to the pricing calculator provisions them and you may be charged.",
+  "options": [
+   "Yes",
+   "No"
+  ],
+  "answer": 1,
+  "explanation": "No. Nothing is provisioned and you are never charged. It only estimates."
+ },
+ {
+  "id": "q170",
+  "domain": 1,
+  "module": "p1m3",
+  "q": "In which two models is the customer responsible for the operating system? (Choose two)",
+  "options": [
+   "Infrastructure as a service (IaaS)",
+   "Platform as a service (PaaS)",
+   "Software as a service (SaaS)",
+   "On-premises"
+  ],
+  "answer": [
+   0,
+   3
+  ],
+  "explanation": "You manage the OS on-premises and in IaaS. In PaaS and SaaS the provider manages it."
+ },
+ {
+  "id": "q171",
+  "domain": 1,
+  "module": "p1m3",
+  "q": "Select the answer that completes the sentence. [Answer choice] is the model where you supply your data and configure access, and the provider runs everything else.",
+  "options": [
+   "IaaS",
+   "PaaS",
+   "SaaS",
+   "On-premises"
+  ],
+  "answer": 2,
+  "explanation": "SaaS: the provider manages the application stack. You manage your data and access settings."
+ },
+ {
+  "id": "q172",
+  "domain": 1,
+  "module": "p1m3",
+  "q": "Azure virtual networks belong to which cloud service type?",
+  "options": [
+   "IaaS",
+   "PaaS",
+   "SaaS",
+   "Serverless only"
+  ],
+  "answer": 0,
+  "explanation": "Virtual networks, VMs and storage are building blocks of IaaS."
+ },
+ {
+  "id": "q173",
+  "domain": 1,
+  "module": "p1m3",
+  "q": "Which Azure service is a PaaS offering?",
+  "options": [
+   "Azure App Service",
+   "Azure Virtual Machines",
+   "Microsoft 365",
+   "Azure Virtual Network"
+  ],
+  "answer": 0,
+  "explanation": "App Service is PaaS. VMs and virtual networks are IaaS. Microsoft 365 is SaaS."
+ },
+ {
+  "id": "q174",
+  "domain": 1,
+  "module": "p1m3",
+  "q": "Which two tasks does the provider handle in a PaaS model? (Choose two)",
+  "options": [
+   "Operating system patching",
+   "Middleware and runtime",
+   "Your application code",
+   "Your data"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "The provider maintains the OS, middleware and runtime. You supply the code and the data."
+ },
+ {
+  "id": "q175",
+  "domain": 1,
+  "module": "p1m3",
+  "q": "A team wants a ready-made expense-tracking application with nothing to install or maintain. Which model fits best?",
+  "options": [
+   "SaaS",
+   "IaaS",
+   "Private cloud",
+   "On-premises"
+  ],
+  "answer": 0,
+  "explanation": "Finished applications such as finance and expense tracking are SaaS."
+ },
+ {
+  "id": "q176",
+  "domain": 1,
+  "module": "p1m2",
+  "q": "Which two are examples of scalability? (Choose two)",
+  "options": [
+   "Adding RAM to a virtual machine",
+   "Adding more virtual machines when traffic rises",
+   "Applying tags to a resource group",
+   "Moving to a paired region"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "Scaling up (more RAM or CPU) and scaling out (more instances) are the two kinds of scaling."
+ },
+ {
+  "id": "q177",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "Which two are part of Azure's management infrastructure? (Choose two)",
+  "options": [
+   "Subscriptions",
+   "Resource groups",
+   "Availability zones",
+   "Region pairs"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "Management infrastructure covers resources, resource groups, subscriptions and management groups. Zones and region pairs are physical infrastructure."
+ },
+ {
+  "id": "q178",
+  "domain": 2,
+  "module": "p2m2",
+  "q": "Which two services can run containers? (Choose two)",
+  "options": [
+   "Azure Container Instances",
+   "Azure Kubernetes Service",
+   "Azure Files",
+   "Azure DNS"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "ACI and AKS run containers. Azure Container Apps does as well."
+ },
+ {
+  "id": "q179",
+  "domain": 2,
+  "module": "p2m3",
+  "q": "Which two connections to Azure use an encrypted tunnel over the public internet? (Choose two)",
+  "options": [
+   "Site-to-site VPN",
+   "Point-to-site VPN",
+   "ExpressRoute",
+   "VNet peering"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "VPN Gateway connections are encrypted tunnels over the internet. ExpressRoute and peering don't cross the public internet."
+ },
+ {
+  "id": "q180",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Which two are features of Microsoft Cost Management? (Choose two)",
+  "options": [
+   "Budgets",
+   "Cost analysis",
+   "Resource locks",
+   "Availability zones"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "Cost Management offers cost analysis, budgets and cost alerts."
+ },
+ {
+  "id": "q181",
+  "domain": 3,
+  "module": "p3m2",
+  "q": "Which two tools help you govern Azure resources? (Choose two)",
+  "options": [
+   "Azure Policy",
+   "Resource locks",
+   "Pricing calculator",
+   "Application Insights"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "Azure Policy and resource locks are governance tools. The calculator estimates cost and Application Insights monitors apps."
+ },
+ {
+  "id": "q182",
+  "domain": 3,
+  "module": "p3m4",
+  "q": "Which two are views in Azure Service Health? (Choose two)",
+  "options": [
+   "Azure status",
+   "Resource Health",
+   "Log Analytics",
+   "Cost analysis"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "Azure status, Service Health and Resource Health are the three views."
+ },
+ {
+  "id": "q183",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Which two are Zero Trust principles? (Choose two)",
+  "options": [
+   "Verify explicitly",
+   "Assume breach",
+   "Trust the internal network",
+   "Share administrator accounts"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "Verify explicitly, use least privilege access and assume breach."
+ },
+ {
+  "id": "q184",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Which two redundancy options copy data across availability zones? (Choose two)",
+  "options": [
+   "Zone-redundant storage (ZRS)",
+   "Geo-zone-redundant storage (GZRS)",
+   "Locally redundant storage (LRS)",
+   "Geo-redundant storage (GRS)"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "ZRS and GZRS both keep copies across three availability zones in the primary region."
+ },
+ {
+  "id": "q185",
+  "domain": 3,
+  "module": "p3m3",
+  "q": "Which two can you use to script Azure management tasks? (Choose two)",
+  "options": [
+   "Azure CLI",
+   "Azure PowerShell",
+   "Azure Advisor",
+   "Cost analysis"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "Azure CLI (Bash-style) and Azure PowerShell (cmdlets) are both scriptable."
+ },
+ {
+  "id": "q186",
+  "domain": 1,
+  "module": "p1m2",
+  "q": "Select the answer that correctly completes the sentence. [Answer choice] lets you deploy apps to regional datacenters around the world so users get the best performance in their region.",
+  "options": [
+   "Geo-distribution",
+   "High availability",
+   "Vertical scaling",
+   "Capital expenditure"
+  ],
+  "answer": 0,
+  "explanation": "Deploying apps and data to regional datacenters worldwide is geo-distribution. High availability is about uptime."
+ },
+ {
+  "id": "q187",
+  "domain": 1,
+  "module": "p1m3",
+  "q": "A company rents virtual machines and wants to choose and patch the operating system itself. Which service model is this?",
+  "options": [
+   "Platform as a service (PaaS)",
+   "Software as a service (SaaS)",
+   "Infrastructure as a service (IaaS)",
+   "Serverless"
+  ],
+  "answer": 2,
+  "explanation": "You manage the OS in IaaS (and on-premises). The provider manages it in PaaS and SaaS."
+ },
+ {
+  "id": "q188",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "Which Azure object is the logical container used to combine and organise resources?",
+  "options": [
+   "Resource group",
+   "Azure Resource Manager",
+   "Subscription",
+   "Management group"
+  ],
+  "answer": 0,
+  "explanation": "Resources are combined into resource groups. ARM is the deployment and management service."
+ },
+ {
+  "id": "q189",
+  "domain": 2,
+  "module": "p2m1",
+  "q": "A storage account named storage001 is an example of what?",
+  "options": [
+   "A resource",
+   "A subscription",
+   "A resource group",
+   "A management group"
+  ],
+  "answer": 0,
+  "explanation": "Storage accounts, VMs, databases and virtual networks are resources."
+ },
+ {
+  "id": "q190",
+  "domain": 2,
+  "module": "p2m4",
+  "q": "Which two are typical jobs for Azure Blob storage? (Choose two)",
+  "options": [
+   "Delivering images or documents straight to a web browser",
+   "Keeping backup copies of data",
+   "Mounting a shared drive on many virtual machines",
+   "Providing the hard drive of a virtual machine"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "Blob serves files to browsers and stores backups. Azure Files gives a mountable shared drive, and Azure Disk is a VM drive."
+ },
+ {
+  "id": "q191",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "A new team member must manage every resource inside one resource group and nothing else. Which Azure feature do you use?",
+  "options": [
+   "Azure role-based access control (RBAC)",
+   "Resource tags",
+   "Resource locks",
+   "Azure Key Vault"
+  ],
+  "answer": 0,
+  "explanation": "RBAC assigns a role at a scope such as a resource group."
+ },
+ {
+  "id": "q192",
+  "domain": 2,
+  "module": "p2m5",
+  "q": "Several protective layers sit between an attacker and your data, and each layer slows the attack. What is this approach called?",
+  "options": [
+   "Defense in depth",
+   "Perimeter",
+   "Least privilege",
+   "DDoS protection"
+  ],
+  "answer": 0,
+  "explanation": "Defense in depth uses several layers. The perimeter is only one of them."
+ },
+ {
+  "id": "q193",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "You need to associate costs with different groups in your organisation without changing where the resources are. What should you use?",
+  "options": [
+   "Resource tags",
+   "Subscriptions",
+   "Management groups",
+   "Azure Advisor"
+  ],
+  "answer": 0,
+  "explanation": "Tags group billing data without moving anything."
+ },
+ {
+  "id": "q194",
+  "domain": 3,
+  "module": "p3m1",
+  "q": "Several production VMs have steady usage all year. What minimises cost without reducing functionality?",
+  "options": [
+   "Azure Reservations",
+   "Azure Monitor alerts",
+   "Spot VMs",
+   "Pay-as-you-go only"
+  ],
+  "answer": 0,
+  "explanation": "Reservations discount stable, predictable workloads. Spot VMs can be evicted."
+ },
+ {
+  "id": "q195",
+  "domain": 3,
+  "module": "p3m3",
+  "q": "Your Linux admins prefer working in a Bash terminal to manage Azure resources. Which tool fits best?",
+  "options": [
+   "Azure CLI",
+   "Azure PowerShell",
+   "Azure Arc",
+   "Azure Advisor"
+  ],
+  "answer": 0,
+  "explanation": "The Azure CLI uses Bash-style commands. PowerShell uses PowerShell cmdlets."
+ },
+ {
+  "id": "q196",
+  "domain": 3,
+  "module": "p3m4",
+  "q": "Where do you find the official root cause analysis (RCA) report for an outage?",
+  "options": [
+   "Azure Service Health",
+   "Azure Monitor",
+   "Application Insights",
+   "Azure Advisor"
+  ],
+  "answer": 0,
+  "explanation": "After an outage, Service Health provides official RCA incident reports."
+ },
+ {
+  "id": "q197",
+  "domain": 3,
+  "module": "p3m4",
+  "q": "What should you review and act on before service retirements or breaking changes interrupt you?",
+  "options": [
+   "Health advisories",
+   "Service issues",
+   "Resource locks",
+   "Budget alerts"
+  ],
+  "answer": 0,
+  "explanation": "Health advisories need proactive action. Service issues are outages needing immediate action."
+ }
+]

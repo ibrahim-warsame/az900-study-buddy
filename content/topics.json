@@ -1,0 +1,514 @@
+[
+ {
+  "id": "1a",
+  "domain": 1,
+  "domainName": "Describe cloud concepts",
+  "weight": "25–30%",
+  "module": "p1m1",
+  "title": "Cloud computing and the shared responsibility model",
+  "notes": [
+   "**Cloud computing** is the delivery of computing services (VMs, storage, databases, networking, and also IoT, machine learning and AI) **over the internet**. You can expand quickly without building a datacenter.",
+   "**Shared responsibility**: the provider and the customer split the work. On-premises you do everything. **IaaS** puts the most on you, **SaaS** the least, and **PaaS** sits in the middle.",
+   "**The provider always owns**: the physical datacenter, the physical network, the physical hosts (the infrastructure).",
+   "**You always own**: your **information and data**, your **devices** (phones, PCs) and your **accounts and identities** (people, services, devices).",
+   "**It depends on the service type**: operating systems, network controls, applications, identity and access. Example: with a cloud SQL database the provider maintains the database, but you still own the data in it. If you install SQL on a VM, you patch it yourself."
+  ],
+  "trap": "\"With SaaS, Microsoft is responsible for your data.\" False. Data, devices and identities are always yours."
+ },
+ {
+  "id": "1b",
+  "domain": 1,
+  "domainName": "Describe cloud concepts",
+  "weight": "25–30%",
+  "module": "p1m1",
+  "title": "Cloud models: public, private, hybrid, multicloud",
+  "notes": [
+   "**Cloud models** describe the deployment type: private, public and hybrid (plus multicloud).",
+   "**Public cloud**: built, controlled and maintained by a **third-party provider**. Anyone can buy services. **No capital expenditure** to scale up, you provision and deprovision quickly, and you **pay only for what you use**. You don't have complete control over resources and security.",
+   "**Private cloud**: used by a **single organisation**, in its own datacenter or a dedicated datacenter (even hosted by a third party). **Complete control** over resources and security, and your data isn't shared with other tenants. But you **buy the hardware** and you maintain and update it. Greater cost, fewer public cloud benefits.",
+   "**Hybrid cloud**: public and private cloud connected together. The **most flexible**. You choose where each app runs. A private cloud can **\"surge\"** into public resources for temporary demand. You can keep some services private for security, compliance or legal reasons.",
+   "**Multicloud**: two or more public cloud providers (for example Azure and AWS), for different features or while migrating from one to another.",
+   "**Azure Arc** helps manage Azure, private, hybrid and multicloud environments. **Azure VMware Solution** lets you run existing **VMware workloads in Azure**."
+  ],
+  "trap": "\"Some data must stay on-premises by law, the rest can go to Azure\" → hybrid. \"No up-front hardware cost\" → public. \"Complete control, no shared tenants\" → private."
+ },
+ {
+  "id": "1c",
+  "domain": 1,
+  "domainName": "Describe cloud concepts",
+  "weight": "25–30%",
+  "module": "p1m1",
+  "title": "Consumption-based model and pricing models",
+  "notes": [
+   "**CapEx** (capital expenditure): up-front spending on physical infrastructure such as servers, network hardware and datacenter space. **OpEx** (operational expenditure): ongoing spending on services over time. **Cloud is OpEx**, because you pay as you consume.",
+   "**Consumption-based model**: you pay only for the resources you use. Benefits: **no upfront cost**, no paying for idle capacity, you can add resources when demand rises and release them when it falls.",
+   "In a traditional datacenter you guess future needs. Overestimate and you waste money on idle hardware. Underestimate and performance suffers. In the cloud you match capacity to real demand.",
+   "**Pay-as-you-go**: pay for what you use each billing cycle, no commitment.",
+   "**Reservations**: commit to specific resources (VMs, databases, storage) for **1 or 3 years** for a discount. Best for stable, predictable workloads, for example a production database running 24/7.",
+   "**Azure savings plan for compute**: commit to a fixed **hourly spend** for 1 or 3 years across eligible compute. More flexible than a reservation, because it isn't tied to one VM type.",
+   "**Spot VMs**: unused Azure capacity at a deep discount. Azure can **evict** them when it needs the capacity back. Only for interruptible work such as batch jobs or restartable tests.",
+   "**Azure Hybrid Benefit**: reuse Windows Server or SQL Server licences you already own on Azure to pay less."
+  ],
+  "trap": "Production VMs with steady use all year → **Reservations**. Spot VMs are cheapest but can be stopped at any time, so they're never the answer for \"must not be interrupted\". Reservation = specific resources. Savings plan = an hourly spend amount, more flexible."
+ },
+ {
+  "id": "1d",
+  "domain": 1,
+  "domainName": "Describe cloud concepts",
+  "weight": "25–30%",
+  "module": "p1m1",
+  "title": "Serverless (taught with Azure Functions in Path 2)",
+  "notes": [
+   "**Serverless**: you don't manage servers. The provider runs and scales them, and you pay only for the time your code runs.",
+   "It is **event-driven**: an HTTP request, a timer, a message or a file upload wakes the code. When there are no events, nothing is running and nothing is billed.",
+   "Azure examples: **Azure Functions** (code) and **Azure Logic Apps** (low-code workflows). It scales automatically with demand."
+  ],
+  "trap": "\"Least management, runs only when triggered, billed per execution\" → Azure Functions."
+ },
+ {
+  "id": "1e",
+  "domain": 1,
+  "domainName": "Describe cloud concepts",
+  "weight": "25–30%",
+  "module": "p1m2",
+  "title": "Benefits: high availability and scalability",
+  "notes": [
+   "**High availability**: keeping resources available with maximum uptime, whatever disruptions happen. Azure gives uptime guarantees per service in **service-level agreements (SLAs)**, written as a percentage such as 99.9% or 99.99%.",
+   "**Scalability**: adjusting resources to meet demand. It also stops you overpaying, because you can reduce resources when demand drops.",
+   "**Vertical scaling** changes the power of one resource. **Scale up** = more CPU or RAM. **Scale down** = less.",
+   "**Horizontal scaling** changes the number of resources. **Scale out** = add VMs or containers. **Scale in** = remove them. Either can be done **automatically** (autoscaling) or manually."
+  ],
+  "trap": "\"Deploy apps to regional datacenters worldwide for the best local performance\" = **geo-distribution** (not high availability). Up = a bigger machine. Out = more machines. A percentage (99.95%) or \"minimal downtime\" = high availability."
+ },
+ {
+  "id": "1f",
+  "domain": 1,
+  "domainName": "Describe cloud concepts",
+  "weight": "25–30%",
+  "module": "p1m2",
+  "title": "Benefits: reliability and predictability",
+  "notes": [
+   "**Reliability**: the ability to **recover from failures and continue to function**. It is one of the pillars of the **Microsoft Azure Well-Architected Framework**.",
+   "The cloud's **decentralised design** puts resources in regions around the world, so even if one region has a catastrophic event, other regions keep running. Sometimes the environment shifts to another region automatically.",
+   "**Predictability** comes in two kinds. **Performance predictability**: having the resources to give users a good experience, supported by **autoscaling, load balancing and high availability**.",
+   "**Cost predictability**: forecasting your cloud spend. Track resource use in real time, monitor efficiency, use analytics to spot trends, and use tools like the **pricing calculator**."
+  ],
+  "trap": "A failure or region outage that you survive → reliability. A percentage or uptime → high availability. \"Forecast spending\" → cost predictability."
+ },
+ {
+  "id": "1g",
+  "domain": 1,
+  "domainName": "Describe cloud concepts",
+  "weight": "25–30%",
+  "module": "p1m2",
+  "title": "Benefits: security, governance and manageability",
+  "notes": [
+   "**Security and governance**: templates help deployed resources meet your technical standards and regulations, and you can update them at scale. Cloud **auditing** flags resources that are out of compliance and suggests fixes. Patches and updates can be applied automatically, depending on the service type.",
+   "Choose the control you need: **IaaS** = maximum control (you patch the OS). **PaaS or SaaS** = the provider patches and maintains for you. Cloud providers are well suited to handle **DDoS** attacks.",
+   "**Manageability of the cloud** (managing your resources): **autoscale** based on need, deploy from **templates**, **monitor health** and automatically replace failing resources, and get automatic **alerts** on metrics.",
+   "**Manageability in the cloud** (the ways you manage it): a **web portal**, a **command line** (CLI), **APIs** and **PowerShell**."
+  ],
+  "trap": "Autoscale, templates, health monitoring, alerts = management OF the cloud. Portal, CLI, APIs, PowerShell = management IN the cloud."
+ },
+ {
+  "id": "1i",
+  "domain": 1,
+  "domainName": "Describe cloud concepts",
+  "weight": "25–30%",
+  "module": "p1m2",
+  "title": "Sustainability in the cloud",
+  "notes": [
+   "Cloud providers run at large scale, which can improve resource **utilisation** compared with many separate on-premises environments.",
+   "You support sustainability (and cut cost) by **scaling down** when demand drops, **turning off or deallocating** resources you aren't using, choosing efficient services to avoid **overprovisioning**, and using governance and monitoring to track usage.",
+   "Example: shut down a development environment automatically overnight and at weekends.",
+   "The habit: **right-size, automate, monitor, optimise**."
+  ],
+  "trap": "Not on the official outline, but it is in the module, so it can appear. The answer is always \"reduce waste\": right-size, shut down what's idle, monitor."
+ },
+ {
+  "id": "1h",
+  "domain": 1,
+  "domainName": "Describe cloud concepts",
+  "weight": "25–30%",
+  "module": "p1m3",
+  "title": "IaaS, PaaS, SaaS and their use cases",
+  "notes": [
+   "**IaaS**: the most flexible, **maximum control**. The provider handles hardware, internet connectivity and physical security. You handle the **OS install and maintenance, network configuration, and database and storage configuration**. Use cases: **lift-and-shift** and **testing and development**.",
+   "**PaaS**: a middle ground. The provider also maintains the **OS, middleware, development tools and analytics services**, so you don't deal with OS or database licensing and patching. You focus on your code, data and access controls. Use cases: a **development framework** and **analytics or business intelligence**. Example: Azure App Service.",
+   "**SaaS**: a complete application you rent and use. The least flexible, easiest to start, and needs the least expertise. You manage your data, identity and access settings, and device access. Use cases: **email and messaging, productivity apps, finance and expense tracking**. Example: Microsoft 365."
+  ],
+  "trap": "You manage the **OS** only in **IaaS and on-premises**, never in PaaS or SaaS. Move servers unchanged → IaaS. Did someone write code and deploy it? → PaaS. Just log in and use it → SaaS."
+ },
+ {
+  "id": "2a",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m1",
+  "title": "Datacenters, regions, region pairs, sovereign regions",
+  "notes": [
+   "**Datacenter**: a facility with servers in racks and its own power, cooling and networking. You never use an individual datacenter directly. Datacenters are grouped into regions and availability zones.",
+   "**Region**: a geographic area with **at least one** (often several) nearby datacenters on a low-latency network. You often choose a region when you deploy. Some services or VM sizes exist only in certain regions. **Global services** need no region: Microsoft Entra ID, Azure Traffic Manager, Azure DNS.",
+   "**Region pair**: most regions are paired with another in the **same geography**, **at least 300 miles** apart, for example West US with East US, or Southeast Asia with East Asia.",
+   "Pair benefits: in a large outage **one region of each pair is restored first**. Planned updates roll out to **one region of a pair at a time**. Data stays in the same geography for residency (except Brazil South).",
+   "**Not every service replicates or fails over automatically.** For many, the customer must configure recovery and replication. Brazil South pairs with South Central US in one direction only. Some regions (Italy North, Poland Central, Israel Central) have no traditional pair and use zones and geo-redundant storage.",
+   "**Sovereign regions** are isolated instances of Azure for compliance or legal reasons. **US Gov** regions (US DoD Central, US Gov Virginia, US Gov Arizona) are for US government agencies, run by screened US personnel. **China East and China North** run through a partnership with **21Vianet**, so Microsoft doesn't directly maintain those datacenters."
+  ],
+  "trap": "Region pairs protect against a whole **region** failing. Availability zones protect against a **datacenter** failing."
+ },
+ {
+  "id": "2b",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m1",
+  "title": "Availability zones",
+  "notes": [
+   "**Availability zones** are physically separate datacenters **within one region**, each made of one or more datacenters with **independent power, cooling and networking**, connected by high-speed private fibre. A zone is an isolation boundary: if one goes down, the others keep working.",
+   "Every zone-enabled region has **at least three** zones. **Not all regions support zones.** Duplicating services across zones may cost extra.",
+   "**Zonal** services are pinned to a zone you choose (VMs, managed disks, IP addresses). **Zone-redundant** services are replicated across zones automatically (zone-redundant storage, SQL Database). **Non-regional** services are always available from Azure geographies and survive zone-wide and region-wide outages."
+  ],
+  "trap": "\"Protect a VM if one datacenter fails\" → spread VMs across availability zones."
+ },
+ {
+  "id": "2c",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m1",
+  "title": "Accounts, subscriptions, resource groups, management groups",
+  "notes": [
+   "**Azure account**: what you sign up with. A subscription is created for you, and you can add more. The account is an identity in **Microsoft Entra ID**. You can buy Azure directly, through a Microsoft representative, or through a partner (**Cloud Solution Provider** partners offer managed-cloud solutions).",
+   "**Azure free account**: free access to popular products for **12 months**, a **credit for the first 30 days**, and some **always-free** services (Learn gives different counts in different units, so don't memorise the number). You need a phone number, a credit card (identity check only) and a Microsoft or GitHub account. Nothing is charged until you upgrade.",
+   "**Azure free student account**: **$100 credit**, free access to some services for 12 months, free developer tools, and **no credit card** needed.",
+   "**Resource**: the basic building block. Anything you create or deploy (a VM, a virtual network, a database, an AI service).",
+   "**Resource group**: every resource is in **exactly one** group (you can move some). Groups **can't be nested** and **can't be renamed**. Anything applied to a group (access, deleting it) applies to **everything inside**. Example: put a temporary dev environment in one group and delete the group when you finish.",
+   "**Subscription**: a unit of management, **billing** and scale. It is a **billing boundary** (separate invoices) and an **access control boundary**. Make more subscriptions to separate **environments** (dev, test, production), **team or workload** boundaries, or **billing**.",
+   "**Management group**: sits above subscriptions. Everything applied to a group is **inherited** by all subscriptions in it. Nest up to **6 levels** (not counting the root and subscriptions). A directory supports up to 10,000 management groups. Each management group and subscription has **only one parent**. Every Entra tenant has one top-level **Tenant Root Group**.",
+   "A policy set on a management group **can't be overridden** by a subscription or resource owner. One RBAC assignment on a management group covers every subscription below it.",
+   "**Hierarchy, top to bottom**: management groups → subscriptions → resource groups → resources."
+  ],
+  "trap": "\"The logical container for resources\" = **resource group** (not ARM). A storage account, VM or database is a **resource**. \"Apply one policy to many subscriptions\" → management group. \"Separate invoices for two departments\" → separate subscriptions. Resource groups can't contain resource groups."
+ },
+ {
+  "id": "2d",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m2",
+  "title": "Virtual machines, scale sets, availability sets, Azure Virtual Desktop",
+  "notes": [
+   "**Azure Virtual Machines** are **IaaS**. Use them when you need **total control of the OS**, custom software or custom hosting. You still patch and update inside the VM. You deploy from an **image** (a template with the OS and tools).",
+   "Use cases: **testing and development**, **cloud app hosting**, **datacenter extension**, **disaster recovery** and **lift-and-shift** migration.",
+   "When you create a VM you choose: **size** (cores and RAM), **storage disks** and **networking** (virtual network, public IP, port configuration).",
+   "VM size families: **B** burstable, **D** general purpose, **E** memory optimised, **F** compute optimised, **M** large memory, **L** storage optimised, **N** GPU. In Standard_D2s_v5: D = family, 2 = vCPUs, s = supports Premium SSD, v5 = hardware generation.",
+   "**Virtual Machine Scale Sets**: groups of **identical, load-balanced VMs** that scale out and in **automatically** on demand or a schedule.",
+   "**Availability sets** improve resilience inside a region. **Update domain**: VMs that can be rebooted together during planned maintenance. **Fault domain**: VMs that share a power or network failure point. No extra cost, you pay only for the VMs. Where zones are supported, **zones are often preferred** because they isolate failures more widely.",
+   "**Azure Virtual Desktop**: desktop and app virtualisation. Desktops and apps **stay in Azure**, so less data sits on local devices. It integrates with **Microsoft Entra ID**, and supports **single-session and multi-session** Windows. Good for distributed users, contractors and hybrid workers."
+  ],
+  "trap": "Availability **set** = protection inside one datacenter (racks and updates). Availability **zone** = across datacenters. Scale set = automatic scaling of identical VMs."
+ },
+ {
+  "id": "2e",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m2",
+  "title": "Containers, Azure Functions and application hosting",
+  "notes": [
+   "**Containers** are lightweight, you **don't manage the OS**, they start fast and scale out dynamically. A VM runs its own OS that you manage. **Docker** is the popular engine. Containers suit **microservices**: split an app into independent pieces and scale each one separately.",
+   "**Azure Container Instances (ACI)**: the fastest, simplest way to run a container, no VMs or extra services. **PaaS**. **Azure Container Apps**: also PaaS, with **built-in load balancing and scaling**. **Azure Kubernetes Service (AKS)**: **orchestration**, managing the lifecycle of a fleet of containers.",
+   "**Azure Functions**: **event-driven, serverless**. Triggers include a REST request, a timer or a message. Best when the work finishes in **seconds or less**. It scales automatically and you pay only for the **CPU time used**. Functions are **stateless** by default. **Durable Functions** are stateful.",
+   "**Azure App Service**: HTTP-based **PaaS** for **web apps, API apps, WebJobs and mobile apps**. Many languages (.NET, Java, PHP, Python, Node.js), Windows or Linux, autoscale, built-in load balancing, and continuous deployment from GitHub, Azure DevOps or any Git repo.",
+   "**WebJobs**: run a program or script in the same context as a web or API app, on a schedule or a trigger, for background tasks.",
+   "**Hosting spectrum**: VMs = most control and most work. Containers = in between. App Service = least operational effort."
+  ],
+  "trap": "\"Run one container quickly\" → ACI. \"Orchestrate many containers\" → AKS. \"Host a web app, no servers\" → App Service. \"Run code on an event, pay per run\" → Functions."
+ },
+ {
+  "id": "2o",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m2",
+  "title": "AI, machine learning and IoT/Edge services",
+  "notes": [
+   "**Azure AI services**: **prebuilt** AI through APIs (language, speech, vision, document processing). Use them when you want AI features without training your own model.",
+   "**Azure OpenAI Service**: **generative AI** (chat and content generation) with built-in security and governance controls.",
+   "**Agentic AI** is an application pattern (an AI model plus instructions, context and tools to finish multistep goals), not a separate compute service.",
+   "**Azure Machine Learning**: **build, train and manage custom** machine learning models.",
+   "**IoT services** connect and manage devices. **Azure IoT Hub**: secure **two-way** communication between cloud services and IoT devices. **Azure IoT Central**: a simplified **SaaS** IoT platform. **Azure IoT Edge**: extends cloud capabilities to **edge devices** so some work runs **closer to where data is generated**.",
+   "Decision pattern: prebuilt AI → AI services. Custom model → Machine Learning. Connected devices and telemetry → IoT services."
+  ],
+  "trap": "Prebuilt = AI services. Custom model you train = Azure Machine Learning. Two-way device messages = IoT Hub. Run near the devices = IoT Edge."
+ },
+ {
+  "id": "2f",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m3",
+  "title": "Virtual networks: subnets, endpoints, routing, filtering, peering",
+  "notes": [
+   "**Virtual network (VNet)**: your private network in Azure, an extension of your on-premises network. It gives you: **isolation and segmentation**, internet communication, communication between Azure resources, communication with on-premises, **routing**, **filtering** and connecting VNets.",
+   "**Isolation**: you define a private IP address space that **isn't internet-routable**. **Subnets** split it into smaller ranges. Name resolution uses Azure's built-in DNS or your own DNS server.",
+   "**Internet access**: assign a **public IP** to a resource or put it behind a **public load balancer**.",
+   "**Between Azure resources**: VNets connect VMs and other resources (such as AKS and scale sets). **Service endpoints** connect a VNet to Azure SQL databases and storage accounts for better security and optimal routing.",
+   "**Public endpoint**: has a public IP, reachable from anywhere. **Private endpoint**: sits inside your VNet with a **private IP** from your address space.",
+   "**Routing**: Azure routes traffic between subnets, VNets, on-premises and the internet by default. **Route tables** and **user-defined routes (UDR)** override this. **BGP** passes on-premises routes to Azure.",
+   "**Filtering**: a **network security group (NSG)** holds inbound and outbound rules that **allow or block traffic by source and destination IP, port and protocol**. **Network virtual appliances** are specialised VMs (for example a firewall or WAN optimiser).",
+   "**VNet peering**: connects two VNets directly. Traffic is private and travels over the **Microsoft backbone**, never the public internet. Works across regions (global)."
+  ],
+  "trap": "NSG = allow/deny rules on traffic. Route table or UDR = where traffic goes. Service endpoint or private endpoint = private access to a service. Peering = VNet to VNet."
+ },
+ {
+  "id": "2p",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m3",
+  "title": "VPN Gateway, ExpressRoute and Azure DNS",
+  "notes": [
+   "**VPN Gateway**: an **encrypted tunnel over the public internet**. It sits in a **dedicated subnet**. **Site-to-site** connects an on-premises datacenter, **point-to-site** connects one device, **network-to-network** connects VNets. **Only one VPN gateway per VNet.**",
+   "Two types: **policy-based** and **route-based**. Use **route-based** for VNet-to-VNet, point-to-site, multisite, or alongside ExpressRoute. Authentication is a preshared key.",
+   "High availability: default is **active/standby** (standby takes over in seconds for planned work, within about 90 seconds for unplanned). **Active/active** uses BGP and two public IPs. A VPN gateway can also be a **failover path for ExpressRoute**. **Zone-redundant** gateways survive a zone failure.",
+   "**ExpressRoute**: a **private connection** from on-premises to Microsoft (Azure, Microsoft 365, Dynamics 365) through a **connectivity provider**. The link is called a **circuit**. It does **not use the public internet**, so it is more reliable and faster, with consistent latency and higher security. Extras: **Global Reach** links your sites through the Microsoft network, **BGP** dynamic routing, built-in redundancy.",
+   "Pick ExpressRoute for strict compliance, predictable latency, high throughput, and keeping critical traffic off the internet. Even with it, DNS queries, certificate revocation checks and CDN requests still use the public internet.",
+   "**Azure DNS**: hosts your DNS domains on Azure. It uses **anycast**, so the closest server answers. It is built on Azure Resource Manager, so you get RBAC, activity logs and resource locks. It supports **private DNS domains** and **alias record sets** (they follow the target resource when its IP changes).",
+   "You **can't buy a domain** with Azure DNS. Buy it with **App Service domains** or a third-party registrar, then host it in Azure DNS."
+  ],
+  "trap": "\"Not over the internet\" → ExpressRoute. \"Encrypted tunnel over the internet\" → VPN Gateway. \"Buy a domain name\" → not Azure DNS."
+ },
+ {
+  "id": "2g",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m4",
+  "title": "Storage accounts and storage services",
+  "notes": [
+   "A **storage account** is a unique namespace for your storage data, reachable over HTTP or HTTPS from anywhere. The **name** must be **3–24 characters, lowercase letters and numbers only, and unique across Azure**.",
+   "Endpoints: <name>.blob.core.windows.net (Blob), .dfs. (Data Lake Storage Gen2), .file. (Files), .queue. (Queue), .table. (Table), all under core.windows.net.",
+   "Account types: **Standard general-purpose v2** (blobs, files, queues, tables, all redundancy options; recommended for most uses). **Premium block blobs** (low latency, high transaction rates; LRS or ZRS). **Premium file shares** (high performance; supports both **SMB and NFS**; LRS or ZRS). **Premium page blobs** (LRS only).",
+   "**Blob**: unstructured object storage (images, video, backups, logs, analytics data), including **Data Lake Storage Gen2**. **Files**: managed file shares over **SMB or NFS** you can mount from cloud or on-premises. **Queue**: messages for asynchronous work, millions of messages, up to **64 KB** each, often paired with Functions. **Table**: NoSQL for structured non-relational data. **Disk**: block-level managed disks for VMs.",
+   "Benefits: durable and highly available, **encrypted by the service**, scalable, managed by Azure, accessible over HTTP/HTTPS (REST, SDKs, CLI, PowerShell, portal, Storage Explorer)."
+  ],
+  "trap": "Blob = serving images or documents to a browser, and backup and restore. Mounting a shared drive on many VMs = Files, not Blob. \"Mount as a shared drive\" → Files. \"Images or video for a website\" → Blob. \"Messages between app parts\" → Queue. \"VM hard drive\" → Disk. NFS needs a premium file shares account."
+ },
+ {
+  "id": "2h",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m4",
+  "title": "Blob access tiers",
+  "notes": [
+   "**Hot**: used often (website images). **Cool**: infrequent, kept **at least 30 days** (customer invoices). **Cold**: infrequent, at least **90 days**. **Archive**: rarely used, at least **180 days**, flexible latency (long-term backups).",
+   "**Account level**: only Hot, Cool and Cold can be the account default. **Archive can't**. **Blob level**: all four can be set on an individual blob, during or after upload.",
+   "Cool and cold: lower storage cost, **higher access cost** and lower availability SLAs. Archive: the **lowest storage cost**, the **highest access cost** and the longest **rehydration** (hours)."
+  ],
+  "trap": "Cheaper to store means more expensive and slower to access. \"Can wait hours to retrieve\" → Archive."
+ },
+ {
+  "id": "2i",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m4",
+  "title": "Storage redundancy (LRS, ZRS, GRS, GZRS, RA-)",
+  "notes": [
+   "Azure Storage **always keeps 3 copies in the primary region**. Choose by balancing cost against availability and protection.",
+   "**LRS**: 3 copies in **one datacenter**. Lowest cost. Protects from rack and drive failures, **not** a datacenter disaster. At least 11 nines of durability.",
+   "**ZRS**: 3 copies **synchronously across 3 availability zones** in the primary region. Stays readable and writable if one zone is down. At least 12 nines. Recommended for in-region high availability.",
+   "**GRS**: LRS in the primary region, then **asynchronously** copied to the secondary region (also LRS). At least 16 nines. **GZRS**: ZRS in the primary region plus LRS in the secondary. Recommended for maximum consistency, availability and disaster resilience.",
+   "The secondary region is chosen from the **region pair**. By default you **can't read** the secondary unless you fail over. **RA-GRS and RA-GZRS** let you **read the secondary at any time**, though it may be slightly behind (the RPO is typically under 15 minutes, with no SLA)."
+  ],
+  "trap": "\"Read from the secondary region without failover\" → an RA- option. \"Survive a zone failure, stay in one region\" → ZRS."
+ },
+ {
+  "id": "2j",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m4",
+  "title": "Moving files and migrating to Azure",
+  "notes": [
+   "**AzCopy**: a **command-line** tool to copy blobs and files to, from and between storage accounts, even to or from other clouds. Its sync works in **one direction only**.",
+   "**Azure Storage Explorer**: a standalone **graphical app** (Windows, macOS, Linux) to manage files and blobs. It uses AzCopy behind the scenes.",
+   "**Azure File Sync**: installed on a local **Windows server**, it keeps files **bi-directionally** in sync with Azure Files. Local access uses SMB, NFS or FTPS. You can have caches worldwide, replace a failed server easily, and use **cloud tiering** so frequently used files stay local.",
+   "**Azure Migrate**: one hub to **assess and migrate** on-premises servers, databases and web apps. Tools include Discovery and assessment and Server Migration. Real-time (online) migration.",
+   "**Azure Data Box**: a **physical, rugged device** shipped to you, up to **80 TB** usable. For very large data sets (tens of TB or more) when bandwidth is limited. You can import or **export**. Disks are wiped to NIST 800-88r1 after use."
+  ],
+  "trap": "\"Huge data, poor bandwidth\" → Data Box. \"Assess servers first\" → Azure Migrate. \"Script copying\" → AzCopy. \"GUI\" → Storage Explorer. \"Sync a file server both ways\" → File Sync."
+ },
+ {
+  "id": "2k",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m5",
+  "title": "Identity: Entra ID, Domain Services, sign-in methods, external identities",
+  "notes": [
+   "**Microsoft Entra ID**: Microsoft's cloud identity and access management service (formerly Azure AD). It provides **authentication** (self-service password reset, MFA, banned password lists, smart lockout), **SSO**, **application management** (Application Proxy, My Apps) and **device management** (for example with Intune).",
+   "**Microsoft Entra Connect** syncs identities between on-premises Active Directory and Entra ID. Once connected, Microsoft can detect suspicious sign-ins at no extra cost.",
+   "**Microsoft Entra Domain Services**: managed **domain join, group policy, LDAP and Kerberos/NTLM** without running domain controllers. Great for **legacy apps** you lift and shift. Microsoft deploys **two domain controllers** for you. Sync is **one-way** from Entra ID.",
+   "**SSO**: sign in once for many apps. It's only as secure as the first sign-in.",
+   "**MFA**: two or more of: something you **know** (password), **have** (phone code) and **are** (fingerprint, face).",
+   "**Passwordless** (3 options): **Windows Hello for Business** (tied to your PC, biometric or PIN), the **Microsoft Authenticator app** (number match plus biometric or PIN) and **FIDO2 security keys** (hardware, can't be phished). Passwordless = high security and high convenience.",
+   "**External identities** (Entra External ID): **B2B collaboration** (guest users in your directory), **B2B direct connect** (mutual trust, **Teams shared channels**, not in your directory) and **External ID for customers** (formerly Azure AD B2C). The outside identity provider manages authentication. You manage authorisation. Use **access reviews** to keep guest access current."
+  ],
+  "trap": "Entra ID ≠ Entra Domain Services. An app needs LDAP, Kerberos or domain join → Domain Services. B2B direct connect = Teams shared channels."
+ },
+ {
+  "id": "2l",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m5",
+  "title": "Conditional Access and RBAC",
+  "notes": [
+   "**Conditional Access**: Entra ID allows or denies access based on **signals** (who the user is, where, which device, which app). The decision is **allow, require MFA or block**, and enforcement carries it out.",
+   "Use cases: require MFA for **admins** or outside trusted networks, allow only **approved client apps**, allow only **managed devices**, **block** untrusted locations.",
+   "**Azure RBAC** follows **least privilege**. You assign a built-in or custom **role** to a user or group at a **scope**: management group, subscription, resource group or resource. It's **inherited** downward. Common roles: **Owner** (full, including granting access), **Contributor** (full, can't grant access), **Reader** (view only).",
+   "RBAC is enforced for actions that go through **Azure Resource Manager**. It does **not** enforce permissions inside your application or data. It uses an **allow model**: if one assignment gives read and another gives write, you have both."
+  ],
+  "trap": "\"Only approved client apps or compliant devices\" → Conditional Access. \"Let a user manage everything in a resource group\" → RBAC. Conditional Access = how and when someone may sign in. RBAC = what they may do once in, at which scope."
+ },
+ {
+  "id": "2m",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m5",
+  "title": "Zero Trust, defense in depth, Defender for Cloud",
+  "notes": [
+   "**Zero Trust** assumes the worst and verifies every request as if it came from an uncontrolled network. Three principles: **verify explicitly** (use all data points), **use least privilege access** (just-in-time, just-enough-access, risk-based policies) and **assume breach** (limit impact, segment access, verify end-to-end encryption, use analytics). Access is based on authentication, **not location**.",
+   "**Defense in depth**: layers so a breach of one is stopped by the next. Outside to inside: **physical** → **identity and access** (SSO, MFA, audit) → **perimeter** (DDoS protection, firewalls) → **network** (limit communication, deny by default, segmentation) → **compute** (secure VM access, endpoint protection, patching) → **application** (secure code, secrets in Key Vault) → **data** (encryption at rest and in transit).",
+   "**Microsoft Defender for Cloud**: security posture management and threat protection for **Azure, on-premises, hybrid and multicloud (AWS, GCP)**. Extend it to non-Azure machines with **Azure Arc**. Three jobs: **continuously assess** (find vulnerabilities), **secure** (harden with the Microsoft cloud security benchmark, built on Azure Policy, and give a **secure score**), **defend** (security alerts with remediation steps, advanced threat protection, just-in-time VM access)."
+  ],
+  "trap": "Several layers that each slow an attacker = **defense in depth**. Perimeter is only one layer. DDoS protection = perimeter layer. NSGs = network layer. Data is the innermost layer. \"Secure score\" or \"security recommendations across clouds\" → Defender for Cloud."
+ },
+ {
+  "id": "2n",
+  "domain": 2,
+  "domainName": "Describe Azure architecture and services",
+  "weight": "35–40%",
+  "module": "p2m5",
+  "title": "Encryption and key management (Azure Key Vault)",
+  "notes": [
+   "**Encryption** makes data unreadable to unauthorised users. **At rest**: protects stored data (databases, disks, storage accounts). **In transit**: protects data moving between services, apps and users. Good security uses both.",
+   "**Azure Key Vault**: the main Azure service for storing and controlling access to **secrets** (connection strings, passwords), **encryption keys** and **certificates**. Don't put secrets in code or config files.",
+   "Key management helps you: **control who can access** keys and secrets, **rotate** them over time, and **audit** their use. Apps can fetch secrets at runtime using **managed identities**, so no hard-coded credentials."
+  ],
+  "trap": "Passwords, keys, certificates, connection strings → Key Vault. Encrypting stored data = at rest. Encrypting moving data = in transit."
+ },
+ {
+  "id": "3a",
+  "domain": 3,
+  "domainName": "Describe Azure management and governance",
+  "weight": "30–35%",
+  "module": "p3m1",
+  "title": "What affects cost",
+  "notes": [
+   "Six factors: **resource type** (and its settings and region), **consumption** (pay-as-you-go, reservations, savings plan, Spot), **maintenance**, **geography**, **subscription type** and **Azure Marketplace**.",
+   "**Maintenance**: when you delete a VM, extra resources (disks, network) may be left behind and keep costing money. Remove what you no longer need.",
+   "**Geography**: the same resource can cost different amounts in different regions (power, labour, taxes). **Network traffic** costs vary too: it's cheaper to move data within Europe than from Europe to Asia or South America.",
+   "**Billing zones** are a geographic grouping of regions used only for **data-transfer pricing**. They are **not** availability zones. Some **inbound** transfers are **free**. **Outbound** transfers are priced by zone.",
+   "**Subscription type**: some include allowances (a free trial gives free products for 12 months and a credit for the first 30 days). **Azure Marketplace**: third-party solutions where you may pay for Azure services **plus** the vendor, and the vendor sets the billing.",
+   "Free things: **resource groups**, management groups and tags don't cost anything on their own."
+  ],
+  "trap": "\"Which does NOT affect cost?\" → the number of resource groups, or inbound data. Billing zone ≠ availability zone."
+ },
+ {
+  "id": "3b",
+  "domain": 3,
+  "domainName": "Describe Azure management and governance",
+  "weight": "30–35%",
+  "module": "p3m1",
+  "title": "Pricing calculator, Cost Management, tags, cost optimisation",
+  "notes": [
+   "**Pricing calculator**: **estimates** the cost of Azure resources **before you deploy** (compute, storage, network, tiers, redundancy). For information only. **Nothing is provisioned and nothing is charged.** **The TCO calculator has been retired**, though old practice questions may still mention it.",
+   "**Microsoft Cost Management**: analyse, monitor and manage **actual** costs. **Cost analysis** shows costs by billing cycle, region, resource, subscription, resource group or service. **Budgets** set a spending limit (by subscription, resource group, service type and so on) and can trigger **automation**, for example shutting down non-production resources. **Cost alerts** are of three kinds: **budget alerts**, **credit alerts** (at 90% and 100% of an Azure Prepayment) and **department spending quota alerts** (Enterprise Agreement).",
+   "**Tags**: **name/value metadata** on resources (for example Environment = Prod). Uses: resource management, **cost reporting** and chargeback, operations (SLAs), security classification, governance and compliance, automation. Manage tags in the portal, PowerShell, CLI, ARM templates or REST. **Resources don't inherit tags** from their resource group or subscription. **Azure Policy** can require tags or re-apply them.",
+   "**Cost optimisation options**: **Reservations** for stable 24/7 workloads. **Savings plan for compute** for steady but varied compute. **Spot** for interruptible work. Review them regularly as usage changes."
+  ],
+  "trap": "\"Group costs without moving resources\" → **tags** (not subscriptions). Estimate before deploying → pricing calculator. Track and alert on what you already spend → Cost Management. Group the bill by department → tags."
+ },
+ {
+  "id": "3c",
+  "domain": 3,
+  "domainName": "Describe Azure management and governance",
+  "weight": "30–35%",
+  "module": "p3m2",
+  "title": "Governance: Purview, Azure Policy, resource locks",
+  "notes": [
+   "**Microsoft Purview**: a family of **data governance, risk and compliance** solutions giving one view of your data across on-premises, multicloud and SaaS. Features: **automated data discovery**, **sensitive data classification** and **end-to-end data lineage**.",
+   "Two solution areas: **risk and compliance** (built around Microsoft 365: Teams, OneDrive, Exchange) and **unified data governance** (a map of your whole data estate, including SQL, Hive and Amazon S3).",
+   "**Azure Policy**: create, assign and manage policies that **control or audit** your resources so they stay compliant. It can **prevent** non-compliant resources from being created, flag existing ones, and sometimes **remediate** (for example add a missing tag). A group of policies is an **initiative**. Policies are **inherited** down the hierarchy. Resources can be marked as **exceptions**.",
+   "**Resource locks**: stop **accidental** deletion or change. **Delete** lock: read and modify, but no delete. **ReadOnly** lock: read only, no changes or deletes (like the Reader role). Apply to a resource, resource group or subscription. **Inherited.** They apply **whatever your RBAC role, even Owner**: remove the lock first."
+  ],
+  "trap": "Policy = what resources may look like. RBAC = what people may do. Locks = stop deletion or change. Purview = governs your DATA."
+ },
+ {
+  "id": "3g",
+  "domain": 3,
+  "domainName": "Describe Azure management and governance",
+  "weight": "30–35%",
+  "module": "p3m2",
+  "title": "Service Trust Portal",
+  "notes": [
+   "The **Service Trust Portal** gives access to content, tools and resources about Microsoft's **security, privacy and compliance** practices (audit reports, compliance documents). Find it at servicetrust.microsoft.com.",
+   "To open some of it you sign in with a Microsoft Entra **work or school** account and accept Microsoft's **non-disclosure agreement**.",
+   "Menu: **My Library** (pin documents and get update notifications) and **All Documents**. Documents stay downloadable for at least 12 months after publishing."
+  ],
+  "trap": "\"Where do I get Microsoft's compliance and audit reports?\" → Service Trust Portal. Not Purview, not Advisor."
+ },
+ {
+  "id": "3d",
+  "domain": 3,
+  "domainName": "Describe Azure management and governance",
+  "weight": "30–35%",
+  "module": "p3m3",
+  "title": "Tools: portal, Cloud Shell, CLI, PowerShell, Copilot, Azure Arc",
+  "notes": [
+   "**Azure portal**: a web-based, unified console with a graphical interface. Build, manage and monitor, make custom dashboards and set accessibility options. It runs in every Azure datacenter, so a single datacenter failure doesn't take it down, and it updates without downtime.",
+   "**Azure Cloud Shell**: a **browser-based** shell, **no install**, already authenticated to your account, supporting **Azure PowerShell or the Azure CLI (Bash)**.",
+   "**Azure PowerShell**: **cmdlets** that call the Azure REST API. **Azure CLI**: functionally the same, but **Bash**-style commands starting with az. Both can be scripted for repeatable, automated work, and installed on Windows, Linux and Mac.",
+   "**Copilot in Azure**: an AI assistant for operations tasks (explore services, understand options, draft commands). Always validate its suggestions before applying.",
+   "**Azure Arc**: works with Azure Resource Manager to project resources **outside Azure** into Azure so you manage them with Azure tools. It manages **servers, Kubernetes clusters, Azure data services, SQL Server** and (preview) VMs, giving consistent governance, policy and inventory across hybrid and multicloud."
+  ],
+  "trap": "\"Linux admins who want Bash\" → **Azure CLI**. PowerShell uses PowerShell commands. \"Manage on-premises or other clouds from Azure\" → Azure Arc. \"Run commands from the browser, nothing installed\" → Cloud Shell."
+ },
+ {
+  "id": "3e",
+  "domain": 3,
+  "domainName": "Describe Azure management and governance",
+  "weight": "30–35%",
+  "module": "p3m3",
+  "title": "Infrastructure as code, Azure Resource Manager, ARM templates",
+  "notes": [
+   "**Azure Resource Manager (ARM)**: Azure's deployment and management service. **Every** request from the portal, CLI, PowerShell, APIs or SDKs goes through it. It **authenticates and authorises** the request, then sends it to the service, which is why results are consistent in every tool.",
+   "ARM lets you manage infrastructure with **declarative templates**, deploy and monitor resources as a **group**, redeploy consistently, define **dependencies** so they deploy in the right order, apply **RBAC** natively and apply **tags**.",
+   "**Infrastructure as code (IaC)**: managing infrastructure with code and templates instead of manual steps. **ARM templates** are **declarative JSON**: you describe the end state and ARM validates, orders and deploys it (in parallel where possible). They're repeatable, modular (nested templates) and extensible (deployment scripts).",
+   "**Bicep**: a simpler, more concise declarative language for deploying through ARM. It is also repeatable (idempotent) and modular."
+  ],
+  "trap": "ARM is the service. An ARM template is the JSON file. \"Deploy the same environment repeatedly\" → ARM templates or Bicep."
+ },
+ {
+  "id": "3f",
+  "domain": 3,
+  "domainName": "Describe Azure management and governance",
+  "weight": "30–35%",
+  "module": "p3m4",
+  "title": "Monitoring: Advisor, Service Health, Azure Monitor",
+  "notes": [
+   "**Azure Advisor**: personalised recommendations in **5 categories**: **Reliability, Security, Performance, Operational Excellence, Cost**. Each recommendation can be acted on, postponed or dismissed, and you can get notifications.",
+   "**Azure Service Health** has **three views**. **Azure Status**: global health of all services and regions. **Service Health**: outages, planned maintenance and advisories for the services and regions you use, with alerts. **Resource Health**: health of one resource (for example a VM), and whether the problem is on Azure's side or yours.",
+   "Service Health reports **three kinds of event**: **service issues** (outages happening now, act immediately), **planned maintenance** (upcoming work that may affect you) and **health advisories** (things you must act on before they cause interruptions, such as **service retirements and breaking changes**). After an outage it also gives official **root cause analysis (RCA)** incident reports you can share.",
+   "**Azure Monitor**: collects, analyses and acts on **logs and metrics** from apps, operating systems and the network, across Azure, on-premises and multicloud.",
+   "**Log Analytics**: the tool where you write and run **queries** on that data. **Alerts**: an **alert rule** (the condition, metric-based or log-based) plus an **action group** (who is notified and what happens). Action groups are reusable across Monitor, Service Health and Advisor.",
+   "**Application Insights**: monitors the performance and usage of **web apps** (request rates, response times, failure rates, dependencies, page load times, users). Add an SDK or enable the agent. **Availability tests** send synthetic requests to check the app is responding."
+  ],
+  "trap": "\"Official post-outage root cause report\" → Service Health. \"Act before it breaks (retirements, breaking changes)\" → **health advisories**. Advice → Advisor. Azure is down for me → Service Health. Is this one VM OK? → Resource Health. Metrics, logs, alerts → Monitor. Web app performance → Application Insights."
+ }
+]

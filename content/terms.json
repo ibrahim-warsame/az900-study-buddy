@@ -1,0 +1,1227 @@
+[
+ {
+  "term": "Cloud computing",
+  "definition": "Renting computing services (servers, storage, databases, networking, software) over the internet, paying for what you use.",
+  "domain": null
+ },
+ {
+  "term": "Shared responsibility model",
+  "definition": "Security duties split between Microsoft and you. You always own your data, devices and identities.",
+  "domain": null
+ },
+ {
+  "term": "Public cloud",
+  "definition": "Provider owns the hardware, anyone can use it, no CapEx.",
+  "domain": null
+ },
+ {
+  "term": "Private cloud",
+  "definition": "Cloud used by one organisation. Full control, CapEx for the hardware.",
+  "domain": null
+ },
+ {
+  "term": "Hybrid cloud",
+  "definition": "Public and private cloud connected and used together.",
+  "domain": null
+ },
+ {
+  "term": "Multi-cloud",
+  "definition": "Using more than one public cloud provider.",
+  "domain": null
+ },
+ {
+  "term": "CapEx",
+  "definition": "Up-front spend on physical infrastructure, such as buying servers.",
+  "domain": null
+ },
+ {
+  "term": "OpEx",
+  "definition": "Ongoing spend on services as you use them. Cloud spend is OpEx.",
+  "domain": null
+ },
+ {
+  "term": "Consumption-based model",
+  "definition": "Pay only for what you use, no up-front cost.",
+  "domain": null
+ },
+ {
+  "term": "Pay-as-you-go",
+  "definition": "Billed per use with no commitment.",
+  "domain": null
+ },
+ {
+  "term": "Reservation (reserved instance)",
+  "definition": "Commit for 1 or 3 years in exchange for a big discount.",
+  "domain": null
+ },
+ {
+  "term": "Spot VM",
+  "definition": "Spare Azure capacity, deeply discounted, can be evicted at any time.",
+  "domain": null
+ },
+ {
+  "term": "Azure Hybrid Benefit",
+  "definition": "Reuse your existing Windows Server or SQL Server licences on Azure.",
+  "domain": null
+ },
+ {
+  "term": "Serverless",
+  "definition": "No servers to manage. Code runs on events and you pay per execution.",
+  "domain": null
+ },
+ {
+  "term": "High availability",
+  "definition": "Keeps a service running with minimal downtime. Measured as an SLA percentage.",
+  "domain": null
+ },
+ {
+  "term": "SLA",
+  "definition": "Service level agreement: Microsoft's promised uptime, for example 99.9%.",
+  "domain": null
+ },
+ {
+  "term": "Scalability",
+  "definition": "Ability to handle more or less load by adding or removing resources.",
+  "domain": null
+ },
+ {
+  "term": "Vertical scaling (scale up)",
+  "definition": "Give a machine more CPU or RAM.",
+  "domain": null
+ },
+ {
+  "term": "Horizontal scaling (scale out)",
+  "definition": "Add more machines or instances.",
+  "domain": null
+ },
+ {
+  "term": "Elasticity / autoscaling",
+  "definition": "Scaling that happens automatically with demand.",
+  "domain": null
+ },
+ {
+  "term": "Reliability",
+  "definition": "Ability to recover from failures and keep working.",
+  "domain": null
+ },
+ {
+  "term": "Predictability",
+  "definition": "Steady performance and forecastable cost.",
+  "domain": null
+ },
+ {
+  "term": "IaaS",
+  "definition": "Rent the infrastructure. You manage the OS and up. Most control.",
+  "domain": null
+ },
+ {
+  "term": "PaaS",
+  "definition": "Microsoft runs the infrastructure and OS. You bring the app and data.",
+  "domain": null
+ },
+ {
+  "term": "SaaS",
+  "definition": "Finished software you just use. Least management.",
+  "domain": null
+ },
+ {
+  "term": "Lift-and-shift",
+  "definition": "Move existing servers to cloud VMs unchanged (IaaS).",
+  "domain": null
+ },
+ {
+  "term": "Datacenter",
+  "definition": "Physical building of servers. Grouped into regions and zones.",
+  "domain": null
+ },
+ {
+  "term": "Region",
+  "definition": "Geographic area of one or more datacenters on a low-latency network.",
+  "domain": null
+ },
+ {
+  "term": "Region pair",
+  "definition": "Two regions in the same geography, at least 300 miles apart. Updated one at a time.",
+  "domain": null
+ },
+ {
+  "term": "Sovereign region",
+  "definition": "Isolated Azure for government or legal needs: Azure Government (US), Azure China (21Vianet).",
+  "domain": null
+ },
+ {
+  "term": "Availability zone",
+  "definition": "Separate datacenter(s) in a region with their own power, cooling and network. At least 3 per region.",
+  "domain": null
+ },
+ {
+  "term": "Resource",
+  "definition": "A single service instance: VM, storage account, VNet, database.",
+  "domain": null
+ },
+ {
+  "term": "Resource group",
+  "definition": "Logical container. Each resource is in exactly one. Groups can't nest. Deleting one deletes its contents.",
+  "domain": null
+ },
+ {
+  "term": "Subscription",
+  "definition": "Billing and access-control boundary that holds resource groups.",
+  "domain": null
+ },
+ {
+  "term": "Management group",
+  "definition": "Container for subscriptions. Policy and RBAC set here are inherited. Up to 6 levels deep.",
+  "domain": null
+ },
+ {
+  "term": "Virtual machine",
+  "definition": "IaaS server in Azure with full OS control.",
+  "domain": null
+ },
+ {
+  "term": "VM Scale Sets",
+  "definition": "Identical, load-balanced VMs that autoscale.",
+  "domain": null
+ },
+ {
+  "term": "Availability set",
+  "definition": "Spreads VMs across fault domains (up to 3) and update domains (up to 20).",
+  "domain": null
+ },
+ {
+  "term": "Fault domain",
+  "definition": "Group of hardware sharing power and network, like a rack.",
+  "domain": null
+ },
+ {
+  "term": "Update domain",
+  "definition": "Group of VMs rebooted together during maintenance.",
+  "domain": null
+ },
+ {
+  "term": "Azure Virtual Desktop",
+  "definition": "Windows desktops and apps hosted in Azure, used from any device.",
+  "domain": null
+ },
+ {
+  "term": "Container",
+  "definition": "Lightweight, portable app package that shares the host OS.",
+  "domain": null
+ },
+ {
+  "term": "Azure Container Instances",
+  "definition": "Run a container fast without managing VMs.",
+  "domain": null
+ },
+ {
+  "term": "Azure Container Apps",
+  "definition": "Serverless containers with built-in scaling and load balancing.",
+  "domain": null
+ },
+ {
+  "term": "AKS",
+  "definition": "Azure Kubernetes Service: managed container orchestration.",
+  "domain": null
+ },
+ {
+  "term": "Azure Functions",
+  "definition": "Serverless, event-driven code, billed per execution.",
+  "domain": null
+ },
+ {
+  "term": "Azure App Service",
+  "definition": "PaaS hosting for web apps, APIs and mobile back ends.",
+  "domain": null
+ },
+ {
+  "term": "Virtual network (VNet)",
+  "definition": "Your private network in Azure.",
+  "domain": null
+ },
+ {
+  "term": "Subnet",
+  "definition": "A smaller address range inside a VNet.",
+  "domain": null
+ },
+ {
+  "term": "VNet peering",
+  "definition": "Private link between VNets over Microsoft's backbone.",
+  "domain": null
+ },
+ {
+  "term": "Azure DNS",
+  "definition": "Hosts DNS domains in Azure. Can't buy domain names there.",
+  "domain": null
+ },
+ {
+  "term": "VPN Gateway",
+  "definition": "Encrypted tunnel over the internet: site-to-site, point-to-site, network-to-network.",
+  "domain": null
+ },
+ {
+  "term": "ExpressRoute",
+  "definition": "Private connection to Azure through a provider, not over the internet.",
+  "domain": null
+ },
+ {
+  "term": "Public endpoint",
+  "definition": "Service reachable on a public IP address.",
+  "domain": null
+ },
+ {
+  "term": "Private endpoint",
+  "definition": "Network interface with a private IP in your VNet, linked to a service (Private Link).",
+  "domain": null
+ },
+ {
+  "term": "Storage account",
+  "definition": "Container for Azure Storage data with a globally unique name.",
+  "domain": null
+ },
+ {
+  "term": "Blob storage",
+  "definition": "Unstructured object storage (images, video, backups).",
+  "domain": null
+ },
+ {
+  "term": "Azure Files",
+  "definition": "Managed SMB/NFS file shares you can mount.",
+  "domain": null
+ },
+ {
+  "term": "Queue storage",
+  "definition": "Messages (up to 64 KB) between app components.",
+  "domain": null
+ },
+ {
+  "term": "Table storage",
+  "definition": "NoSQL key/attribute storage.",
+  "domain": null
+ },
+ {
+  "term": "Managed disk",
+  "definition": "Block storage volume for a VM.",
+  "domain": null
+ },
+ {
+  "term": "Hot / Cool / Cold / Archive",
+  "definition": "Blob tiers from frequent to rare access. Minimum days: 0 / 30 / 90 / 180.",
+  "domain": null
+ },
+ {
+  "term": "Rehydration",
+  "definition": "Moving an archived blob back online. Can take hours.",
+  "domain": null
+ },
+ {
+  "term": "LRS",
+  "definition": "3 copies in one datacenter.",
+  "domain": null
+ },
+ {
+  "term": "ZRS",
+  "definition": "3 copies across 3 availability zones.",
+  "domain": null
+ },
+ {
+  "term": "GRS",
+  "definition": "LRS plus a copy in a secondary region.",
+  "domain": null
+ },
+ {
+  "term": "GZRS",
+  "definition": "ZRS plus a copy in a secondary region.",
+  "domain": null
+ },
+ {
+  "term": "RA-GRS / RA-GZRS",
+  "definition": "Geo-redundant plus read access to the secondary at any time.",
+  "domain": null
+ },
+ {
+  "term": "AzCopy",
+  "definition": "Command-line tool to copy data to and from storage.",
+  "domain": null
+ },
+ {
+  "term": "Azure Storage Explorer",
+  "definition": "Desktop GUI for managing storage.",
+  "domain": null
+ },
+ {
+  "term": "Azure File Sync",
+  "definition": "Syncs Windows file servers with Azure Files and caches hot files.",
+  "domain": null
+ },
+ {
+  "term": "Azure Migrate",
+  "definition": "Hub to discover, assess and migrate to Azure.",
+  "domain": null
+ },
+ {
+  "term": "Azure Data Box",
+  "definition": "Physical device shipped to move large data offline.",
+  "domain": null
+ },
+ {
+  "term": "Microsoft Entra ID",
+  "definition": "Azure's cloud identity service (formerly Azure AD).",
+  "domain": null
+ },
+ {
+  "term": "Entra Domain Services",
+  "definition": "Managed domain join, LDAP, Kerberos and group policy without domain controllers.",
+  "domain": null
+ },
+ {
+  "term": "Entra Connect",
+  "definition": "Syncs on-prem Active Directory with Entra ID.",
+  "domain": null
+ },
+ {
+  "term": "SSO",
+  "definition": "One sign-in for many apps.",
+  "domain": null
+ },
+ {
+  "term": "MFA",
+  "definition": "Two or more factors: something you know, have or are.",
+  "domain": null
+ },
+ {
+  "term": "Passwordless",
+  "definition": "Windows Hello for Business, Authenticator app, FIDO2 keys.",
+  "domain": null
+ },
+ {
+  "term": "External identities",
+  "definition": "Outside users sign in with their own accounts (B2B, External ID).",
+  "domain": null
+ },
+ {
+  "term": "Conditional Access",
+  "definition": "If-then sign-in policies: signals lead to allow, require MFA or block.",
+  "domain": null
+ },
+ {
+  "term": "Azure RBAC",
+  "definition": "Assign roles at a scope to control who can do what.",
+  "domain": null
+ },
+ {
+  "term": "Owner / Contributor / Reader",
+  "definition": "Full plus grant access / full minus grant access / view only.",
+  "domain": null
+ },
+ {
+  "term": "Zero Trust",
+  "definition": "Verify explicitly, use least privilege, assume breach.",
+  "domain": null
+ },
+ {
+  "term": "Defense in depth",
+  "definition": "Layers: physical, identity, perimeter, network, compute, application, data.",
+  "domain": null
+ },
+ {
+  "term": "Microsoft Defender for Cloud",
+  "definition": "Security posture (secure score) and threat protection across Azure, on-prem and other clouds.",
+  "domain": null
+ },
+ {
+  "term": "Ingress / egress",
+  "definition": "Data into Azure (generally free) / data out of Azure (charged).",
+  "domain": null
+ },
+ {
+  "term": "Pricing calculator",
+  "definition": "Estimates the cost of services before you deploy.",
+  "domain": null
+ },
+ {
+  "term": "TCO calculator",
+  "definition": "Retired by Microsoft. Older practice tests still mention it. Use the pricing calculator.",
+  "domain": null
+ },
+ {
+  "term": "Microsoft Cost Management",
+  "definition": "Cost analysis, budgets and alerts on actual spending.",
+  "domain": null
+ },
+ {
+  "term": "Tags",
+  "definition": "Name/value labels on resources for cost and organisation. Not inherited by default.",
+  "domain": null
+ },
+ {
+  "term": "Microsoft Purview",
+  "definition": "Discovers, classifies and governs data across your whole estate.",
+  "domain": null
+ },
+ {
+  "term": "Azure Policy",
+  "definition": "Enforces rules on resource properties and reports compliance.",
+  "domain": null
+ },
+ {
+  "term": "Policy initiative",
+  "definition": "A group of policies assigned together.",
+  "domain": null
+ },
+ {
+  "term": "Delete lock",
+  "definition": "Can read and modify, can't delete.",
+  "domain": null
+ },
+ {
+  "term": "ReadOnly lock",
+  "definition": "Can read only: no changes, no deletes.",
+  "domain": null
+ },
+ {
+  "term": "Azure portal",
+  "definition": "Web GUI for managing Azure.",
+  "domain": null
+ },
+ {
+  "term": "Azure Cloud Shell",
+  "definition": "Browser shell, already signed in, Bash or PowerShell.",
+  "domain": null
+ },
+ {
+  "term": "Azure CLI",
+  "definition": "Cross-platform az commands.",
+  "domain": null
+ },
+ {
+  "term": "Azure PowerShell",
+  "definition": "Az cmdlets such as New-AzVM.",
+  "domain": null
+ },
+ {
+  "term": "Azure Arc",
+  "definition": "Extends Azure management to on-prem and other clouds.",
+  "domain": null
+ },
+ {
+  "term": "Infrastructure as code",
+  "definition": "Defining infrastructure in code for repeatable deployments.",
+  "domain": null
+ },
+ {
+  "term": "Azure Resource Manager",
+  "definition": "Deployment and management layer every request goes through.",
+  "domain": null
+ },
+ {
+  "term": "ARM template",
+  "definition": "Declarative JSON describing resources to deploy.",
+  "domain": null
+ },
+ {
+  "term": "Bicep",
+  "definition": "Simpler language that compiles to ARM JSON.",
+  "domain": null
+ },
+ {
+  "term": "Azure Advisor",
+  "definition": "Recommendations: reliability, security, performance, operational excellence, cost.",
+  "domain": null
+ },
+ {
+  "term": "Azure Service Health",
+  "definition": "Azure outages, maintenance and advisories affecting you.",
+  "domain": null
+ },
+ {
+  "term": "Resource Health",
+  "definition": "Health of one of your resources.",
+  "domain": null
+ },
+ {
+  "term": "Azure Monitor",
+  "definition": "Collects and analyses metrics and logs, and raises alerts.",
+  "domain": null
+ },
+ {
+  "term": "Log Analytics",
+  "definition": "Query tool for Azure Monitor logs (KQL).",
+  "domain": null
+ },
+ {
+  "term": "Action group",
+  "definition": "Who and how to notify when an alert fires (email, SMS, webhook).",
+  "domain": null
+ },
+ {
+  "term": "Application Insights",
+  "definition": "Performance monitoring for web apps.",
+  "domain": null
+ },
+ {
+  "term": "On-premises (on-prem)",
+  "definition": "In your own building or datacenter, not in the cloud.",
+  "domain": null
+ },
+ {
+  "term": "Provision",
+  "definition": "Create and set up a resource so it is ready to use.",
+  "domain": null
+ },
+ {
+  "term": "Deploy",
+  "definition": "Put an app or resource into Azure so it runs.",
+  "domain": null
+ },
+ {
+  "term": "Workload",
+  "definition": "An app or job that runs in the cloud.",
+  "domain": null
+ },
+ {
+  "term": "Migration",
+  "definition": "Moving apps, servers or data to Azure.",
+  "domain": null
+ },
+ {
+  "term": "Legacy app",
+  "definition": "An older app built for older technology. It often needs things like Kerberos or LDAP.",
+  "domain": null
+ },
+ {
+  "term": "Virtualization",
+  "definition": "Running many virtual machines on one physical machine.",
+  "domain": null
+ },
+ {
+  "term": "Hypervisor",
+  "definition": "The software that creates and runs virtual machines.",
+  "domain": null
+ },
+ {
+  "term": "Managed service",
+  "definition": "A service where the provider runs the underlying parts for you.",
+  "domain": null
+ },
+ {
+  "term": "Latency",
+  "definition": "The delay before data arrives. Lower is faster.",
+  "domain": null
+ },
+ {
+  "term": "Bandwidth",
+  "definition": "How much data can move per second over a connection.",
+  "domain": null
+ },
+ {
+  "term": "Throughput",
+  "definition": "How much data or work actually gets processed per second.",
+  "domain": null
+ },
+ {
+  "term": "Load balancing",
+  "definition": "Spreading traffic across several servers so none is overloaded.",
+  "domain": null
+ },
+ {
+  "term": "Uptime / downtime",
+  "definition": "Time a service is working / time it is not.",
+  "domain": null
+ },
+ {
+  "term": "Outage",
+  "definition": "A period when a service is down.",
+  "domain": null
+ },
+ {
+  "term": "Availability",
+  "definition": "How much of the time a service is up, usually as a %.",
+  "domain": null
+ },
+ {
+  "term": "Redundancy",
+  "definition": "Extra copies, so one failure doesn't lose anything.",
+  "domain": null
+ },
+ {
+  "term": "Durability",
+  "definition": "How safe stored data is from being lost (the \"nines\", e.g. 11 nines).",
+  "domain": null
+ },
+ {
+  "term": "Fault tolerance",
+  "definition": "The system keeps working even if one part fails.",
+  "domain": null
+ },
+ {
+  "term": "Failover",
+  "definition": "Switching to a backup copy when the main one fails.",
+  "domain": null
+ },
+ {
+  "term": "Disaster recovery",
+  "definition": "Getting systems back after a big failure, such as a region outage.",
+  "domain": null
+ },
+ {
+  "term": "Geography",
+  "definition": "An area such as Europe that contains several regions. Data stays inside it.",
+  "domain": null
+ },
+ {
+  "term": "Data residency",
+  "definition": "Where data is physically stored, which matters for laws.",
+  "domain": null
+ },
+ {
+  "term": "Endpoint",
+  "definition": "An address where a service can be reached (a URL or IP).",
+  "domain": null
+ },
+ {
+  "term": "Encryption",
+  "definition": "Scrambling data so only someone with the key can read it.",
+  "domain": null
+ },
+ {
+  "term": "At rest / in transit",
+  "definition": "Data stored on disk / data moving over a network.",
+  "domain": null
+ },
+ {
+  "term": "Patch",
+  "definition": "A software update that fixes bugs or security holes.",
+  "domain": null
+ },
+ {
+  "term": "Tenant",
+  "definition": "Your organisation's own instance of Microsoft Entra ID (its directory).",
+  "domain": null
+ },
+ {
+  "term": "Identity",
+  "definition": "Who or what is signing in: a user, an app or a device.",
+  "domain": null
+ },
+ {
+  "term": "Authentication (AuthN)",
+  "definition": "Proving who you are, e.g. signing in with a password and MFA.",
+  "domain": null
+ },
+ {
+  "term": "Authorization (AuthZ)",
+  "definition": "What you are allowed to do after signing in (RBAC decides this).",
+  "domain": null
+ },
+ {
+  "term": "Security principal",
+  "definition": "A user, group or app that can be given access.",
+  "domain": null
+ },
+ {
+  "term": "Least privilege",
+  "definition": "Give only the access needed, nothing more.",
+  "domain": null
+ },
+ {
+  "term": "Scope",
+  "definition": "The level a setting applies to: management group, subscription, resource group or resource.",
+  "domain": null
+ },
+ {
+  "term": "Inheritance",
+  "definition": "Settings flow down from a parent level to everything below it.",
+  "domain": null
+ },
+ {
+  "term": "Governance",
+  "definition": "Rules and control over how the cloud is used.",
+  "domain": null
+ },
+ {
+  "term": "Compliance",
+  "definition": "Meeting laws and standards (e.g. GDPR, ISO 27001).",
+  "domain": null
+ },
+ {
+  "term": "Remediation",
+  "definition": "Fixing something that breaks a rule, e.g. Azure Policy fixing non-compliant resources.",
+  "domain": null
+ },
+ {
+  "term": "Telemetry",
+  "definition": "Data a system sends about itself, such as metrics and logs.",
+  "domain": null
+ },
+ {
+  "term": "Metrics",
+  "definition": "Numbers measured over time, such as CPU 75%.",
+  "domain": null
+ },
+ {
+  "term": "Logs",
+  "definition": "Time-stamped records of events, such as \"VM started at 09:02\".",
+  "domain": null
+ },
+ {
+  "term": "Orchestration",
+  "definition": "Automatically managing, scaling and restarting many containers or tasks.",
+  "domain": null
+ },
+ {
+  "term": "Declarative",
+  "definition": "You describe the end result you want, not the steps.",
+  "domain": null
+ },
+ {
+  "term": "Imperative",
+  "definition": "You give step-by-step commands.",
+  "domain": null
+ },
+ {
+  "term": "Idempotent",
+  "definition": "Running it twice gives the same result as running it once.",
+  "domain": null
+ },
+ {
+  "term": "SKU",
+  "definition": "A specific product size or edition you can buy, such as a VM size.",
+  "domain": null
+ },
+ {
+  "term": "Tier",
+  "definition": "A level of a service, such as Basic, Standard or Premium, or Hot and Cool.",
+  "domain": null
+ },
+ {
+  "term": "Quota / limit",
+  "definition": "The maximum amount you are allowed to create.",
+  "domain": null
+ },
+ {
+  "term": "Egress / ingress",
+  "definition": "Data going out of Azure (charged) / data coming in (free).",
+  "domain": null
+ },
+ {
+  "term": "Network security group (NSG)",
+  "definition": "Allow and deny rules for traffic to a subnet or VM. Network layer.",
+  "domain": null
+ },
+ {
+  "term": "Azure Firewall",
+  "definition": "Managed, stateful firewall that protects a whole virtual network. More powerful than an NSG.",
+  "domain": null
+ },
+ {
+  "term": "Azure DDoS Protection",
+  "definition": "Defends against floods of traffic meant to take you offline. Perimeter layer.",
+  "domain": null
+ },
+ {
+  "term": "Azure Load Balancer",
+  "definition": "Spreads network traffic across VMs in a region.",
+  "domain": null
+ },
+ {
+  "term": "Application Gateway",
+  "definition": "Load balancer for web traffic (HTTP), with an optional web application firewall.",
+  "domain": null
+ },
+ {
+  "term": "Traffic Manager",
+  "definition": "DNS-based routing that sends users to the best region.",
+  "domain": null
+ },
+ {
+  "term": "Azure Front Door",
+  "definition": "Global entry point for web apps: fast routing, caching and a firewall.",
+  "domain": null
+ },
+ {
+  "term": "Azure CDN",
+  "definition": "Caches content on servers close to users so it loads faster.",
+  "domain": null
+ },
+ {
+  "term": "Azure Bastion",
+  "definition": "Secure RDP/SSH into VMs from the portal, without giving them public IPs.",
+  "domain": null
+ },
+ {
+  "term": "Azure Key Vault",
+  "definition": "Safe storage for secrets, passwords, keys and certificates.",
+  "domain": null
+ },
+ {
+  "term": "Microsoft Sentinel",
+  "definition": "Cloud SIEM: collects security data and detects and responds to threats.",
+  "domain": null
+ },
+ {
+  "term": "Azure SQL Database",
+  "definition": "Managed relational SQL database (PaaS).",
+  "domain": null
+ },
+ {
+  "term": "Azure Cosmos DB",
+  "definition": "Globally distributed NoSQL database.",
+  "domain": null
+ },
+ {
+  "term": "Azure Database for MySQL / PostgreSQL",
+  "definition": "Managed open-source relational databases.",
+  "domain": null
+ },
+ {
+  "term": "Azure Logic Apps",
+  "definition": "Low-code, serverless workflows that connect apps and services.",
+  "domain": null
+ },
+ {
+  "term": "Azure Backup",
+  "definition": "Backs up VMs, files and databases.",
+  "domain": null
+ },
+ {
+  "term": "Azure Site Recovery",
+  "definition": "Replicates VMs to another region so you can fail over in a disaster.",
+  "domain": null
+ },
+ {
+  "term": "Azure Marketplace",
+  "definition": "Store of Microsoft and third-party solutions. Purchases may add cost.",
+  "domain": null
+ },
+ {
+  "term": "Azure free account / student account",
+  "definition": "Free credit and free services for a limited time to try Azure.",
+  "domain": null
+ },
+ {
+  "term": "Well-Architected Framework",
+  "definition": "Microsoft guidance for good cloud design. Reliability is one of its pillars, and it shapes predictability.",
+  "domain": null
+ },
+ {
+  "term": "Sustainability (cloud)",
+  "definition": "Cutting waste: right-size, automate, monitor, optimise. Shut down what is idle.",
+  "domain": null
+ },
+ {
+  "term": "Azure VMware Solution",
+  "definition": "Run your existing VMware workloads in Azure.",
+  "domain": null
+ },
+ {
+  "term": "Savings plan for compute",
+  "definition": "Commit to an hourly compute spend for 1 or 3 years. More flexible than a reservation.",
+  "domain": null
+ },
+ {
+  "term": "Management OF the cloud",
+  "definition": "Autoscale, templates, health monitoring and alerts.",
+  "domain": null
+ },
+ {
+  "term": "Management IN the cloud",
+  "definition": "Ways to manage it: portal, CLI, APIs, PowerShell.",
+  "domain": null
+ },
+ {
+  "term": "Cloud models",
+  "definition": "The deployment types: public, private and hybrid (plus multicloud).",
+  "domain": null
+ },
+ {
+  "term": "Azure account",
+  "definition": "What you sign up with. It holds your subscriptions and is an identity in Entra ID.",
+  "domain": null
+ },
+ {
+  "term": "Azure free account",
+  "definition": "12 months of popular products, a credit for the first 30 days, and some always-free services.",
+  "domain": null
+ },
+ {
+  "term": "Azure free student account",
+  "definition": "$100 credit, free services and developer tools, no credit card needed.",
+  "domain": null
+ },
+ {
+  "term": "Cloud Solution Provider (CSP)",
+  "definition": "A Microsoft partner that sells Azure with managed-cloud solutions.",
+  "domain": null
+ },
+ {
+  "term": "Billing boundary",
+  "definition": "A subscription gets its own invoice.",
+  "domain": null
+ },
+ {
+  "term": "Access control boundary",
+  "definition": "Access policies are applied at the subscription level.",
+  "domain": null
+ },
+ {
+  "term": "Tenant Root Group",
+  "definition": "The single top-level management group in every Entra tenant.",
+  "domain": null
+ },
+ {
+  "term": "Zonal service",
+  "definition": "Pinned to one availability zone you choose (VMs, managed disks).",
+  "domain": null
+ },
+ {
+  "term": "Zone-redundant service",
+  "definition": "Replicated across zones automatically (ZRS, SQL Database).",
+  "domain": null
+ },
+ {
+  "term": "Non-regional service",
+  "definition": "Always available from Azure geographies. Survives zone and region outages.",
+  "domain": null
+ },
+ {
+  "term": "VM image",
+  "definition": "A template with an OS and tools used to create a VM.",
+  "domain": null
+ },
+ {
+  "term": "VM size families",
+  "definition": "B burstable, D general purpose, E memory, F compute, M large memory, L storage, N GPU.",
+  "domain": null
+ },
+ {
+  "term": "Container Apps vs ACI",
+  "definition": "Both PaaS. Container Apps add built-in load balancing and scaling.",
+  "domain": null
+ },
+ {
+  "term": "WebJobs",
+  "definition": "Run a program or script alongside an App Service app, on a schedule or trigger.",
+  "domain": null
+ },
+ {
+  "term": "Durable Functions",
+  "definition": "The stateful kind of Azure Functions. Plain Functions are stateless.",
+  "domain": null
+ },
+ {
+  "term": "Azure AI services",
+  "definition": "Prebuilt AI through APIs: language, speech, vision, documents.",
+  "domain": null
+ },
+ {
+  "term": "Azure OpenAI Service",
+  "definition": "Generative AI such as chat and content generation, with security and governance controls.",
+  "domain": null
+ },
+ {
+  "term": "Azure Machine Learning",
+  "definition": "Build, train and manage custom machine learning models.",
+  "domain": null
+ },
+ {
+  "term": "Azure IoT Hub",
+  "definition": "Secure two-way communication between the cloud and IoT devices.",
+  "domain": null
+ },
+ {
+  "term": "Azure IoT Central",
+  "definition": "A simplified SaaS platform for IoT solutions.",
+  "domain": null
+ },
+ {
+  "term": "Azure IoT Edge",
+  "definition": "Runs cloud workloads on devices close to where the data is created.",
+  "domain": null
+ },
+ {
+  "term": "Service endpoint",
+  "definition": "Lets a VNet reach Azure SQL or storage accounts securely, with optimal routing.",
+  "domain": null
+ },
+ {
+  "term": "Route table / UDR",
+  "definition": "Rules that control where traffic is sent. UDR = user-defined route.",
+  "domain": null
+ },
+ {
+  "term": "BGP",
+  "definition": "Border Gateway Protocol: shares routes between on-premises and Azure.",
+  "domain": null
+ },
+ {
+  "term": "Network virtual appliance",
+  "definition": "A specialised VM acting as a firewall or WAN optimiser.",
+  "domain": null
+ },
+ {
+  "term": "Policy-based vs route-based VPN",
+  "definition": "Two VPN gateway types. Route-based is needed for VNet-to-VNet, point-to-site and multisite.",
+  "domain": null
+ },
+ {
+  "term": "ExpressRoute Global Reach",
+  "definition": "Links your on-premises sites through the Microsoft network, not the internet.",
+  "domain": null
+ },
+ {
+  "term": "ExpressRoute circuit",
+  "definition": "The private connection from your network to Microsoft through a provider.",
+  "domain": null
+ },
+ {
+  "term": "Alias record",
+  "definition": "An Azure DNS record that follows the target resource if its IP changes.",
+  "domain": null
+ },
+ {
+  "term": "Premium file shares",
+  "definition": "Premium account type for Azure Files. Supports both SMB and NFS.",
+  "domain": null
+ },
+ {
+  "term": "Data Lake Storage Gen2",
+  "definition": "Big-data analytics storage built on Blob storage.",
+  "domain": null
+ },
+ {
+  "term": "RPO",
+  "definition": "Recovery point objective: how far behind the secondary copy can be. Typically under 15 minutes for Azure Storage.",
+  "domain": null
+ },
+ {
+  "term": "Windows Hello for Business",
+  "definition": "Passwordless sign-in tied to your PC, with biometric or PIN.",
+  "domain": null
+ },
+ {
+  "term": "Microsoft Authenticator",
+  "definition": "Phone app. Passwordless with number matching plus biometric or PIN.",
+  "domain": null
+ },
+ {
+  "term": "FIDO2 security key",
+  "definition": "Hardware key for passwordless sign-in. Cannot be phished.",
+  "domain": null
+ },
+ {
+  "term": "B2B collaboration",
+  "definition": "Partners sign in as guest users in your directory with their own accounts.",
+  "domain": null
+ },
+ {
+  "term": "B2B direct connect",
+  "definition": "Mutual trust between tenants for Teams shared channels. No guest accounts.",
+  "domain": null
+ },
+ {
+  "term": "External ID for customers",
+  "definition": "Customer-facing identity. Formerly Azure AD B2C.",
+  "domain": null
+ },
+ {
+  "term": "Access review",
+  "definition": "A regular check that guests and users still need their access.",
+  "domain": null
+ },
+ {
+  "term": "Microsoft Intune",
+  "definition": "Device management. Used for device-based Conditional Access.",
+  "domain": null
+ },
+ {
+  "term": "Self-service password reset",
+  "definition": "Users reset their own passwords. An Entra ID feature.",
+  "domain": null
+ },
+ {
+  "term": "Microsoft cloud security benchmark",
+  "definition": "Security guidance that Defender for Cloud recommendations follow.",
+  "domain": null
+ },
+ {
+  "term": "Just-in-time VM access",
+  "definition": "Opens management ports only when needed. A Defender for Cloud feature.",
+  "domain": null
+ },
+ {
+  "term": "Billing zone",
+  "definition": "Grouping of regions used for data-transfer pricing. Not an availability zone.",
+  "domain": null
+ },
+ {
+  "term": "Cost analysis",
+  "definition": "Cost Management view of spending by resource, region, billing cycle and so on.",
+  "domain": null
+ },
+ {
+  "term": "Budget",
+  "definition": "A spending limit with alerts, and optionally automation.",
+  "domain": null
+ },
+ {
+  "term": "Budget alert",
+  "definition": "Warns you when spending reaches a threshold.",
+  "domain": null
+ },
+ {
+  "term": "Credit alert",
+  "definition": "Warns at 90% and 100% of an Azure Prepayment.",
+  "domain": null
+ },
+ {
+  "term": "Department spending quota alert",
+  "definition": "Enterprise Agreement alert when a department reaches part of its quota.",
+  "domain": null
+ },
+ {
+  "term": "Service Trust Portal",
+  "definition": "Microsoft portal for security, privacy and compliance documents and audit reports.",
+  "domain": null
+ },
+ {
+  "term": "Policy remediation",
+  "definition": "Azure Policy fixing non-compliant resources, such as adding a missing tag.",
+  "domain": null
+ },
+ {
+  "term": "Policy exception",
+  "definition": "Marking a resource as exempt from a policy.",
+  "domain": null
+ },
+ {
+  "term": "Copilot in Azure",
+  "definition": "AI assistant for Azure operations. Always check its suggestions.",
+  "domain": null
+ },
+ {
+  "term": "Azure status",
+  "definition": "Global view of Azure health across all services and regions.",
+  "domain": null
+ },
+ {
+  "term": "Availability test",
+  "definition": "Application Insights synthetic requests that check your app responds.",
+  "domain": null
+ },
+ {
+  "term": "Alert rule",
+  "definition": "The condition (metric or log) that triggers an Azure Monitor alert.",
+  "domain": null
+ },
+ {
+  "term": "Data lineage",
+  "definition": "The path data takes through your systems. A Purview feature.",
+  "domain": null
+ },
+ {
+  "term": "Data classification",
+  "definition": "Labelling data by sensitivity. A Purview feature.",
+  "domain": null
+ }
+]

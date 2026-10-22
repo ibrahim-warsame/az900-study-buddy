@@ -1,0 +1,9 @@
+{
+  "name": "Wingu Buddy (unofficial AZ-900 study buddy)",
+  "short_name": "Wingu Buddy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbf6ee",
+  "theme_color": "#0f4c4a",
+  "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

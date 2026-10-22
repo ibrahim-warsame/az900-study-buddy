@@ -1,0 +1,435 @@
+[
+ {
+  "id": "1a",
+  "topic": "1a",
+  "keywords": [
+   "cloud computing",
+   "shared responsibility",
+   "what is cloud",
+   "responsibility",
+   "who is responsible",
+   "responsabilité partagée",
+   "responsabilité",
+   "partagée",
+   "majukumu",
+   "wingu",
+   "informatique en nuage"
+  ],
+  "en": {
+   "line": "Cloud computing means renting computing power over the internet instead of owning it.",
+   "simple": "Instead of buying and running your own servers, you use Microsoft's computers over the internet and pay for what you use. The work is shared. Microsoft looks after the datacenter, and you always look after your data, your devices and your accounts.",
+   "africa": "Think of a market stall. The market owner secures the building, the gate and the water. You still lock your own stall, look after your stock and decide who gets a key.",
+   "breaks": "In the cloud the split moves with the service type: the more managed the service, the more the provider does.",
+   "exam": "Always yours: data, devices, accounts and identities. Always the provider's: the physical datacenter, network and hosts. Everything in between depends on IaaS, PaaS or SaaS.",
+   "check": {
+    "q": "Who is always responsible for your data in the cloud?",
+    "options": [
+     "The cloud provider",
+     "You, the customer",
+     "Your internet company"
+    ],
+    "answer": 1,
+    "why": "Data, devices and identities always stay with the customer."
+   }
+  },
+  "sw": {
+   "line": "Kompyuta ya wingu ni kukodi nguvu za kompyuta kupitia intaneti badala ya kuzimiliki.",
+   "simple": "Badala ya kununua na kuendesha seva zako mwenyewe, unatumia kompyuta za Microsoft kupitia intaneti na unalipa kulingana na matumizi yako. Majukumu yanagawanywa. Microsoft inatunza kituo cha data, na wewe unatunza data yako, vifaa vyako na akaunti zako kila wakati.",
+   "africa": "Fikiria kibanda sokoni. Mwenye soko analinda jengo, lango na maji. Wewe bado unafunga kibanda chako, unatunza bidhaa zako na unaamua nani anapata ufunguo.",
+   "breaks": "Kwenye wingu, mgawanyo hubadilika kulingana na aina ya huduma: kadiri huduma inavyosimamiwa zaidi, ndivyo mtoa huduma anavyofanya kazi zaidi.",
+   "exam": "Daima ni zako: data, vifaa, akaunti na vitambulisho. Daima ni za mtoa huduma: kituo cha data, mtandao na seva halisi. Vingine hutegemea IaaS, PaaS au SaaS.",
+   "check": {
+    "q": "Nani anawajibika daima kwa data yako kwenye wingu?",
+    "options": [
+     "Mtoa huduma wa wingu",
+     "Wewe, mteja",
+     "Kampuni yako ya intaneti"
+    ],
+    "answer": 1,
+    "why": "Data, vifaa na vitambulisho hubaki kwa mteja kila wakati."
+   }
+  }
+ },
+ {
+  "id": "1b",
+  "topic": "1b",
+  "keywords": [
+   "public cloud",
+   "private cloud",
+   "hybrid",
+   "multicloud",
+   "cloud model",
+   "deployment"
+  ],
+  "en": {
+   "line": "Public, private and hybrid describe who owns and uses the cloud.",
+   "simple": "A public cloud is owned by a provider and shared by many customers. A private cloud is used by one organisation only. A hybrid cloud connects the two, so you can keep some things private and use the public cloud when you need more.",
+   "africa": "A public cloud is like a matatu: shared, you pay per ride and you own nothing. A private cloud is like your own car: full control, but you pay for it and maintain it. Hybrid is using your own car every day and hiring a matatu when many people travel.",
+   "breaks": "A private cloud is not always on your premises. It can be hosted by a third party as long as it is dedicated to you.",
+   "exam": "No up-front hardware cost points to public. Complete control and no shared tenants points to private. Some data must stay on-premises by law points to hybrid. Two or more public providers is multicloud.",
+   "check": {
+    "q": "Some customer data must stay in your own datacenter, the rest can go to Azure. Which model is this?",
+    "options": [
+     "Public cloud",
+     "Private cloud",
+     "Hybrid cloud"
+    ],
+    "answer": 2,
+    "why": "Mixing your own datacenter with the public cloud is hybrid."
+   }
+  },
+  "sw": {
+   "line": "Wingu la umma, la kibinafsi na mseto vinaelezea nani anamiliki na kutumia wingu.",
+   "simple": "Wingu la umma linamilikiwa na mtoa huduma na kutumiwa na wateja wengi. Wingu la kibinafsi linatumiwa na shirika moja tu. Wingu mseto linaunganisha vyote viwili, kwa hiyo unaweza kuweka vitu vingine kwa siri na kutumia wingu la umma unapohitaji zaidi.",
+   "africa": "Wingu la umma ni kama matatu: la pamoja, unalipa kwa safari na huna umiliki. Wingu la kibinafsi ni kama gari lako mwenyewe: udhibiti kamili, lakini unalitunza na kulilipia. Mseto ni kutumia gari lako kila siku na kukodi matatu watu wengi wanaposafiri.",
+   "breaks": "Wingu la kibinafsi si lazima liwe kwenye eneo lako. Linaweza kuwekwa na kampuni nyingine mradi ni lako peke yako.",
+   "exam": "Hakuna gharama ya vifaa mwanzoni inaashiria umma. Udhibiti kamili bila wateja wengine inaashiria kibinafsi. Data fulani lazima ibaki kwenye eneo lako kisheria inaashiria mseto. Watoa huduma wawili au zaidi wa umma ni multicloud.",
+   "check": {
+    "q": "Data fulani ya wateja lazima ibaki kwenye kituo chako cha data, nyingine iende Azure. Huu ni mfano gani?",
+    "options": [
+     "Wingu la umma",
+     "Wingu la kibinafsi",
+     "Wingu mseto"
+    ],
+    "answer": 2,
+    "why": "Kuchanganya kituo chako cha data na wingu la umma ni mseto."
+   }
+  }
+ },
+ {
+  "id": "1c",
+  "topic": "1c",
+  "keywords": [
+   "capex",
+   "opex",
+   "consumption",
+   "pay as you go",
+   "reservation",
+   "savings plan",
+   "spot",
+   "hybrid benefit",
+   "pricing model",
+   "cost model"
+  ],
+  "en": {
+   "line": "In the cloud you pay as you use, so cost is operating spend, not a big upfront purchase.",
+   "simple": "CapEx is a big upfront purchase, like servers. OpEx is ongoing spending, like a monthly bill. The cloud is OpEx and consumption-based: you pay only for what you use and add or release capacity as demand changes. You can also save money with reservations, savings plans and Spot VMs.",
+   "africa": "Buying a generator is CapEx. Buying prepaid electricity tokens is OpEx: you pay as you use. Pay-as-you-go is like topping up airtime. A reservation is like a monthly data bundle where you commit for a lower price. Spot is like cheap leftover seats that the operator can take back.",
+   "breaks": "In Azure, reservations and savings plans commit you for 1 or 3 years, and Spot VMs can be evicted at any time.",
+   "exam": "Steady 24/7 workload: reservations. Flexible hourly spend: savings plan. Interruptible batch work: Spot. Reuse licences you already own: Azure Hybrid Benefit.",
+   "check": {
+    "q": "A production database runs all year with steady use. Which option saves the most money?",
+    "options": [
+     "Spot VMs",
+     "Reservations",
+     "Pay-as-you-go only"
+    ],
+    "answer": 1,
+    "why": "Reservations give a discount for predictable, steady workloads. Spot VMs can be stopped."
+   }
+  },
+  "sw": {
+   "line": "Kwenye wingu unalipa kulingana na matumizi, kwa hiyo ni gharama ya uendeshaji, si ununuzi mkubwa wa mwanzo.",
+   "simple": "CapEx ni ununuzi mkubwa wa mwanzo, kama seva. OpEx ni matumizi yanayoendelea, kama bili ya kila mwezi. Wingu ni OpEx na linalipwa kwa matumizi: unalipa kwa unachotumia tu na unaongeza au kupunguza uwezo kadiri mahitaji yanavyobadilika. Unaweza pia kuokoa kwa reservations, savings plans na Spot VMs.",
+   "africa": "Kununua jenereta ni CapEx. Kununua tokeni za umeme za kulipia kabla ni OpEx: unalipa kadiri unavyotumia. Pay-as-you-go ni kama kuweka salio la muda wa maongezi. Reservation ni kama kifurushi cha data cha kila mwezi ambapo unaahidi kutumia ili upate bei nafuu. Spot ni kama viti vilivyobaki vya bei nafuu ambavyo kampuni inaweza kuvichukua tena.",
+   "breaks": "Kwenye Azure, reservations na savings plans zinakufunga kwa mwaka 1 au miaka 3, na Spot VMs zinaweza kusimamishwa wakati wowote.",
+   "exam": "Kazi thabiti saa 24: reservations. Matumizi ya kila saa yanayobadilika: savings plan. Kazi zinazoweza kukatizwa: Spot. Kutumia leseni ulizonazo: Azure Hybrid Benefit.",
+   "check": {
+    "q": "Hifadhidata ya uzalishaji inatumika mwaka mzima kwa kiwango thabiti. Chaguo gani linaokoa zaidi?",
+    "options": [
+     "Spot VMs",
+     "Reservations",
+     "Pay-as-you-go pekee"
+    ],
+    "answer": 1,
+    "why": "Reservations zinatoa punguzo kwa kazi zinazotabirika. Spot VMs zinaweza kusimamishwa."
+   }
+  }
+ },
+ {
+  "id": "1d",
+  "topic": "1d",
+  "keywords": [
+   "serverless",
+   "azure functions",
+   "logic apps",
+   "event driven",
+   "no servers"
+  ],
+  "en": {
+   "line": "Serverless means you write the code and the provider runs it only when something triggers it.",
+   "simple": "With serverless you do not manage servers. Your code wakes up when an event happens, like a web request or a file upload, runs, and stops. You pay only while it runs and it scales by itself.",
+   "africa": "Ordering a boda boda: you pay only for the trip, you never think about the motorbike, and no bike sits idle waiting for you.",
+   "breaks": "Serverless code can take a moment to start after being idle, and it has time and size limits.",
+   "exam": "Least management, runs only when triggered, billed per execution: Azure Functions. Low-code workflows: Logic Apps.",
+   "check": {
+    "q": "Which service runs your code only when an event triggers it and bills per execution?",
+    "options": [
+     "Azure Functions",
+     "A virtual machine",
+     "Azure Key Vault"
+    ],
+    "answer": 0,
+    "why": "Azure Functions is the serverless, event-driven compute service."
+   }
+  },
+  "sw": {
+   "line": "Serverless ina maana unaandika msimbo na mtoa huduma anauendesha tu pale tukio linapouamsha.",
+   "simple": "Kwa serverless huhitaji kusimamia seva. Msimbo wako unaamka tukio linapotokea, kama ombi la tovuti au kupakia faili, unaendeshwa, kisha unasimama. Unalipa tu wakati unapoendeshwa na unajipanua wenyewe.",
+   "africa": "Kuita boda boda: unalipa safari tu, huna mawazo kuhusu pikipiki, na hakuna pikipiki inayosubiri bure.",
+   "breaks": "Msimbo wa serverless unaweza kuchelewa kuanza baada ya kutokuwa na kazi, na una mipaka ya muda na ukubwa.",
+   "exam": "Usimamizi mdogo kabisa, unaendeshwa tu ukiamshwa, unalipwa kwa kila utekelezaji: Azure Functions. Mtiririko wa kazi usio na msimbo mwingi: Logic Apps.",
+   "check": {
+    "q": "Huduma gani huendesha msimbo wako tu tukio linapouamsha na kulipiwa kwa kila utekelezaji?",
+    "options": [
+     "Azure Functions",
+     "Mashine pepe (VM)",
+     "Azure Key Vault"
+    ],
+    "answer": 0,
+    "why": "Azure Functions ni huduma ya serverless inayoendeshwa na matukio."
+   }
+  }
+ },
+ {
+  "id": "1e",
+  "topic": "1e",
+  "keywords": [
+   "high availability",
+   "scalability",
+   "scale up",
+   "scale out",
+   "sla",
+   "autoscale",
+   "vertical",
+   "horizontal",
+   "scaling",
+   "scaling up",
+   "scaling out",
+   "scale in",
+   "elasticity"
+  ],
+  "en": {
+   "line": "High availability keeps your service running. Scalability changes the size of your service to match demand.",
+   "simple": "High availability means maximum uptime, and Azure promises it in a service-level agreement (SLA) such as 99.9%. Scalability means adjusting resources to demand. Scale up makes one machine more powerful. Scale out adds more machines. Both can be automatic.",
+   "africa": "On a busy route, adding more matatus is scaling out. Replacing a small van with a big bus is scaling up. Having two stages open so riders still get served if one closes is high availability.",
+   "breaks": "Scaling up has a limit because one machine can only get so big. Scaling out can keep going.",
+   "exam": "A percentage like 99.95% means high availability. Up means a bigger machine, out means more machines. Autoscaling is automatic scaling.",
+   "check": {
+    "q": "Adding more virtual machines to share the load is called:",
+    "options": [
+     "Scaling up",
+     "Scaling out",
+     "Scaling down"
+    ],
+    "answer": 1,
+    "why": "Out means more instances. Up means a more powerful single machine."
+   }
+  },
+  "sw": {
+   "line": "Upatikanaji wa juu unaweka huduma yako ikifanya kazi. Upanuzi hubadilisha ukubwa wa huduma kulingana na mahitaji.",
+   "simple": "Upatikanaji wa juu ni muda mwingi zaidi wa kufanya kazi, na Azure huahidi kwenye makubaliano ya kiwango cha huduma (SLA) kama 99.9%. Upanuzi ni kurekebisha rasilimali kulingana na mahitaji. Scale up inaongeza nguvu ya mashine moja. Scale out inaongeza mashine zaidi. Vyote vinaweza kuwa vya kiotomatiki.",
+   "africa": "Kwenye njia yenye msongamano, kuongeza matatu zaidi ni scale out. Kubadilisha gari dogo na basi kubwa ni scale up. Kuwa na vituo viwili vilivyo wazi ili abiria wahudumiwe hata kimoja kikifungwa ni upatikanaji wa juu.",
+   "breaks": "Scale up ina kikomo kwa sababu mashine moja inaweza kuwa kubwa hadi kiwango fulani. Scale out inaweza kuendelea.",
+   "exam": "Asilimia kama 99.95% inamaanisha upatikanaji wa juu. Up ni mashine kubwa zaidi, out ni mashine nyingi zaidi. Autoscaling ni upanuzi wa kiotomatiki.",
+   "check": {
+    "q": "Kuongeza mashine pepe zaidi ili kugawana mzigo kunaitwaje?",
+    "options": [
+     "Scaling up",
+     "Scaling out",
+     "Scaling down"
+    ],
+    "answer": 1,
+    "why": "Out ni kuongeza idadi ya mashine. Up ni kuongeza nguvu ya mashine moja."
+   }
+  }
+ },
+ {
+  "id": "1f",
+  "topic": "1f",
+  "keywords": [
+   "reliability",
+   "predictability",
+   "fault",
+   "recover",
+   "well-architected",
+   "forecast cost"
+  ],
+  "en": {
+   "line": "Reliability means the service recovers from failures and keeps working. Predictability means no surprises in performance or cost.",
+   "simple": "A reliable cloud spreads resources across regions around the world, so if one place has a disaster, others keep running. Performance predictability comes from autoscaling and load balancing. Cost predictability means you can forecast spending with tools like the pricing calculator.",
+   "africa": "A bank with branches in several towns stays open to customers even when one branch has a power cut. Budgeting your monthly airtime is cost predictability.",
+   "breaks": "Reliability needs design. Putting everything in one region still leaves you exposed to a regional outage.",
+   "exam": "Survives a failure or regional outage: reliability. A percentage of uptime: high availability. Forecast your spending: cost predictability.",
+   "check": {
+    "q": "Which benefit is about recovering from failures and continuing to work?",
+    "options": [
+     "Reliability",
+     "Manageability",
+     "Sustainability"
+    ],
+    "answer": 0,
+    "why": "Reliability is the ability to recover from failure and keep functioning."
+   }
+  },
+  "sw": {
+   "line": "Kuaminika ni huduma kupona kutokana na hitilafu na kuendelea kufanya kazi. Kutabirika ni kutokuwa na mshangao kwenye utendaji au gharama.",
+   "simple": "Wingu linaloaminika linasambaza rasilimali kwenye kanda mbalimbali duniani, kwa hiyo mahali pamoja panapopata maafa, pengine panaendelea. Utabirikaji wa utendaji unatokana na autoscaling na load balancing. Utabirikaji wa gharama ni kuweza kukadiria matumizi kwa zana kama pricing calculator.",
+   "africa": "Benki yenye matawi kwenye miji kadhaa inabaki wazi kwa wateja hata tawi moja likikosa umeme. Kupanga bajeti ya salio lako la kila mwezi ni utabirikaji wa gharama.",
+   "breaks": "Kuaminika kunahitaji usanifu. Kuweka kila kitu kwenye eneo moja bado kunakuacha hatarini ikiwa eneo hilo litakatika.",
+   "exam": "Kustahimili hitilafu au kukatika kwa eneo: kuaminika. Asilimia ya muda wa kufanya kazi: upatikanaji wa juu. Kukadiria matumizi: utabirikaji wa gharama.",
+   "check": {
+    "q": "Faida gani inahusu kupona kutokana na hitilafu na kuendelea kufanya kazi?",
+    "options": [
+     "Kuaminika",
+     "Usimamizi rahisi",
+     "Uendelevu"
+    ],
+    "answer": 0,
+    "why": "Kuaminika ni uwezo wa kupona kutokana na hitilafu na kuendelea kufanya kazi."
+   }
+  }
+ },
+ {
+  "id": "1g",
+  "topic": "1g",
+  "keywords": [
+   "manageability",
+   "governance",
+   "security benefit",
+   "templates",
+   "monitor",
+   "portal",
+   "cli",
+   "management of the cloud",
+   "management in the cloud"
+  ],
+  "en": {
+   "line": "Manageability has two sides: managing the cloud (autoscale, templates, monitoring) and managing in the cloud (portal, CLI, APIs, PowerShell).",
+   "simple": "The cloud helps you manage resources automatically with autoscaling, templates and health monitoring that replaces failing resources and sends alerts. You manage it through a web portal, a command line, APIs or PowerShell. For security and governance, templates keep deployments to your standards and auditing flags what is out of compliance.",
+   "africa": "A SACCO keeps a standard form and automatic reminders so every member is treated the same. Templates and alerts do the same for your resources.",
+   "breaks": "IaaS gives you the most control and the most patching. PaaS and SaaS shift patching to the provider.",
+   "exam": "Autoscale, templates, health monitoring and alerts are management OF the cloud. Portal, CLI, APIs and PowerShell are management IN the cloud.",
+   "check": {
+    "q": "Which is management IN the cloud?",
+    "options": [
+     "Autoscaling",
+     "Using the Azure portal",
+     "Deploying from a template"
+    ],
+    "answer": 1,
+    "why": "The portal, CLI, APIs and PowerShell are the ways you manage in the cloud."
+   }
+  },
+  "sw": {
+   "line": "Usimamizi una pande mbili: kusimamia wingu (autoscale, templates, ufuatiliaji) na kusimamia ndani ya wingu (portal, CLI, API, PowerShell).",
+   "simple": "Wingu linakusaidia kusimamia rasilimali kiotomatiki kwa autoscaling, templates na ufuatiliaji wa afya unaobadilisha rasilimali zinazoharibika na kutuma tahadhari. Unalisimamia kupitia tovuti ya portal, mstari wa amri, API au PowerShell. Kwa usalama na utawala, templates huweka usambazaji kwenye viwango vyako na ukaguzi huonyesha kisichozingatia masharti.",
+   "africa": "Chama cha akiba na mikopo (SACCO) kina fomu ya kawaida na vikumbusho vya kiotomatiki ili kila mwanachama ahudumiwe sawa. Templates na tahadhari hufanya vivyo hivyo kwa rasilimali zako.",
+   "breaks": "IaaS inakupa udhibiti mkubwa zaidi na kazi nyingi za masasisho. PaaS na SaaS huhamisha masasisho kwa mtoa huduma.",
+   "exam": "Autoscale, templates, ufuatiliaji wa afya na tahadhari ni usimamizi WA wingu. Portal, CLI, API na PowerShell ni usimamizi NDANI ya wingu.",
+   "check": {
+    "q": "Kipi ni usimamizi NDANI ya wingu?",
+    "options": [
+     "Autoscaling",
+     "Kutumia Azure portal",
+     "Kusambaza kutoka kwenye template"
+    ],
+    "answer": 1,
+    "why": "Portal, CLI, API na PowerShell ni njia za kusimamia ndani ya wingu."
+   }
+  }
+ },
+ {
+  "id": "1i",
+  "topic": "1i",
+  "keywords": [
+   "sustainability",
+   "energy",
+   "idle resources",
+   "right size",
+   "shut down"
+  ],
+  "en": {
+   "line": "Sustainability in the cloud means using only what you need and switching off what you do not.",
+   "simple": "Cloud providers run at large scale, which can use resources more efficiently. You help by scaling down when demand drops, turning off or deallocating resources you do not use, and monitoring your usage.",
+   "africa": "Switch off the lights and the generator in a shop when nobody is inside. It saves fuel and money. Shutting down a test server overnight does the same.",
+   "breaks": "Stopping a VM is not always enough: a stopped but still allocated VM can still cost money. Deallocate it.",
+   "exam": "The answer is almost always to reduce waste: right-size, shut down idle resources, monitor.",
+   "check": {
+    "q": "Which action best supports sustainability and cuts cost?",
+    "options": [
+     "Leave test servers on all night",
+     "Shut down resources you are not using",
+     "Buy more capacity than needed"
+    ],
+    "answer": 1,
+    "why": "Turning off idle resources and right-sizing reduces waste."
+   }
+  },
+  "sw": {
+   "line": "Uendelevu kwenye wingu ni kutumia tu unachohitaji na kuzima usichohitaji.",
+   "simple": "Watoa huduma wa wingu wanaendesha kwa kiwango kikubwa, jambo linaloweza kutumia rasilimali kwa ufanisi zaidi. Wewe unasaidia kwa kupunguza uwezo mahitaji yanaposhuka, kuzima au kuachilia rasilimali usizotumia, na kufuatilia matumizi yako.",
+   "africa": "Zima taa na jenereta dukani wakati hakuna mtu ndani. Inaokoa mafuta na pesa. Kuzima seva ya majaribio usiku kunafanya vivyo hivyo.",
+   "breaks": "Kusimamisha VM haitoshi kila mara: VM iliyosimamishwa lakini bado imetengwa inaweza kugharimu. Iachilie (deallocate).",
+   "exam": "Jibu mara nyingi ni kupunguza upotevu: rekebisha ukubwa, zima rasilimali zisizotumika, fuatilia.",
+   "check": {
+    "q": "Kitendo gani kinasaidia uendelevu na kupunguza gharama zaidi?",
+    "options": [
+     "Kuacha seva za majaribio zikiwaka usiku kucha",
+     "Kuzima rasilimali usizotumia",
+     "Kununua uwezo mwingi kuliko unaohitajika"
+    ],
+    "answer": 1,
+    "why": "Kuzima rasilimali zisizotumika na kurekebisha ukubwa kunapunguza upotevu."
+   }
+  }
+ },
+ {
+  "id": "1h",
+  "topic": "1h",
+  "keywords": [
+   "iaas",
+   "paas",
+   "saas",
+   "infrastructure as a service",
+   "platform as a service",
+   "software as a service",
+   "service model",
+   "lift and shift"
+  ],
+  "en": {
+   "line": "IaaS, PaaS and SaaS describe how much the provider manages for you.",
+   "simple": "With IaaS you rent the basic computer, network and storage and manage the operating system yourself. With PaaS the provider also manages the operating system and tools, and you focus on your code and data. With SaaS you just use a finished application.",
+   "africa": "IaaS is renting an empty kitchen: you bring the ingredients and do all the cooking. PaaS is renting a kitchen that already has the tools and gas set up: you cook your own dish. SaaS is ordering a cooked meal.",
+   "breaks": "In real life you still choose the food in all three. In the cloud, you always keep your data, accounts and devices, even with SaaS.",
+   "exam": "You manage the operating system only in IaaS (and on-premises). Moving servers unchanged is IaaS. Write code and deploy it is PaaS. Just log in and use it is SaaS.",
+   "check": {
+    "q": "In which model do you manage the operating system yourself?",
+    "options": [
+     "IaaS",
+     "PaaS",
+     "SaaS"
+    ],
+    "answer": 0,
+    "why": "Only IaaS leaves the operating system with the customer."
+   }
+  },
+  "sw": {
+   "line": "IaaS, PaaS na SaaS vinaelezea ni kiasi gani mtoa huduma anakusimamia.",
+   "simple": "Kwa IaaS unakodi kompyuta ya msingi, mtandao na hifadhi na unasimamia mfumo wa uendeshaji mwenyewe. Kwa PaaS mtoa huduma anasimamia pia mfumo wa uendeshaji na zana, nawe unazingatia msimbo na data yako. Kwa SaaS unatumia programu iliyokamilika tu.",
+   "africa": "IaaS ni kukodi jiko tupu: unaleta viungo na kupika kila kitu. PaaS ni kukodi jiko lenye vifaa na gesi tayari: unapika chakula chako. SaaS ni kuagiza chakula kilichopikwa.",
+   "breaks": "Kwenye maisha halisi bado unachagua chakula kwa njia zote tatu. Kwenye wingu, data, akaunti na vifaa vyako hubaki kwako kila wakati, hata kwa SaaS.",
+   "exam": "Unasimamia mfumo wa uendeshaji kwenye IaaS tu (na on-premises). Kuhamisha seva bila kubadilisha ni IaaS. Kuandika msimbo na kuusambaza ni PaaS. Kuingia na kutumia tu ni SaaS.",
+   "check": {
+    "q": "Kwenye modeli gani unasimamia mfumo wa uendeshaji mwenyewe?",
+    "options": [
+     "IaaS",
+     "PaaS",
+     "SaaS"
+    ],
+    "answer": 0,
+    "why": "IaaS pekee inaacha mfumo wa uendeshaji kwa mteja."
+   }
+  }
+ }
+]

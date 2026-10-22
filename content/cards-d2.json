@@ -1,0 +1,794 @@
+[
+ {
+  "id": "2a",
+  "topic": "2a",
+  "keywords": [
+   "region",
+   "region pair",
+   "datacenter",
+   "sovereign",
+   "geography",
+   "paired region"
+  ],
+  "en": {
+   "line": "A region is a place on the map with Azure datacenters. Most regions are paired with another region far away for recovery.",
+   "simple": "Azure datacenters are grouped into regions, such as West Europe or South Africa North. Most regions are paired with another in the same geography, at least 300 miles apart. In a big outage, one region of each pair is restored first, and planned updates go to one region of a pair at a time. Sovereign regions, such as Azure Government, are separate and for special legal needs.",
+   "africa": "Picture a bank with a cluster of branches in Nairobi and a paired cluster in Mombasa far away. If one city has a disaster, the other keeps your records safe.",
+   "breaks": "Not every service fails over automatically to the paired region. For many services you must set up replication yourself.",
+   "exam": "Region pairs protect against a whole REGION failing. Availability zones protect against a DATACENTER failing.",
+   "check": {
+    "q": "Region pairs are designed to protect against the failure of:",
+    "options": [
+     "One server rack",
+     "One datacenter",
+     "A whole region"
+    ],
+    "answer": 2,
+    "why": "A pair gives recovery in a second region. Zones cover a datacenter."
+   }
+  },
+  "sw": {
+   "line": "Eneo (region) ni mahali kwenye ramani penye vituo vya data vya Azure. Maeneo mengi yameunganishwa na eneo jingine lililo mbali kwa ajili ya kupona.",
+   "simple": "Vituo vya data vya Azure vimekusanywa kwenye maeneo, kama West Europe au South Africa North. Maeneo mengi yameoanishwa na eneo jingine kwenye jiografia ileile, umbali wa angalau maili 300. Wakati wa hitilafu kubwa, eneo moja la jozi hurejeshwa kwanza, na masasisho yaliyopangwa huenda eneo moja la jozi kwa wakati. Maeneo huru kama Azure Government yametengwa kwa mahitaji maalum ya kisheria.",
+   "africa": "Fikiria benki yenye matawi mengi Nairobi na kundi lililooanishwa Mombasa mbali. Mji mmoja ukipata maafa, mwingine unalinda kumbukumbu zako.",
+   "breaks": "Si kila huduma huhamia kiotomatiki kwenye eneo lililooanishwa. Kwa huduma nyingi unapaswa kuweka urudufishaji mwenyewe.",
+   "exam": "Jozi za maeneo zinalinda dhidi ya kushindwa kwa ENEO zima. Availability zones zinalinda dhidi ya kushindwa kwa KITUO CHA DATA.",
+   "check": {
+    "q": "Jozi za maeneo zimeundwa kulinda dhidi ya kushindwa kwa:",
+    "options": [
+     "Rafu moja ya seva",
+     "Kituo kimoja cha data",
+     "Eneo zima"
+    ],
+    "answer": 2,
+    "why": "Jozi inatoa kupona kwenye eneo la pili. Zones zinashughulikia kituo cha data."
+   }
+  }
+ },
+ {
+  "id": "2b",
+  "topic": "2b",
+  "keywords": [
+   "availability zone",
+   "zones",
+   "zone redundant",
+   "zonal",
+   "datacenter failure",
+   "zone"
+  ],
+  "en": {
+   "line": "Availability zones are separate datacenters inside one region, each with its own power, cooling and network.",
+   "simple": "A zone-enabled region has at least three zones. If one zone fails, the others keep working. Zonal services are pinned to a zone you choose, like a VM. Zone-redundant services copy across zones automatically.",
+   "africa": "Imagine three buildings in one town, each with its own generator, water tank and internet line, joined by a fast road. If one has a power cut, the other two keep serving customers.",
+   "breaks": "All the zones are still in one region, so zones do not protect you from a whole-region disaster. Not all regions have zones.",
+   "exam": "Protect a VM if one datacenter fails: put VMs in different availability zones. Zones are inside one region.",
+   "check": {
+    "q": "How many availability zones does a zone-enabled region have at minimum?",
+    "options": [
+     "Two",
+     "Three",
+     "Five"
+    ],
+    "answer": 1,
+    "why": "Every zone-enabled region has at least three zones."
+   }
+  },
+  "sw": {
+   "line": "Availability zones ni vituo tofauti vya data ndani ya eneo moja, kila kimoja kina umeme, upoozaji na mtandao wake.",
+   "simple": "Eneo lenye zones lina angalau zones tatu. Zone moja ikishindwa, zingine zinaendelea kufanya kazi. Huduma za zonal zimefungwa kwenye zone unayochagua, kama VM. Huduma za zone-redundant zinajirudufisha kati ya zones kiotomatiki.",
+   "africa": "Fikiria majengo matatu kwenye mji mmoja, kila moja na jenereta, tanki la maji na laini ya intaneti yake, yakiunganishwa na barabara ya haraka. Moja likikosa umeme, mengine mawili yanaendelea kuhudumia wateja.",
+   "breaks": "Zones zote bado ziko kwenye eneo moja, kwa hiyo hazikulindi dhidi ya maafa ya eneo zima. Si kila eneo lina zones.",
+   "exam": "Kulinda VM kituo kimoja cha data kikishindwa: weka VM kwenye availability zones tofauti. Zones ziko ndani ya eneo moja.",
+   "check": {
+    "q": "Eneo lenye zones lina angalau zones ngapi?",
+    "options": [
+     "Mbili",
+     "Tatu",
+     "Tano"
+    ],
+    "answer": 1,
+    "why": "Kila eneo lenye zones lina angalau zones tatu."
+   }
+  }
+ },
+ {
+  "id": "2c",
+  "topic": "2c",
+  "keywords": [
+   "subscription",
+   "resource group",
+   "management group",
+   "resource",
+   "account",
+   "hierarchy",
+   "free account",
+   "billing boundary",
+   "invoice",
+   "billing"
+  ],
+  "en": {
+   "line": "Azure organises things in four levels: management groups, subscriptions, resource groups and resources.",
+   "simple": "A resource is one item, like a VM or a database. A resource group is a container for related resources, and every resource lives in exactly one group. A subscription is a billing and access boundary. A management group sits above subscriptions, so you can apply rules once to many subscriptions. Rules and access flow down from the top.",
+   "africa": "Think of a holding company (management group) with several shops (subscriptions), each shop has labelled boxes for stock (resource groups), and every item is in one box (resources). Each shop gets its own invoice.",
+   "breaks": "A resource can be in only one resource group, and resource groups cannot be nested.",
+   "exam": "The logical container for resources is a resource group. Separate invoices means separate subscriptions. Apply one policy to many subscriptions means a management group.",
+   "check": {
+    "q": "You want one policy to apply to ten subscriptions. Where do you assign it?",
+    "options": [
+     "A resource group",
+     "A management group",
+     "A resource"
+    ],
+    "answer": 1,
+    "why": "Management groups sit above subscriptions and pass settings down."
+   }
+  },
+  "sw": {
+   "line": "Azure hupanga vitu kwenye ngazi nne: management groups, subscriptions, resource groups na resources.",
+   "simple": "Resource ni kitu kimoja, kama VM au hifadhidata. Resource group ni chombo cha rasilimali zinazohusiana, na kila rasilimali iko kwenye kundi moja tu. Subscription ni mpaka wa malipo na ufikiaji. Management group iko juu ya subscriptions, kwa hiyo unaweza kuweka sheria mara moja kwa subscriptions nyingi. Sheria na ufikiaji hushuka kutoka juu.",
+   "africa": "Fikiria kampuni mama (management group) yenye maduka kadhaa (subscriptions), kila duka lina masanduku yenye lebo ya bidhaa (resource groups), na kila bidhaa iko kwenye sanduku moja (resources). Kila duka lina ankara yake.",
+   "breaks": "Rasilimali inaweza kuwa kwenye resource group moja tu, na resource groups haziwezi kuwekwa ndani ya nyingine.",
+   "exam": "Chombo cha kimantiki cha rasilimali ni resource group. Ankara tofauti ni subscriptions tofauti. Kutumia sera moja kwa subscriptions nyingi ni management group.",
+   "check": {
+    "q": "Unataka sera moja itumike kwenye subscriptions kumi. Unaipa wapi?",
+    "options": [
+     "Resource group",
+     "Management group",
+     "Resource"
+    ],
+    "answer": 1,
+    "why": "Management groups ziko juu ya subscriptions na hushusha mipangilio."
+   }
+  }
+ },
+ {
+  "id": "2d",
+  "topic": "2d",
+  "keywords": [
+   "virtual machine",
+   "vm",
+   "scale set",
+   "availability set",
+   "virtual desktop",
+   "avd",
+   "fault domain",
+   "update domain"
+  ],
+  "en": {
+   "line": "A virtual machine is a computer you rent in Azure and control, including its operating system.",
+   "simple": "VMs are IaaS: you choose the size, disks and network, and you patch the operating system. A Virtual Machine Scale Set is a group of identical VMs that grows and shrinks automatically. An availability set spreads VMs inside one datacenter. Azure Virtual Desktop gives people a Windows desktop that stays in Azure.",
+   "africa": "A VM is like renting an empty shop unit where you decide the layout and who works there. A scale set is a franchise that opens more identical branches when the queue gets long, and closes them when it is quiet.",
+   "breaks": "Unlike a rented shop unit, a VM keeps costing money while allocated, even if you are not using it.",
+   "exam": "An availability SET protects inside one datacenter, a ZONE protects across datacenters. A scale set means automatic scaling of identical VMs.",
+   "check": {
+    "q": "Which feature automatically adds or removes identical VMs based on demand?",
+    "options": [
+     "Availability set",
+     "Virtual Machine Scale Set",
+     "Azure Virtual Desktop"
+    ],
+    "answer": 1,
+    "why": "Scale sets are built for automatic scale out and in."
+   }
+  },
+  "sw": {
+   "line": "Mashine pepe ni kompyuta unayokodi kwenye Azure na kuidhibiti, ikiwemo mfumo wake wa uendeshaji.",
+   "simple": "VM ni IaaS: unachagua ukubwa, diski na mtandao, na unasasisha mfumo wa uendeshaji. Virtual Machine Scale Set ni kundi la VM zinazofanana linalokua na kupungua kiotomatiki. Availability set inasambaza VM ndani ya kituo kimoja cha data. Azure Virtual Desktop huwapa watu desktop ya Windows inayobaki Azure.",
+   "africa": "VM ni kama kukodi chumba tupu cha duka ambapo unaamua mpangilio na nani anafanya kazi. Scale set ni kampuni ya matawi inayofungua matawi mengi yanayofanana foleni inapokuwa ndefu, na kuyafunga kukiwa tulivu.",
+   "breaks": "Tofauti na chumba cha duka, VM inaendelea kugharimu ikiwa imetengwa, hata kama huitumii.",
+   "exam": "Availability SET inalinda ndani ya kituo kimoja cha data, ZONE inalinda kati ya vituo. Scale set ni upanuzi wa kiotomatiki wa VM zinazofanana.",
+   "check": {
+    "q": "Kipengele gani huongeza au kuondoa VM zinazofanana kiotomatiki kulingana na mahitaji?",
+    "options": [
+     "Availability set",
+     "Virtual Machine Scale Set",
+     "Azure Virtual Desktop"
+    ],
+    "answer": 1,
+    "why": "Scale sets zimeundwa kwa scale out na in ya kiotomatiki."
+   }
+  }
+ },
+ {
+  "id": "2e",
+  "topic": "2e",
+  "keywords": [
+   "container",
+   "aci",
+   "aks",
+   "kubernetes",
+   "app service",
+   "azure functions",
+   "docker",
+   "web app",
+   "hosting",
+   "container apps"
+  ],
+  "en": {
+   "line": "Containers, App Service and Functions are different ways to run your app with less work than a VM.",
+   "simple": "A container packs your app and what it needs so it runs the same anywhere, without a full operating system to manage. Azure Container Instances runs one container quickly. AKS manages many containers. App Service hosts web apps and APIs without servers to manage. Azure Functions runs code only when an event triggers it.",
+   "africa": "A container is like a lunch box: everything for the meal is packed inside and you can carry it anywhere. App Service is a managed market stall where the market handles electricity and cleaning, and you just sell.",
+   "breaks": "A lunch box is a good picture, but real containers share the host's operating system kernel.",
+   "exam": "Run one container fast: ACI. Orchestrate many containers: AKS. Host a web app without servers: App Service. Run code on an event and pay per run: Functions.",
+   "check": {
+    "q": "Which service lets you host a web app without managing servers?",
+    "options": [
+     "Azure App Service",
+     "Azure Key Vault",
+     "Azure DNS"
+    ],
+    "answer": 0,
+    "why": "App Service is the PaaS for web apps and APIs."
+   }
+  },
+  "sw": {
+   "line": "Containers, App Service na Functions ni njia tofauti za kuendesha programu yako kwa kazi ndogo kuliko VM.",
+   "simple": "Container inafunga programu yako na mahitaji yake ili iendeshe vilevile popote, bila mfumo kamili wa uendeshaji wa kusimamia. Azure Container Instances huendesha container moja haraka. AKS husimamia containers nyingi. App Service huhifadhi programu za wavuti na API bila seva za kusimamia. Azure Functions huendesha msimbo tu tukio linapouamsha.",
+   "africa": "Container ni kama sanduku la chakula: kila kitu cha mlo kimefungwa ndani na unaweza kulibeba popote. App Service ni kibanda sokoni kinachosimamiwa ambapo soko linashughulikia umeme na usafi, nawe unauza tu.",
+   "breaks": "Sanduku la chakula ni picha nzuri, lakini containers halisi hushiriki kernel ya mfumo wa uendeshaji wa mwenyeji.",
+   "exam": "Kuendesha container moja haraka: ACI. Kusimamia containers nyingi: AKS. Kuhifadhi programu ya wavuti bila seva: App Service. Kuendesha msimbo kwa tukio na kulipa kwa kila uendeshaji: Functions.",
+   "check": {
+    "q": "Huduma gani hukuruhusu kuhifadhi programu ya wavuti bila kusimamia seva?",
+    "options": [
+     "Azure App Service",
+     "Azure Key Vault",
+     "Azure DNS"
+    ],
+    "answer": 0,
+    "why": "App Service ni PaaS ya programu za wavuti na API."
+   }
+  }
+ },
+ {
+  "id": "2o",
+  "topic": "2o",
+  "keywords": [
+   "ai services",
+   "machine learning",
+   "openai",
+   "iot",
+   "iot hub",
+   "iot central",
+   "iot edge",
+   "cognitive"
+  ],
+  "en": {
+   "line": "Azure has ready-made AI, a place to build your own models, and services to connect devices.",
+   "simple": "Azure AI services give you prebuilt AI through APIs, like speech or vision. Azure Machine Learning is for building and training your own custom models. Azure OpenAI Service gives generative AI such as chat. IoT Hub connects and manages devices with two-way messages, and IoT Edge runs work close to the devices.",
+   "africa": "Prebuilt AI is like using a mobile money agent: you use the service without building the network. Machine Learning is like training your own agent team from scratch.",
+   "breaks": "Prebuilt services are convenient but you cannot change the model inside them.",
+   "exam": "Prebuilt AI: AI services. A custom model you train: Machine Learning. Two-way device messages: IoT Hub. Run near the devices: IoT Edge.",
+   "check": {
+    "q": "You want to add speech recognition without training a model. What do you use?",
+    "options": [
+     "Azure Machine Learning",
+     "Azure AI services",
+     "Azure IoT Hub"
+    ],
+    "answer": 1,
+    "why": "AI services provide prebuilt AI through APIs."
+   }
+  },
+  "sw": {
+   "line": "Azure ina AI iliyotengenezwa tayari, mahali pa kujenga modeli zako, na huduma za kuunganisha vifaa.",
+   "simple": "Azure AI services zinakupa AI iliyotengenezwa tayari kupitia API, kama sauti au maono. Azure Machine Learning ni ya kujenga na kufundisha modeli zako maalum. Azure OpenAI Service inatoa AI ya kutengeneza kama mazungumzo. IoT Hub huunganisha na kusimamia vifaa kwa ujumbe wa pande mbili, na IoT Edge huendesha kazi karibu na vifaa.",
+   "africa": "AI iliyotengenezwa tayari ni kama kutumia wakala wa pesa za simu: unatumia huduma bila kujenga mtandao. Machine Learning ni kama kufundisha timu yako ya mawakala tangu mwanzo.",
+   "breaks": "Huduma zilizotengenezwa tayari ni rahisi lakini huwezi kubadilisha modeli ndani yake.",
+   "exam": "AI iliyotengenezwa tayari: AI services. Modeli maalum unayoifundisha: Machine Learning. Ujumbe wa pande mbili wa vifaa: IoT Hub. Kuendesha karibu na vifaa: IoT Edge.",
+   "check": {
+    "q": "Unataka kuongeza utambuzi wa sauti bila kufundisha modeli. Unatumia nini?",
+    "options": [
+     "Azure Machine Learning",
+     "Azure AI services",
+     "Azure IoT Hub"
+    ],
+    "answer": 1,
+    "why": "AI services hutoa AI iliyotengenezwa tayari kupitia API."
+   }
+  }
+ },
+ {
+  "id": "2f",
+  "topic": "2f",
+  "keywords": [
+   "virtual network",
+   "vnet",
+   "subnet",
+   "nsg",
+   "network security group",
+   "peering",
+   "private endpoint",
+   "service endpoint",
+   "route table"
+  ],
+  "en": {
+   "line": "A virtual network is your private network inside Azure, split into subnets and guarded by rules.",
+   "simple": "A VNet gives you a private address space that the internet cannot route to. Subnets divide it. A network security group (NSG) allows or blocks traffic by IP, port and protocol. Route tables decide where traffic goes. VNet peering joins two VNets privately over the Microsoft backbone, and private endpoints give private access to a service.",
+   "africa": "A VNet is a fenced compound with several houses (subnets). An NSG is the guard at the gate and each door with a checklist of who may enter. Peering is a private door between two compounds.",
+   "breaks": "An NSG only filters traffic. It does not decide the route traffic takes.",
+   "exam": "NSG: allow or deny rules. Route table or UDR: where traffic goes. Service or private endpoint: private access to a service. Peering: VNet to VNet.",
+   "check": {
+    "q": "Which feature allows or blocks traffic by IP address, port and protocol?",
+    "options": [
+     "Network security group",
+     "Route table",
+     "VNet peering"
+    ],
+    "answer": 0,
+    "why": "NSGs hold the allow and deny rules."
+   }
+  },
+  "sw": {
+   "line": "Mtandao pepe ni mtandao wako wa faragha ndani ya Azure, uliogawanywa kuwa subnets na kulindwa kwa sheria.",
+   "simple": "VNet inakupa nafasi ya anwani ya faragha ambayo intaneti haiwezi kuifikia. Subnets huigawanya. Network security group (NSG) huruhusu au kuzuia trafiki kwa IP, port na itifaki. Route tables huamua trafiki inaenda wapi. VNet peering huunganisha VNets mbili kwa faragha kupitia mtandao wa Microsoft, na private endpoints hutoa ufikiaji wa faragha kwa huduma.",
+   "africa": "VNet ni boma lenye uzio lenye nyumba kadhaa (subnets). NSG ni mlinzi wa lango na kila mlango mwenye orodha ya nani anaruhusiwa kuingia. Peering ni mlango wa faragha kati ya mabomba mawili.",
+   "breaks": "NSG huchuja trafiki tu. Haiamui njia ambayo trafiki inapita.",
+   "exam": "NSG: sheria za kuruhusu au kukataa. Route table au UDR: trafiki inaenda wapi. Service au private endpoint: ufikiaji wa faragha kwa huduma. Peering: VNet hadi VNet.",
+   "check": {
+    "q": "Kipengele gani huruhusu au kuzuia trafiki kwa anwani ya IP, port na itifaki?",
+    "options": [
+     "Network security group",
+     "Route table",
+     "VNet peering"
+    ],
+    "answer": 0,
+    "why": "NSG zina sheria za kuruhusu na kukataa."
+   }
+  }
+ },
+ {
+  "id": "2p",
+  "topic": "2p",
+  "keywords": [
+   "vpn",
+   "vpn gateway",
+   "expressroute",
+   "dns",
+   "azure dns",
+   "site to site",
+   "private connection",
+   "circuit",
+   "domain name",
+   "private road"
+  ],
+  "en": {
+   "line": "VPN Gateway is an encrypted tunnel over the internet. ExpressRoute is a private connection that avoids the internet.",
+   "simple": "VPN Gateway connects your office or a single device to Azure through an encrypted tunnel on the public internet. ExpressRoute is a private connection through a connectivity provider, so it is more reliable and faster, with steady delay. Azure DNS hosts your domain's DNS records, and it can not sell you a domain name.",
+   "africa": "A VPN is a sealed truck travelling on the public road with a lock. ExpressRoute is renting your own private road from the telecom company. DNS is the contacts list that turns a name into a phone number.",
+   "breaks": "Even with ExpressRoute, some traffic such as DNS queries can still use the public internet.",
+   "exam": "Not over the internet: ExpressRoute. Encrypted tunnel over the internet: VPN Gateway. Buy a domain name: not Azure DNS.",
+   "check": {
+    "q": "A company needs a private connection to Azure that does not use the public internet. Which service?",
+    "options": [
+     "VPN Gateway",
+     "ExpressRoute",
+     "Azure DNS"
+    ],
+    "answer": 1,
+    "why": "ExpressRoute is a private connection through a provider."
+   }
+  },
+  "sw": {
+   "line": "VPN Gateway ni handaki lililosimbwa kupitia intaneti. ExpressRoute ni muunganisho wa faragha usiotumia intaneti.",
+   "simple": "VPN Gateway huunganisha ofisi yako au kifaa kimoja na Azure kupitia handaki lililosimbwa kwenye intaneti ya umma. ExpressRoute ni muunganisho wa faragha kupitia mtoa huduma wa muunganisho, kwa hiyo ni wa kuaminika na wa kasi zaidi, wenye ucheleweshaji thabiti. Azure DNS huhifadhi rekodi za DNS za kikoa chako, lakini haikuuzii jina la kikoa.",
+   "africa": "VPN ni lori lililofungwa kwa kufuli linalosafiri barabara ya umma. ExpressRoute ni kukodi barabara yako binafsi kutoka kampuni ya mawasiliano. DNS ni orodha ya mawasiliano inayogeuza jina kuwa namba ya simu.",
+   "breaks": "Hata kwa ExpressRoute, trafiki nyingine kama maswali ya DNS bado inaweza kutumia intaneti ya umma.",
+   "exam": "Si kupitia intaneti: ExpressRoute. Handaki lililosimbwa kupitia intaneti: VPN Gateway. Kununua jina la kikoa: si Azure DNS.",
+   "check": {
+    "q": "Kampuni inahitaji muunganisho wa faragha na Azure usiotumia intaneti ya umma. Huduma gani?",
+    "options": [
+     "VPN Gateway",
+     "ExpressRoute",
+     "Azure DNS"
+    ],
+    "answer": 1,
+    "why": "ExpressRoute ni muunganisho wa faragha kupitia mtoa huduma."
+   }
+  }
+ },
+ {
+  "id": "2g",
+  "topic": "2g",
+  "keywords": [
+   "storage account",
+   "blob",
+   "files",
+   "queue",
+   "table",
+   "disk",
+   "azure files",
+   "data lake",
+   "storage services",
+   "shared drive",
+   "mount",
+   "images"
+  ],
+  "en": {
+   "line": "A storage account gives you one place for blobs, files, queues and tables.",
+   "simple": "Blob storage holds unstructured data like images, video and backups. Azure Files gives a shared drive you can mount, over SMB or NFS. Queue storage holds messages for apps to pass work. Table storage holds simple structured data. Disks are the hard drives of VMs. A storage account name is 3 to 24 lowercase letters and numbers and must be unique across Azure.",
+   "africa": "Blob storage is a big warehouse for any kind of goods. Azure Files is the shared filing cabinet in an office. A queue is the numbered ticket system at a clinic, serving people in order.",
+   "breaks": "A warehouse picture is fine, but blobs are accessed by web address, not by walking in.",
+   "exam": "Images for a website: Blob. Mount as a shared drive on many VMs: Files. Messages between app parts: Queue. A VM hard drive: Disk.",
+   "check": {
+    "q": "You need a shared drive that many VMs can mount. Which storage service?",
+    "options": [
+     "Blob storage",
+     "Azure Files",
+     "Queue storage"
+    ],
+    "answer": 1,
+    "why": "Azure Files provides SMB or NFS file shares you can mount."
+   }
+  },
+  "sw": {
+   "line": "Akaunti ya hifadhi inakupa mahali pamoja pa blobs, files, queues na tables.",
+   "simple": "Blob storage huhifadhi data isiyopangwa kama picha, video na nakala rudufu. Azure Files hutoa diski ya pamoja unayoweza kuiunganisha, kupitia SMB au NFS. Queue storage huhifadhi ujumbe ili programu zipitishe kazi. Table storage huhifadhi data rahisi iliyopangwa. Diski ni diski ngumu za VM. Jina la akaunti ya hifadhi ni herufi ndogo na namba 3 hadi 24 na lazima liwe la kipekee kote Azure.",
+   "africa": "Blob storage ni ghala kubwa la bidhaa za aina yoyote. Azure Files ni kabati la mafaili la pamoja ofisini. Queue ni mfumo wa tiketi zenye namba kliniki, unaohudumia watu kwa mpangilio.",
+   "breaks": "Picha ya ghala ni sawa, lakini blobs hufikiwa kwa anwani ya wavuti, si kwa kutembea ndani.",
+   "exam": "Picha za tovuti: Blob. Kuunganisha kama diski ya pamoja kwenye VM nyingi: Files. Ujumbe kati ya sehemu za programu: Queue. Diski ya VM: Disk.",
+   "check": {
+    "q": "Unahitaji diski ya pamoja ambayo VM nyingi zinaweza kuiunganisha. Huduma gani ya hifadhi?",
+    "options": [
+     "Blob storage",
+     "Azure Files",
+     "Queue storage"
+    ],
+    "answer": 1,
+    "why": "Azure Files hutoa file shares za SMB au NFS unazoweza kuunganisha."
+   }
+  }
+ },
+ {
+  "id": "2h",
+  "topic": "2h",
+  "keywords": [
+   "access tier",
+   "hot",
+   "cool",
+   "cold",
+   "archive",
+   "rehydration",
+   "blob tier",
+   "tier",
+   "tiers",
+   "long-term",
+   "rarely used",
+   "backup storage"
+  ],
+  "en": {
+   "line": "Blob access tiers trade storage cost against access cost: Hot, Cool, Cold and Archive.",
+   "simple": "Hot is for data you use often. Cool is for data you keep at least 30 days, and Cold at least 90 days. Archive is for data you rarely need and keep at least 180 days. Cheaper tiers cost less to store but more to read, and Archive can take hours to bring back.",
+   "africa": "Hot is the goods on the front shelf. Cool is the back store. Archive is the warehouse in another town: cheapest to keep, but it takes hours to fetch what you need.",
+   "breaks": "Archive cannot be the default tier of the whole account. You set it on individual blobs.",
+   "exam": "Cheaper to store means more expensive and slower to access. Can wait hours to retrieve: Archive.",
+   "check": {
+    "q": "Which tier is cheapest to store but takes hours to retrieve?",
+    "options": [
+     "Hot",
+     "Cool",
+     "Archive"
+    ],
+    "answer": 2,
+    "why": "Archive has the lowest storage cost and the longest retrieval time."
+   }
+  },
+  "sw": {
+   "line": "Viwango vya ufikiaji wa blob vinabadilisha gharama ya kuhifadhi dhidi ya gharama ya kufikia: Hot, Cool, Cold na Archive.",
+   "simple": "Hot ni ya data unayoitumia mara kwa mara. Cool ni ya data unayoihifadhi angalau siku 30, na Cold angalau siku 90. Archive ni ya data unayoihitaji mara chache na kuihifadhi angalau siku 180. Viwango vya bei nafuu vinagharimu kidogo kuhifadhi lakini zaidi kusoma, na Archive inaweza kuchukua saa kadhaa kuirudisha.",
+   "africa": "Hot ni bidhaa kwenye rafu ya mbele. Cool ni stoo ya nyuma. Archive ni ghala kwenye mji mwingine: la bei nafuu zaidi kuweka, lakini linachukua saa kuleta unachohitaji.",
+   "breaks": "Archive haiwezi kuwa kiwango chaguomsingi cha akaunti nzima. Unaiweka kwenye blobs binafsi.",
+   "exam": "Bei nafuu ya kuhifadhi inamaanisha gharama zaidi na polepole kufikia. Inaweza kusubiri saa kadhaa: Archive.",
+   "check": {
+    "q": "Kiwango gani ni cha bei nafuu zaidi kuhifadhi lakini kinachukua saa kuirudisha?",
+    "options": [
+     "Hot",
+     "Cool",
+     "Archive"
+    ],
+    "answer": 2,
+    "why": "Archive ina gharama ya chini zaidi ya kuhifadhi na muda mrefu zaidi wa kurudisha."
+   }
+  }
+ },
+ {
+  "id": "2i",
+  "topic": "2i",
+  "keywords": [
+   "lrs",
+   "zrs",
+   "grs",
+   "gzrs",
+   "redundancy",
+   "replication",
+   "ra-grs",
+   "storage redundancy",
+   "copies",
+   "geo-redundant",
+   "zone-redundant",
+   "secondary region",
+   "durability"
+  ],
+  "en": {
+   "line": "Storage redundancy decides where your 3 copies of data are kept: one datacenter, across zones, or in another region.",
+   "simple": "Azure Storage always keeps 3 copies in the primary region. LRS keeps them in one datacenter and is cheapest. ZRS spreads them across 3 availability zones. GRS also copies to a second region, and GZRS combines zones and a second region. The RA- versions let you read the second region at any time.",
+   "africa": "LRS is three copies of your records in one building. ZRS is three copies in three buildings in the same town. GRS adds a copy in another city, so a disaster in your town cannot destroy everything.",
+   "breaks": "By default you cannot read the secondary region unless you fail over. You need an RA- option for that.",
+   "exam": "Survive a zone failure but stay in one region: ZRS. Read from the secondary region without failover: RA-GRS or RA-GZRS.",
+   "check": {
+    "q": "Which option keeps copies in three availability zones in one region?",
+    "options": [
+     "LRS",
+     "ZRS",
+     "GRS"
+    ],
+    "answer": 1,
+    "why": "ZRS copies data across zones in the primary region."
+   }
+  },
+  "sw": {
+   "line": "Redundancy ya hifadhi inaamua nakala 3 za data yako zinahifadhiwa wapi: kituo kimoja, kati ya zones, au eneo jingine.",
+   "simple": "Azure Storage daima huweka nakala 3 kwenye eneo kuu. LRS huziweka kwenye kituo kimoja na ni ya bei nafuu zaidi. ZRS huzisambaza kati ya availability zones 3. GRS pia hunakili kwenye eneo la pili, na GZRS huchanganya zones na eneo la pili. Matoleo ya RA- hukuruhusu kusoma eneo la pili wakati wowote.",
+   "africa": "LRS ni nakala tatu za kumbukumbu zako kwenye jengo moja. ZRS ni nakala tatu kwenye majengo matatu ya mji huohuo. GRS inaongeza nakala kwenye mji mwingine, kwa hiyo maafa kwenye mji wako hayawezi kuharibu kila kitu.",
+   "breaks": "Kwa chaguomsingi huwezi kusoma eneo la pili isipokuwa ufanye failover. Unahitaji chaguo la RA- kwa hilo.",
+   "exam": "Kustahimili kushindwa kwa zone lakini kubaki eneo moja: ZRS. Kusoma eneo la pili bila failover: RA-GRS au RA-GZRS.",
+   "check": {
+    "q": "Chaguo gani linaweka nakala kwenye availability zones tatu kwenye eneo moja?",
+    "options": [
+     "LRS",
+     "ZRS",
+     "GRS"
+    ],
+    "answer": 1,
+    "why": "ZRS hunakili data kati ya zones kwenye eneo kuu."
+   }
+  }
+ },
+ {
+  "id": "2j",
+  "topic": "2j",
+  "keywords": [
+   "azcopy",
+   "storage explorer",
+   "file sync",
+   "azure migrate",
+   "data box",
+   "migrate",
+   "move files",
+   "migration"
+  ],
+  "en": {
+   "line": "Azure gives different tools for moving files and data depending on the size and the way you work.",
+   "simple": "AzCopy is a command-line tool to copy blobs and files. Storage Explorer is a graphical app for the same job. Azure File Sync keeps a local Windows file server and Azure Files in sync in both directions. Azure Migrate assesses and moves servers, databases and web apps. Data Box is a rugged device shipped to you for very large data when your bandwidth is limited.",
+   "africa": "When the road is too slow for a huge load, you hire a lorry. Data Box is the lorry for your data. Copying a few files online is like sending goods on a boda boda.",
+   "breaks": "AzCopy sync works in one direction only. File Sync works in both directions.",
+   "exam": "Huge data and poor bandwidth: Data Box. Assess servers first: Azure Migrate. Script copying: AzCopy. A graphical tool: Storage Explorer. Sync a file server both ways: File Sync.",
+   "check": {
+    "q": "You must move tens of terabytes and your internet is slow. What fits best?",
+    "options": [
+     "AzCopy over the internet",
+     "Azure Data Box",
+     "Azure DNS"
+    ],
+    "answer": 1,
+    "why": "Data Box is a physical device for very large data when bandwidth is limited."
+   }
+  },
+  "sw": {
+   "line": "Azure inatoa zana tofauti za kuhamisha faili na data kulingana na ukubwa na jinsi unavyofanya kazi.",
+   "simple": "AzCopy ni zana ya mstari wa amri ya kunakili blobs na faili. Storage Explorer ni programu ya picha kwa kazi hiyohiyo. Azure File Sync huweka seva ya faili ya Windows na Azure Files sawa pande zote mbili. Azure Migrate hutathmini na kuhamisha seva, hifadhidata na programu za wavuti. Data Box ni kifaa imara kinachotumwa kwako kwa data kubwa sana wakati intaneti yako ni ndogo.",
+   "africa": "Barabara ikiwa polepole mno kwa mzigo mkubwa, unakodi lori. Data Box ni lori la data yako. Kunakili faili chache mtandaoni ni kama kutuma bidhaa kwa boda boda.",
+   "breaks": "Usawazishaji wa AzCopy huenda upande mmoja tu. File Sync hufanya kazi pande zote mbili.",
+   "exam": "Data kubwa na intaneti dhaifu: Data Box. Kutathmini seva kwanza: Azure Migrate. Kunakili kwa script: AzCopy. Zana ya picha: Storage Explorer. Kusawazisha seva ya faili pande zote: File Sync.",
+   "check": {
+    "q": "Unahitaji kuhamisha terabaiti kadhaa na intaneti yako ni polepole. Kipi kinafaa zaidi?",
+    "options": [
+     "AzCopy kupitia intaneti",
+     "Azure Data Box",
+     "Azure DNS"
+    ],
+    "answer": 1,
+    "why": "Data Box ni kifaa halisi cha data kubwa sana wakati intaneti ni ndogo."
+   }
+  }
+ },
+ {
+  "id": "2k",
+  "topic": "2k",
+  "keywords": [
+   "entra id",
+   "azure ad",
+   "active directory",
+   "sso",
+   "mfa",
+   "passwordless",
+   "external identities",
+   "b2b",
+   "domain services",
+   "identity",
+   "authentication"
+  ],
+  "en": {
+   "line": "Microsoft Entra ID is the cloud service that knows who you are and lets you sign in.",
+   "simple": "Entra ID handles sign-in, single sign-on (SSO), multifactor authentication (MFA) and device management. MFA uses two or more of something you know, have or are. Passwordless options include Windows Hello, the Authenticator app and FIDO2 keys. Entra Domain Services gives managed domain features like LDAP for older apps. External identities let guests and customers sign in.",
+   "africa": "Entra ID is like the ID card checked at the gate. SSO is one ID card that opens many doors. MFA is showing your ID card and also entering a code sent to your phone.",
+   "breaks": "SSO is only as safe as the first sign-in, so pair it with MFA.",
+   "exam": "Entra ID is not Entra Domain Services. An app that needs LDAP, Kerberos or domain join: Domain Services. B2B direct connect: Teams shared channels.",
+   "check": {
+    "q": "Which two things together make multifactor authentication?",
+    "options": [
+     "Password and a code sent to your phone",
+     "Two passwords",
+     "Username and email"
+    ],
+    "answer": 0,
+    "why": "MFA needs factors from two groups: know, have or are."
+   }
+  },
+  "sw": {
+   "line": "Microsoft Entra ID ni huduma ya wingu inayojua wewe ni nani na kukuruhusu kuingia.",
+   "simple": "Entra ID inashughulikia kuingia, kuingia mara moja (SSO), uthibitishaji wa hatua nyingi (MFA) na usimamizi wa vifaa. MFA hutumia mambo mawili au zaidi kati ya unachojua, unachomiliki au ulivyo. Chaguo zisizo na nenosiri ni Windows Hello, programu ya Authenticator na funguo za FIDO2. Entra Domain Services hutoa vipengele vya domain kama LDAP kwa programu za zamani. External identities huruhusu wageni na wateja kuingia.",
+   "africa": "Entra ID ni kama kitambulisho kinachokaguliwa langoni. SSO ni kitambulisho kimoja kinachofungua milango mingi. MFA ni kuonyesha kitambulisho na pia kuingiza msimbo uliotumwa kwenye simu yako.",
+   "breaks": "SSO ni salama tu kama kuingia kwa kwanza, kwa hiyo iunganishe na MFA.",
+   "exam": "Entra ID si Entra Domain Services. Programu inayohitaji LDAP, Kerberos au domain join: Domain Services. B2B direct connect: Teams shared channels.",
+   "check": {
+    "q": "Vitu gani viwili kwa pamoja vinaunda uthibitishaji wa hatua nyingi?",
+    "options": [
+     "Nenosiri na msimbo uliotumwa kwenye simu",
+     "Manenosiri mawili",
+     "Jina la mtumiaji na barua pepe"
+    ],
+    "answer": 0,
+    "why": "MFA inahitaji vipengele kutoka makundi mawili: unachojua, unachomiliki au ulivyo."
+   }
+  }
+ },
+ {
+  "id": "2l",
+  "topic": "2l",
+  "keywords": [
+   "conditional access",
+   "rbac",
+   "role based access",
+   "role assignment",
+   "owner",
+   "contributor",
+   "reader",
+   "least privilege",
+   "scope"
+  ],
+  "en": {
+   "line": "Conditional Access decides how and when someone may sign in. RBAC decides what they may do once inside.",
+   "simple": "Conditional Access reads signals like who, where, which device and which app, then allows, requires MFA, or blocks. Azure RBAC gives a role such as Owner, Contributor or Reader at a scope: management group, subscription, resource group or resource. Roles are inherited downward and follow least privilege.",
+   "africa": "Conditional Access is the guard at the gate asking where you come from and checking your pass. RBAC is the set of keys you are given: some people get the key for one room only, others for the whole building.",
+   "breaks": "RBAC controls Azure actions through Azure Resource Manager. It does not control permissions inside your own app or data.",
+   "exam": "Only approved apps or compliant devices: Conditional Access. Let someone manage everything in one resource group: RBAC at the resource group scope.",
+   "check": {
+    "q": "You want a user to manage everything in one resource group and nothing else. What do you use?",
+    "options": [
+     "Conditional Access",
+     "RBAC at the resource group scope",
+     "Azure Policy"
+    ],
+    "answer": 1,
+    "why": "RBAC assigns a role at a chosen scope."
+   }
+  },
+  "sw": {
+   "line": "Conditional Access huamua jinsi na lini mtu anaweza kuingia. RBAC huamua anachoweza kufanya akishaingia.",
+   "simple": "Conditional Access husoma ishara kama nani, wapi, kifaa gani na programu gani, kisha huruhusu, huhitaji MFA, au huzuia. Azure RBAC hutoa jukumu kama Owner, Contributor au Reader kwenye scope: management group, subscription, resource group au resource. Majukumu hurithiwa kuelekea chini na hufuata ruhusa ndogo zaidi.",
+   "africa": "Conditional Access ni mlinzi wa lango anayeuliza unatoka wapi na kukagua kibali chako. RBAC ni funguo ulizopewa: wengine wanapata ufunguo wa chumba kimoja tu, wengine wa jengo zima.",
+   "breaks": "RBAC hudhibiti vitendo vya Azure kupitia Azure Resource Manager. Haidhibiti ruhusa ndani ya programu au data yako.",
+   "exam": "Programu zilizoidhinishwa tu au vifaa vinavyozingatia sheria: Conditional Access. Kumruhusu mtu kusimamia kila kitu kwenye resource group moja: RBAC kwenye scope ya resource group.",
+   "check": {
+    "q": "Unataka mtumiaji asimamie kila kitu kwenye resource group moja na si kingine. Unatumia nini?",
+    "options": [
+     "Conditional Access",
+     "RBAC kwenye scope ya resource group",
+     "Azure Policy"
+    ],
+    "answer": 1,
+    "why": "RBAC hutoa jukumu kwenye scope unayochagua."
+   }
+  }
+ },
+ {
+  "id": "2m",
+  "topic": "2m",
+  "keywords": [
+   "zero trust",
+   "defense in depth",
+   "defender for cloud",
+   "layers",
+   "assume breach",
+   "secure score",
+   "security posture"
+  ],
+  "en": {
+   "line": "Zero Trust means never trust, always verify. Defense in depth means several layers of protection.",
+   "simple": "Zero Trust has three principles: verify explicitly, use least privilege access, and assume breach. Defense in depth adds layers from outside to inside: physical, identity and access, perimeter, network, compute, application and data. Microsoft Defender for Cloud checks your security posture and protects workloads across Azure, on-premises and other clouds.",
+   "africa": "A compound with a gate, a guard, locked doors and a safe inside. A thief must beat every layer, not just one.",
+   "breaks": "Layers slow an attacker but do not make an attack impossible, which is why Zero Trust also assumes a breach can happen.",
+   "exam": "Several layers that each slow an attacker is defense in depth. DDoS protection is the perimeter layer. NSGs are the network layer. Data is the innermost layer. Secure score is Defender for Cloud.",
+   "check": {
+    "q": "Which approach uses several layers so that breaching one still leaves others?",
+    "options": [
+     "Defense in depth",
+     "Single sign-on",
+     "Scale out"
+    ],
+    "answer": 0,
+    "why": "Defense in depth is the layered security strategy."
+   }
+  },
+  "sw": {
+   "line": "Zero Trust ina maana usiamini kamwe, thibitisha daima. Defense in depth ina maana tabaka kadhaa za ulinzi.",
+   "simple": "Zero Trust ina kanuni tatu: thibitisha wazi, tumia ruhusa ndogo zaidi, na dhani kuvunjwa kumetokea. Defense in depth huongeza tabaka kutoka nje hadi ndani: kimwili, utambulisho na ufikiaji, mzunguko, mtandao, kompyuta, programu na data. Microsoft Defender for Cloud hukagua hali ya usalama na kulinda kazi kote Azure, on-premises na wingu zingine.",
+   "africa": "Boma lenye lango, mlinzi, milango iliyofungwa na salama ndani. Mwizi lazima ashinde kila tabaka, si moja tu.",
+   "breaks": "Tabaka hupunguza kasi ya mshambulizi lakini hazifanyi shambulio kuwa lisilowezekana, ndiyo maana Zero Trust pia hudhani kuvunjwa kunaweza kutokea.",
+   "exam": "Tabaka kadhaa zinazopunguza kasi ya mshambulizi ni defense in depth. Ulinzi wa DDoS ni tabaka ya mzunguko. NSG ni tabaka ya mtandao. Data ni tabaka ya ndani kabisa. Secure score ni Defender for Cloud.",
+   "check": {
+    "q": "Mbinu gani hutumia tabaka kadhaa ili kuvunja moja kuache zingine?",
+    "options": [
+     "Defense in depth",
+     "Single sign-on",
+     "Scale out"
+    ],
+    "answer": 0,
+    "why": "Defense in depth ni mkakati wa usalama wa tabaka."
+   }
+  }
+ },
+ {
+  "id": "2n",
+  "topic": "2n",
+  "keywords": [
+   "key vault",
+   "encryption",
+   "at rest",
+   "in transit",
+   "secrets",
+   "keys",
+   "certificates",
+   "managed identity",
+   "password",
+   "passwords",
+   "connection string",
+   "nenosiri",
+   "siri"
+  ],
+  "en": {
+   "line": "Azure Key Vault is a safe place for secrets, keys and certificates. Encryption makes data unreadable to others.",
+   "simple": "Encryption at rest protects stored data. Encryption in transit protects data on the move. Key Vault stores passwords, connection strings, encryption keys and certificates, controls who can read them, helps rotate them and records their use. Apps can fetch secrets with managed identities, so no passwords sit in code.",
+   "africa": "Key Vault is a safe-deposit box at the bank. Only people on the list get in, and the bank records every visit. Encryption in transit is a sealed envelope for a letter on the way.",
+   "breaks": "Key Vault protects the secrets, but your app still needs permission to open it.",
+   "exam": "Passwords, keys, certificates, connection strings: Key Vault. Encrypting stored data: at rest. Encrypting moving data: in transit.",
+   "check": {
+    "q": "Where should an app's database password be stored instead of in code?",
+    "options": [
+     "Azure Key Vault",
+     "A text file in the app",
+     "Azure DNS"
+    ],
+    "answer": 0,
+    "why": "Key Vault is the service for secrets, keys and certificates."
+   }
+  },
+  "sw": {
+   "line": "Azure Key Vault ni mahali salama pa siri, funguo na vyeti. Usimbaji fiche hufanya data isisomeke na wengine.",
+   "simple": "Usimbaji fiche wakati wa kupumzika hulinda data iliyohifadhiwa. Usimbaji fiche wakati wa kusafirishwa hulinda data inayosafiri. Key Vault huhifadhi manenosiri, connection strings, funguo za usimbaji na vyeti, hudhibiti nani anaweza kuvisoma, husaidia kuvibadilisha na hurekodi matumizi. Programu zinaweza kuchukua siri kwa managed identities, kwa hiyo hakuna manenosiri ndani ya msimbo.",
+   "africa": "Key Vault ni sanduku la amana benki. Watu walio kwenye orodha pekee ndio wanaingia, na benki hurekodi kila ziara. Usimbaji fiche wakati wa kusafirishwa ni bahasha iliyofungwa kwa barua njiani.",
+   "breaks": "Key Vault hulinda siri, lakini programu yako bado inahitaji ruhusa ya kulifungua.",
+   "exam": "Manenosiri, funguo, vyeti, connection strings: Key Vault. Kusimba data iliyohifadhiwa: at rest. Kusimba data inayosafiri: in transit.",
+   "check": {
+    "q": "Nenosiri la hifadhidata la programu lihifadhiwe wapi badala ya ndani ya msimbo?",
+    "options": [
+     "Azure Key Vault",
+     "Faili ya maandishi ndani ya programu",
+     "Azure DNS"
+    ],
+    "answer": 0,
+    "why": "Key Vault ni huduma ya siri, funguo na vyeti."
+   }
+  }
+ }
+]
