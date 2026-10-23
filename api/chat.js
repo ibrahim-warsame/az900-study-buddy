@@ -1,6 +1,6 @@
 // POST /api/chat  -> streams Wingu Buddy's answer as plain text.
 // The Anthropic API key lives only in the server environment (ANTHROPIC_API_KEY), never in the browser.
-import { Anthropic, buildRequest, parseBody, streamAnswer } from "../lib/buddy.mjs";
+import { Anthropic, UpstreamError, buildRequest, liveProvider, parseBody, streamAnswer } from "../lib/buddy.mjs";
 
 const WINDOW_MS = 10 * 60 * 1000;
 const PER_IP = Number(process.env.RATE_LIMIT_PER_10_MIN || 20);
@@ -25,7 +25,7 @@ function limited(ip) {
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST") return res.status(405).json({ error: "Use POST." });
-  if (!process.env.ANTHROPIC_API_KEY) return res.status(503).json({ error: "offline", message: "Live AI is not configured. Offline cards still work." });
+  if (!liveProvider()) return res.status(503).json({ error: "offline", message: "Live AI is not configured. Offline cards still work." });
 
   let input;
   try {
@@ -51,7 +51,8 @@ export default async function handler(req, res) {
     console.log(JSON.stringify({ event: "answer", lang: input.lang, version: input.version, topics: topicIds, model: result.model, stop: result.stopReason, usage: result.usage }));
     res.end();
   } catch (err) {
-    const status = err instanceof Anthropic.RateLimitError ? 429
+    const status = err instanceof UpstreamError ? (err.status === 429 ? 429 : err.status === 401 || err.status === 403 ? 503 : 502)
+      : err instanceof Anthropic.RateLimitError ? 429
       : err instanceof Anthropic.AuthenticationError ? 503
       : err instanceof Anthropic.APIError ? 502 : 500;
     console.error(JSON.stringify({ event: "error", status, type: err?.constructor?.name, message: err?.message }));

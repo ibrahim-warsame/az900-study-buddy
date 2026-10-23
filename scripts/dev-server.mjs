@@ -6,6 +6,7 @@ import path from "node:path";
 import { ROOT } from "../lib/content.mjs";
 import chat from "../api/chat.js";
 import health from "../api/health.js";
+import { liveProvider } from "../lib/buddy.mjs";
 
 const PORT = Number(process.env.PORT || 3000);
 const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json", ".svg": "image/svg+xml", ".webmanifest": "application/manifest+json" };
@@ -36,4 +37,4 @@ http.createServer(async (req, res) => {
   } catch {
     res.status(404).end("Not found");
   }
-}).listen(PORT, () => console.log(`Wingu Buddy on http://localhost:${PORT}  (live AI: ${process.env.ANTHROPIC_API_KEY ? "yes" : "no, offline cards only"})`));
+}).listen(PORT, () => console.log(`Wingu Buddy on http://localhost:${PORT}  (live AI: ${liveProvider() ?? "no, offline cards only"})`));

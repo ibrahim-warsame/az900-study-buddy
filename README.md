@@ -35,7 +35,7 @@ Vercel function (api/chat.js) ── rate limit, input checks, daily cap
    │  lib/retrieve.mjs   keyword retrieval → topic ids
    │  lib/buddy.mjs      system prompt v3 (cached) + NOTES for those topics
    ▼
-Claude API (claude-opus-5-5, low effort, streamed back word by word)
+Claude API (claude-opus-5-5, low effort) or any OpenAI-compatible provider, streamed back word by word
 ```
 
 - **Prompt caching:** the long, stable part of the prompt (rules + analogy library) is cached. Only the per-question notes change, so repeat questions are cheaper and faster.
@@ -66,7 +66,14 @@ node scripts/dev-server.mjs       # http://localhost:3000 – offline cards only
 node evals/run.mjs --versions v1,v2,v3 --judge   # runs the evals (costs API credit)
 ```
 
-Deploy: import the repo in Vercel and add `ANTHROPIC_API_KEY` as an environment variable. Optional: `BUDDY_MODEL`, `RATE_LIMIT_PER_10_MIN` (default 20), `DAILY_LIMIT` (default 400).
+Deploy: import the repo in Vercel and set **one** of these provider options as environment variables:
+
+| Provider | Variables |
+|---|---|
+| Claude (best quality) | `ANTHROPIC_API_KEY` (optional `BUDDY_MODEL`, default `claude-opus-5-5`) |
+| Any OpenAI-compatible provider, including free tiers (Groq, GitHub Models, OpenRouter, Gemini) | `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL` |
+
+Optional for both: `RATE_LIMIT_PER_10_MIN` (default 20), `DAILY_LIMIT` (default 400). Without any key the app still works with offline cards.
 
 ## Scaling to more learners and more exams
 
