@@ -71,7 +71,7 @@ Deploy: import the repo in Vercel and set **one** of these provider options as e
 | Provider | Variables |
 |---|---|
 | Claude (best quality) | `ANTHROPIC_API_KEY` (optional `BUDDY_MODEL`, default `claude-opus-5-5`) |
-| Any OpenAI-compatible provider, including free tiers (Groq, GitHub Models, OpenRouter, Gemini) | `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL` |
+| Any OpenAI-compatible provider, including free tiers (for example Groq: base URL `https://api.groq.com/openai/v1`) | `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL` |
 
 Optional for both: `RATE_LIMIT_PER_10_MIN` (default 20), `DAILY_LIMIT` (default 400). Without any key the app still works with offline cards.
 
