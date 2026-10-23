@@ -23,6 +23,7 @@ function limited(ip) {
 }
 
 export default async function handler(req, res) {
+  if (req.headers["x-vercel-oidc-token"]) process.env.VERCEL_OIDC_TOKEN = req.headers["x-vercel-oidc-token"];
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST") return res.status(405).json({ error: "Use POST." });
   if (!liveProvider()) return res.status(503).json({ error: "offline", message: "Live AI is not configured. Offline cards still work." });
